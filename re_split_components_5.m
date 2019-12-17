@@ -8,8 +8,6 @@
 
 addpath('other/');
 
-%nrem_awakenings = EEG_all.pnts/(EEG_all.srate*60*5 - EEG_all.srate*2 + 1)
-%save('nrem_index.mat','nrem_index');
 log_file = 'log/log_file.txt';
 inputlist = uigetfile_n_dir;
 
@@ -37,24 +35,18 @@ for mff_input_file = 1:length(inputlist)
         timepoint=1;
         if ~exist(sesdir)
             mkdir(sesdir);
-        else 
-            f = warndlg('Subject Folder Already Exists','Warning');
         end
     elseif strcmp(session,'T2')
         sesdir = [eegdir '/ses-2'];
         timepoint=2;
         if ~exist(sesdir)
             mkdir(sesdir);
-        else 
-            f = warndlg('Subject Folder Already Exists','Warning');
         end
     elseif strcmp(session,'T3')
         sesdir = [eegdir '/ses-3'];
         timepoint=3;
         if ~exist(sesdir)
             mkdir(sesdir);
-        else 
-            f = warndlg('Subject Folder Already Exists','Warning');
         end
     else
         fprintf('session directory error\n');

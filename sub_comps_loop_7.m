@@ -65,7 +65,7 @@ for mff_input_file = 1:length(inputlist)
     EEG = pop_loadset([sesdir '/nrem_awakening_eeg_hp_trim_merged_nobadch_ica2.set']);
     
 
-    % average reference
+    % average reference for ICLabel
     EEG_avgref = epi_log(@pop_reref, EEG, []);
     
     EEG_avgref = iclabel(EEG_avgref); % prior to computing features, each dataset was converted to a common average reference

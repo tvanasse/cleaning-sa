@@ -7,9 +7,6 @@
 
 addpath('other/');
 
-%nrem_awakenings = EEG_all.pnts/(EEG_all.srate*60*5 - EEG_all.srate*2 + 1)
-%save('nrem_index.mat','nrem_index');
-log_file = 'log/log_file.txt';
 inputlist = uigetfile_n_dir;
 
 %% loop through input file list

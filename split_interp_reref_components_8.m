@@ -8,8 +8,6 @@
 
 addpath('other/');
 
-%nrem_awakenings = EEG_all.pnts/(EEG_all.srate*60*5 - EEG_all.srate*2 + 1)
-%save('nrem_index.mat','nrem_index');
 log_file = 'log/log_file.txt';
 inputlist = uigetfile_n_dir;
 
@@ -107,16 +105,13 @@ for awak = 1:length(nrem_index)
     EEG = pop_importdata('dataformat','array','data',EEG.data,...
         'srate',500,'xmin',0,'nbchan',EEG_all.nbchan, 'chanlocs', EEG_all.chanlocs);
 
-    %Interpoloate bad channels
+    % identify and interpoloate bad channels
     load([sesdir '/chanlocs_185.mat'])
-    EEG.urchanlocs = origEEGchanlocs;
-    
-    % Interpolate.
+    EEG.urchanlocs = origEEGchanlocs;   
     EEG = epi_log(@eeg_interp, EEG, EEG.urchanlocs); 
     
-    % Average reference
+    % average reference
     EEG = epi_log(@pop_reref, EEG, []);
-
 
     EEG = pop_saveset(EEG, 'filename', sprintf('awakening-%d-cleaned2_nrem',nrem_index(awak)),'filepath',sesdir);
     

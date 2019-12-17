@@ -5,14 +5,13 @@
 % Center for Sleep and Consciousness, University of Wisconsin - Madison
 % ------------------------------------------------------------------------
 
+eeglab;
+close;
+
+addpath('functions/')
 CHANNEL_LOCATION_FILE = 'channel_location_file/HydroCelGSN256v10.sfp';
 
 %readfilename
-% fileID=fopen(strcat([pwd '/input_files/input_sub_comps_loop.csv']));
-% C = textscan(fileID, '%s','delimiter',',');
-% fclose('all');
-
-log_file = 'log/log_file.txt';
 inputlist = uigetfile_n_dir;
 
 %% loop through input file list

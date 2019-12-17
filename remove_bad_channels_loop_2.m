@@ -1,6 +1,5 @@
 % ------------------------------------------------------------------------
-% Manually remove bad channels, interpolate, and average reference
-% Loop through all files specified in input_files
+% Manually remove bad channels
 
 % Author: Thomas Vanasse
 % Center for Sleep and Consciousness, University of Wisconsin - Madison
@@ -9,11 +8,7 @@
 CHANNEL_LOCATION_FILE = 'channel_location_file/HydroCelGSN256v10.sfp';
 
 %% read allfilenames
-% fileID=fopen(strcat([pwd '/input_files/input_remove_bad_channels_loop.csv']));
-% input_files = textscan(fileID, '%s','delimiter',',');
-% fclose('all');
 
-log_file = 'log/log_file.txt';
 inputlist = uigetfile_n_dir;
 
 %% loop through input file list
@@ -25,6 +20,7 @@ for mff_input_file = 1:length(inputlist)
     subid = filename(end-9:end-6); %subject ID
     
     %% create directory if it does not already exist
+    
     subdir = ['/Volumes/data/NCCAM3/SA/wDreamReport/aligned/extraction_TJV' '/sub-' subid];
     if ~exist(subdir, 'dir')
        mkdir(subdir);
@@ -62,7 +58,7 @@ for mff_input_file = 1:length(inputlist)
     
     % store original channel locations (185)
     origEEGchanlocs = EEG.chanlocs;
-    save([sesdir '/185_chanlocs.mat'],'origEEGchanlocs');
+    save([sesdir '/chanlocs_185.mat'],'origEEGchanlocs');
 
     EEG = csc_eeg_plotter(EEG);
     

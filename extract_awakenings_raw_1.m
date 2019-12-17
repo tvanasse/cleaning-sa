@@ -7,18 +7,17 @@
 % Center for Sleep and Consciousness, University of Wisconsin - Madison
 % ------------------------------------------------------------------------
 
+eeglab;
+close;
+
 %add path to mff functions
 addpath('mffs');
 addpath('functions');
 
 CHANNEL_LOCATION_FILE = 'channel_location_file/HydroCelGSN256v10.sfp';
 
-%% readfilename
-% fileID=fopen([pwd '/input_files/input_extract_awakenings_raw.csv']);
-% inputlist = textscan(fileID, '%s','delimiter',',');
-% fclose('all');
+%% input filenames
 
-log_file = 'log/log_file.txt';
 inputlist = uigetfile_n_dir;
 
 %% loop through input file list
@@ -70,9 +69,6 @@ for mff_input_file = 1:length(inputlist)
     end 
     
     fprintf('\nExtracting data for subject %s, %s... \n\n', subid, session)
-    fileID = fopen(log_file, 'a');
-    fprintf(fileID,'Beginning extraction for subject %s, %s... \n', subid, session);
-    fclose(fileID); 
 
     extr_filname = ['/Volumes/data/NCCAM3/SA/wDreamReport/aligned/' filename(end-15:end) '/' filename(end-15:end) '.mff'];
     extr_dir = filename;
@@ -86,7 +82,7 @@ for mff_input_file = 1:length(inputlist)
         end
     end 
     
-    %Check if file exists, if not--mark and go to next file
+    % check if file exists, if not--mark and go to next file
     if ~isfolder(extr_filname)
         TABLE.FILE_NOT_FOUND(de_index(1)) = 1;
         continue;
@@ -94,8 +90,9 @@ for mff_input_file = 1:length(inputlist)
         mff_meta_data = mff_import_meta_data(extr_filname);
     end
 
-    %add java file necessary for mff function
-    javaaddpath('/Users/tononilab/Documents/MATLAB/eeglab14_1_2b/plugins/MFFimport2.2/mffimport/MFF-1.2.jar');
+    % add java file necessary for mff function
+    eeglab_filepath = which('eeglab')
+    javaaddpath([eeglab_filepath(1:end-8) 'plugins/MFFimport2.2/mffimport/MFF-1.2.jar']);
     
     mff_header = read_mff_header(extr_filname,0);
     
@@ -120,9 +117,7 @@ for mff_input_file = 1:length(inputlist)
             if ~isfield(mff_events, events_field)
                 events_field = 'Events_DINS';
                 if ~isfield(mff_events, events_field)
-                    fileID = fopen(log_file, 'a');
-                    fprintf(fileID,'subject %s, %s events do not have a known field structure\n', subid, session)
-                    fclose(fileID); 
+                    fprintf('subject %s, %s events do not have a known field structure\n', subid, session)
                     %fieldnames(mff_events)
                 end
             end
@@ -196,6 +191,7 @@ for mff_input_file = 1:length(inputlist)
         din_event_match(:,3) = sum(din_event_match(:,1)==din_event_match(:,1)');
         
         %% identify DIN with the shortest time from recorded awakening
+        
         for k = 1:length(din_event_match(:,1))
             if ((din_event_match(k,1) > 0) && (din_event_match(k,3) > 1)) %3rd column specifices number of Awakening repeats,...
                 % 4th column is valid awakening
@@ -242,7 +238,7 @@ for mff_input_file = 1:length(inputlist)
                      
                 %EXTRACTING 5 MINUTES BEFORE AWAKENING
                 samples_before_awakening = mff_read_samples(extr_filname,'all', events(din100_idx(i),2)-(mff_header.Fs*60*5), events(din100_idx(i),2)-1);
-   
+           
                 eloc = readlocs(CHANNEL_LOCATION_FILE);
 
                 %eloc_no257 = eloc(1:257); %remove channel 257... so it won't affect bad channel removal
@@ -256,48 +252,13 @@ for mff_input_file = 1:length(inputlist)
                     duration_between_dins(i));
                 EEG.subject = subid;
                 
-                % convert 256 to 185 channels
+                % convert 256 to "inseide 185 channels
                 load('channel_location_file/inside185ch.mat');
                 EEG.chanlocs = EEG.chanlocs(inside185ch);
                 EEG.nbchan = 185;
                 EEG.data = EEG.data(inside185ch,:);
 
-                EEG = pop_saveset(EEG,sprintf('awakening-%d_eeg',ent_matched_awakening), sesdir);
-
-                
-%                 %remove channels that aren't in MARA (98 channels)
-%                 keep_channels = [ 3     5     6     7     8    12    13    15    16    18    19    23    25    28    29    30    32    33    34    36    37    39    40    48    49 ...
-%                     50    55    57    59    60    62    64    69    76    77    79    85    86    87    88    96    97    98   100   101   105   106   107   108   110 ...
-%                     115   117   118   124   125   126   127   128   129   135   136   137   138   139   142   143   148   149   151   152   153   155   157   159   160 ...
-%                     161   162   163   169   170   171   172   173   177   183   194   202   203   204   205   211   213   215   221   222   223   224   257];
-%                 
-%                 EEG_mara = pop_select(EEG, 'channel', keep_channels);
-%                 EEG_mara = pop_saveset(EEG_mara,sprintf('awakening-%d_eeg_mara',ent_matched_awakening), sesdir);
-%                 
-                                                                                                                                                              
-%                 clean_EEG = clean_rawdata(EEG_mara, 5,[0.25 0.75], 0.85, 4, 20, 0.25);
-%                 EEG_mara.badchannels = find(clean_EEG.etc.clean_channel_mask==0); 
-%                 figure; topoplot([],EEG_mara.chanlocs([EEG_mara.badchannels]), 'style', 'blank',  'electrodes', 'labelpoint', 'chaninfo', EEG_mara.chaninfo); % which channels removed
-%                 saveas(gcf, [sesdir '/badchannels_awakening-' num2str(ent_matched_awakening) '.tif'], 'tif');
-%                 close all;
-%                 EEG_mara = epi_log(@pop_select, EEG_mara, 'nochannel', EEG_mara.badchannels);
-%                 
-%                 EEG_mara.urchanlocs = readlocs(CHANNEL_LOCATION_FILE);
-%                 % Interpolate.
-%                 EEG = epi_log(@eeg_interp, EEG, EEG.urchanlocs); 
-%                 pop_saveset(EEG,sprintf('awakening-%d_eeg_nobadchan_interp',din_event_match(i)), sesdir); 
-                
-%                 %perform high-pass filter
-%                 df = 1; % requested transition band width
-%                 fs = 500; % sampling frequency
-%                 order = 3.3 / (df / fs) % round to next even integer, here 1650
-%                 EEG_mara = pop_eegfiltnew(EEG_mara, [],1.5,1650,true,[],1); %will then give you a 1 Hz highpass with 1.5 Hz passband edge. 
-
-%                 clean_EEG = clean_rawdata(EEG, 5,[0.25 0.75], 0.7, 10, 20, 0.25);
-%                 EEG.badchannels = find(clean_EEG.etc.clean_channel_mask==0); 
-%                 figure; topoplot([],EEG.chanlocs([EEG.badchannels]), 'style', 'blank',  'electrodes', 'labelpoint', 'chaninfo', EEG.chaninfo); % which channels removed
-%                 saveas(gcf, [sesdir '/badchannels_awakening-' num2str(ent_matched_awakening) '.tif'], 'tif');
-%                 close all;                        
+                EEG = pop_saveset(EEG,sprintf('awakening-%d_eeg',ent_matched_awakening), sesdir);                 
                 
                 % save scoring for each entry matched awakening
                 if ~isfile([extr_dir '/alignedscoring.raw'])
@@ -316,9 +277,6 @@ for mff_input_file = 1:length(inputlist)
                     TABLE.WAKE(de_index(din_event_match(i,1))) = any(scoring(:) == 0);
                 end
                 
-                %[weights,sphere] = runica(EEG.data)
-                
-           
                 writetable(TABLE,'NCCAM3_06_SADreamReports_10-20-18.csv');
                 
                 % high-pass Filter (1 Hz)
@@ -348,27 +306,23 @@ for mff_input_file = 1:length(inputlist)
                     else
                         MERGEDEEG = pop_mergeset(MERGEDEEG,EEG);
                     end
-                    n2n3_iter = n2n3_iter + 1;
-                  
+                    n2n3_iter = n2n3_iter + 1;                 
                 end   
-                
-               ent_matched_awakening = ent_matched_awakening + 1;
-                          
+               ent_matched_awakening = ent_matched_awakening + 1;                         
             else 
                 fprintf('No Awakening Match\n');
-            end
-           
+            end          
         end
     
     save([sesdir '/nrem_index.mat'],'nrem_index');
     pop_saveset(MERGEDEEG,'filename', 'nrem_awakening_eeg_hp_trim_merged','filepath', sesdir); 
         
     else 
-        fileID = fopen(log_file, 'a');
-        fprintf(fileID, 'subject %s, %s mff file has no events to import\n', subid, session);
+        
+        fprintf('subject %s, %s mff file has no events to import\n', subid, session);
         TABLE.MFF_FILE_HAS_NO_EVENTS_TO_IMPORT(de_index(1)) = 1;
         writetable(TABLE,'NCCAM3_06_SADreamReports_10-20-18.csv');
-        fclose(fileID); 
+
     end 
     
 end 
