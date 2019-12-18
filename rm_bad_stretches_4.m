@@ -107,12 +107,13 @@ for mff_input_file = 1:length(inputlist)
     
     pop_viewprops(EEG_avgref, 0,ic_good_all);
     pop_eegplot(EEG,0,0,0);
-    
+         
     waitfor(gcf)
     
     manual_remove_components = [];
     manual_remove_components = inputdlg('REMOVE THESE COMPONENTS',...
              'Sample', [1 50]);
+    
     manual_remove_components = str2num(manual_remove_components{1});
     
     if ~isempty(manual_remove_components)
@@ -121,11 +122,13 @@ for mff_input_file = 1:length(inputlist)
     
     pop_viewprops(EEG_avgref, 0 ,ic_artifacts_all);
     pop_eegplot(EEG,0,0,0);
+         
     waitfor(gcf)
     
     manual_keep_components = [];
     manual_keep_components = inputdlg('KEEP THESE COMPONENTS',...
              'Sample', [1 50]);
+
     manual_keep_components = str2num(manual_keep_components{1});
     
     if ~isempty(manual_keep_components)
