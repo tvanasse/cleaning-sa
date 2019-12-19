@@ -62,7 +62,7 @@ for mff_input_file = 1:length(inputlist)
     end 
     
     
-    EEG = pop_loadset([sesdir '/nrem_awakening_eeg_hp_trim_merged_nobadch_ica2.set']);
+    EEG = pop_loadset([sesdir '/nrem_merged_ica2.set']);
     
 
     % average reference for ICLabel
@@ -142,7 +142,7 @@ for mff_input_file = 1:length(inputlist)
     
     % subtract artifactual components (from non-ref-averaged EEG)
     EEG_subcomps = pop_subcomp(EEG, ic_artifacts_all, 1);
-    pop_saveset(EEG_subcomps, 'filename',[EEG.filename(1:end-4) '_subcomps2.set'],'filepath', sesdir);
+    pop_saveset(EEG_subcomps, 'filename',[EEG.filename(1:end-4) '_subcomps.set'],'filepath', sesdir);
 
     
 end 

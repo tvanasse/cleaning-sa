@@ -72,6 +72,8 @@ for mff_input_file = 1:length(inputlist)
     EEG.icaweights = EEG.etc.amica.W; % unmixing weights
     EEG.icasphere  = EEG.etc.amica.S; % sphering matrix
     EEG.icawinv = EEG.etc.amica.A; % model component matrices
+    
+    %EEG.icaact = (EEG.icaweights*EEG.icasphere)*EEG.data(EEG.icachansind,:);
 
     EEG = eeg_checkset(EEG, 'ica'); % update EEG.icaact
     

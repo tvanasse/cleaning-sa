@@ -6,6 +6,10 @@
 % ------------------------------------------------------------------------
 
 addpath('other/');
+addpath('functions/');
+
+eeglab;
+close;
 
 inputlist = uigetfile_n_dir;
 
@@ -13,7 +17,7 @@ inputlist = uigetfile_n_dir;
 
 for mff_input_file = 1:length(inputlist)
     
-    TABLE = readtable('NCCAM3_06_SADreamReports_10-20-18.csv','ReadVariableNames',true); %read experimenter input file
+    %TABLE = readtable('NCCAM3_06_SADreamReports_10-20-18.csv','ReadVariableNames',true); %read experimenter input file
     filename = char(inputlist(mff_input_file)); %mff raw data filename
     subid = filename(end-9:end-6); %subject ID
     
@@ -51,33 +55,26 @@ for mff_input_file = 1:length(inputlist)
         sesdir = [eegdir '/error'];
     end 
     
-    load([sesdir '/nrem_index'])
-    
-    % merge cleaned data
-    cleaned_lengths = [];
-    for x = 1:length(nrem_index)
-        if x == 1
-           MERGEDEEG = pop_loadset([sesdir '/awakening-' num2str(nrem_index(x)) '-cleaned_nrem.set']);
-           cleaned_lengths = [cleaned_lengths MERGEDEEG.pnts];
-        else 
-            EEG = pop_loadset([sesdir '/awakening-' num2str(nrem_index(x)) '-cleaned_nrem.set']);
-            MERGEDEEG = pop_mergeset(MERGEDEEG,EEG); 
-            cleaned_lengths = [cleaned_lengths EEG.pnts];
-        end     
-    end
-    
-    EEG = MERGEDEEG;
-    
-    save([sesdir '/cleaned_lengths.mat'], 'cleaned_lengths');
+    EEG = pop_loadset([sesdir '/nrem_awakening_eeg_hp_trim_merged_icaprep.set']);
     
     AMICA_DIR = [sesdir '/amicaout2/']; % good to have a separate dir for each file
     if ~exist(AMICA_DIR,'dir')
         mkdir(AMICA_DIR)
+    else 
+        rmdir(AMICA_DIR, 's')
+        mkdir(AMICA_DIR)
     end
 
+%     runamica15(EEG.data, 'num_chans', EEG.nbchan,...
+%         'outdir', AMICA_DIR,...
+%         'num_models', 1, 'num_mix_comps', 3, 'max_threads',6);
+    
+    % amica15 was failing on my (TJV) machine when manually setting threads
+    % to 6
+    
     runamica15(EEG.data, 'num_chans', EEG.nbchan,...
         'outdir', AMICA_DIR,...
-        'num_models', 1, 'num_mix_comps', 3, 'max_threads',6);
+        'num_models', 1, 'num_mix_comps', 3);
 
     EEG.etc.amica  = loadmodout15(AMICA_DIR);
     EEG.etc.amica.S = EEG.etc.amica.S(1:EEG.etc.amica.num_pcs, :); % Weirdly, I saw size(S,1) be larger than rank. This process does not hurt anyway.
@@ -87,7 +84,7 @@ for mff_input_file = 1:length(inputlist)
 
     EEG = eeg_checkset(EEG, 'ica'); % update EEG.icaact
     
-    EEG = pop_saveset(EEG, 'filename', ['nrem_awakening_eeg_hp_trim_merged_nobadch_ica2.set'], 'filepath', sesdir); % '_ica'
+    EEG = pop_saveset(EEG, 'filename', ['nrem_merged_ica2.set'], 'filepath', sesdir); % '_ica'
     
     
 end

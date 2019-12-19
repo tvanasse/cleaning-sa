@@ -8,7 +8,6 @@
 
 addpath('other/');
 
-log_file = 'log/log_file.txt';
 inputlist = uigetfile_n_dir;
 
 %% loop through input file list
@@ -55,7 +54,7 @@ for mff_input_file = 1:length(inputlist)
     
     load([sesdir '/nrem_index'])
     
-    EEG_all = pop_loadset([sesdir '/nrem_awakening_eeg_hp_trim_merged_nobadch_ica_subcomps.set']);
+    EEG_all = pop_loadset([sesdir '/nrem_ica2_subcomps.set']);
 
     load([sesdir '/cleaned_lengths.mat']);
     

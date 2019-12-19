@@ -3,8 +3,8 @@ function [pathname] = uigetdir2(start_path, dialog_title)
 
 import javax.swing.JFileChooser;
 
-if nargin == 0 || start_path == '' || start_path == 0 % Allow a null argument.
-    start_path = pwd;
+if nargin == 0 % Allow a null argument.
+    start_path = '/Volumes/data/NCCAM3/SA/wDreamReport/aligned/';
 end
 
 jchooser = javaObjectEDT('javax.swing.JFileChooser', start_path);
