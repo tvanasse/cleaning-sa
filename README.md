@@ -1,21 +1,20 @@
-## Procssing Pipeline <br />
+## Processing Pipeline <br />
 (1) Extract 5 minutes before awakening <br />
-(2) Find that awakening matches to experiment entry <br />
-(3) Convert from 256 to "inside" 185 channels <br />
-(4) High-pass Filter (1 Hz) <br />
-(5) Clean Line Noise <br />
-(6) Mark if awakening (30 seconds before) was during N2 or N3 sleep. <br />
-(7) Merge NREM awakenings <br />
+(1) Find that awakening matches to experiment entry <br />
+(1) Convert from 256 to "inside" 185 channels <br />
+(1) High-pass Filter (1 Hz) <br />
+(1) Clean Line Noise <br />
+(1) Mark if awakening (0-30 seconds before) was during N2 or N3 sleep. <br />
+(1) Merge NREM awakenings <br />
 <br />
-(8) Manually remove bad channels from merged file <br />
+(2) Manually remove bad channels from merged file <br />
 <br />
-(9) Run AMICA on EEG data <br /> 
+(3) Run AMICA on EEG data <br /> 
 <br />
-(10) Identify artifact components with help of ICLabel <br />
+(4) Identify bad stretches according to component activations, and save rejected data <br />
 <br />
-(11) Split awakenings, and clean bad time streches <br />
-(12) High-pass filter (50 Hz) <br />
+(5) Run AMICA on EEG w/ bad streches removed
 <br />
-(13) Re-merge NREM awakenings and run AMICA again <br />
+(6) Remove artifactual components with help from ICLabel
 <br />
-(14) Remove artifactual components, and split data again 
+(7) Resplit awakenings and low-pass filter (50 Hz)
