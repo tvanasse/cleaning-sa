@@ -112,6 +112,9 @@ for awak = 1:length(nrem_index)
     EEG.urchanlocs = origEEGchanlocs;   
     EEG = epi_log(@eeg_interp, EEG, EEG.urchanlocs); 
     
+    %50 Hz low-pass filter
+    EEG = pop_eegfiltnew(EEG, [], 50, [], 0, [], 0); 
+    
     % average reference
     EEG = epi_log(@pop_reref, EEG, []);
 
