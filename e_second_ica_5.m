@@ -61,8 +61,6 @@ for mff_input_file = 1:length(inputlist)
         sesdir = [eegdir '/error'];
     end 
     
-    EEG = pop_loadset([sesdir '/nrem_awakening_eeg_hp_trim_merged_icaprep.set']);
-    
     AMICA_DIR = [sesdir '/amicaout2/']; % good to have a separate dir for each file
     if ~exist(AMICA_DIR,'dir')
         mkdir(AMICA_DIR)
@@ -71,13 +69,28 @@ for mff_input_file = 1:length(inputlist)
         mkdir(AMICA_DIR)
     end
 
-%     runamica15(EEG.data, 'num_chans', EEG.nbchan,...
-%         'outdir', AMICA_DIR,...
-%         'num_models', 1, 'num_mix_comps', 3, 'max_threads',6);
+    load([sesdir '/nrem_index'])
     
+    % merge cleaned data
+    cleaned_lengths = [];
+    for x = 1:length(nrem_index)
+        if x == 1
+           MERGEDEEG = pop_loadset([sesdir '/awakening-' num2str(nrem_index(x)) '-nrem-posICA1-cleaned.set']);
+           cleaned_lengths = [cleaned_lengths MERGEDEEG.pnts];
+        else 
+            EEG = pop_loadset([sesdir '/awakening-' num2str(nrem_index(x)) '-nrem-posICA1-cleaned.set']);
+            MERGEDEEG = pop_mergeset(MERGEDEEG,EEG); 
+            cleaned_lengths = [cleaned_lengths EEG.pnts];
+        end     
+    end
+    
+    EEG = MERGEDEEG;
+    
+    save([sesdir '/cleaned_lengths.mat'], 'cleaned_lengths');
+    
+
     % amica15 was failing on my (TJV) machine when manually setting threads
     % to 6
-
     runamica15(EEG.data, 'num_chans', EEG.nbchan,...
         'outdir', AMICA_DIR,...
         'num_models', 1, 'num_mix_comps', 3, 'max_threads', max_threads);

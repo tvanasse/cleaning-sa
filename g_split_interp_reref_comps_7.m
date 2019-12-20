@@ -56,30 +56,17 @@ for mff_input_file = 1:length(inputlist)
     
     EEG_all = pop_loadset([sesdir '/nrem_merged_ica2_subcomps.set']);
     
-    bs = EEG_all.badsections;
-    save([sesdir '/badsections.mat'], 'bs');
+    load([sesdir '/cleaned_lengths.mat']);
+    cumul_sample = 1; %keep track of sample 
     
 for awak = 1:length(nrem_index)
     
-    length_extract = EEG.srate*(60*5-2); %length of trimmed awakening before cleaning (4:58)
-    for rmv = 1:length(EEG_all.badsections)
-        if EEG_all.badsections(rmv,1) < (awak-1)*EEG.srate*(60*5-2)
-            length_extract_before = length_extract - (EEG_all.badsections(rmv,2) - EEG_all.badsections(rmv,1));
-            fprintf("rmv\n")
-        elseif EEG_all.badsections(rmv,1) < (awak-1)*EEG.srate*(60*5-2)  
-            length_extract_after = length_extract - (EEG_all.badsections(rmv,2) - EEG_all.badsections(rmv,1));
-            fprintf("rmv\n")
-        else
-            break
-        end
-    end        
-  
-    %get entire five minutes
-    start_sample = cumul_sample;
-    end_sample = cumul_sample + cleaned_lengths(awak) - 1; 
-    cumul_sample = cumul_sample + cleaned_lengths(awak);
+        %get entire five minutes
+        start_sample = cumul_sample;
+        end_sample = cumul_sample + cleaned_lengths(awak) - 1; 
+        cumul_sample = cumul_sample + cleaned_lengths(awak);
 
-    EEG = pop_select(EEG_all, 'point', [start_sample, end_sample]);
+        EEG = pop_select(EEG_all, 'point', [start_sample, end_sample]);
 
 %     subdir = ['awakening-' num2str(nrem_index(awak)) '-spectrograms'];
 %     if ~exist(subdir, 'dir')
@@ -116,6 +103,10 @@ for awak = 1:length(nrem_index)
     EEG = pop_importdata('dataformat','array','data',EEG.data,...
         'srate',500,'xmin',0,'nbchan',EEG_all.nbchan, 'chanlocs', EEG_all.chanlocs);
 
+    % load bad sections
+    load([sesdir '/awakening-' num2str(nrem_index(awak))' '-badsections.mat');
+    EEG.badsections = badsections;
+    
     % identify and interpoloate bad channels
     load([sesdir '/chanlocs_185.mat'])
     EEG.urchanlocs = origEEGchanlocs;   
@@ -129,7 +120,6 @@ for awak = 1:length(nrem_index)
     %Calculate point spectral density
     % average reference
     EEG_avgref = EEG;
-    
     psd_epoch_length = 6; %seconds
     upperHzlimit = 40; %Hz
     averef = 1;
@@ -147,7 +137,6 @@ for awak = 1:length(nrem_index)
     ztopo = zeros(EEG_avgref.nbchan,5);
 
     for freq_l = 1:length(freq_bans)
-
         % psd -> channels x frequency_bins x epochs
         %Average across frequency bins between designations
         temp_topo = squeeze(mean(psd(:,freq_bans{freq_l},:),2));
@@ -157,7 +146,6 @@ for awak = 1:length(nrem_index)
 
         % z-score 
         ztopo(:,freq_l) = zscore(raw_topo(:,freq_l));
-
     end
       
     figure('Renderer', 'painters', 'Position', [100 900 1500 200],'Name', sprintf('Awakening-%d-cleaned_nrem, 5 min.',nrem_index(awak)))
@@ -169,7 +157,6 @@ for awak = 1:length(nrem_index)
     ax8 = subplot(1,5,5); topoplot(raw_topo(:,5), EEG_avgref.chanlocs,'maplimits',[min(raw_topo(:,5)),max(raw_topo(:,5))],'electrodes','on','style','map'); title('Gamma'); colorbar; colormap(ax8,jet)
 
     saveas(gcf, [sesdir '/' sprintf('awakening-%d-cleaned2_nrem.tif', nrem_index(awak))], 'tif');
-    %saveas(gcf, sprintf('awakening-%d-UN-cleaned_nrem.tif',nrem_index(awak)), 'tif');
     
     close all
   
