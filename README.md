@@ -1,3 +1,7 @@
+## TO-DO <br />
+(1) Check with Brady that I am extracting correctly (aligned files)
+(2) Create script to handle Pt 1 & Pt 2 files
+
 ## Processing Pipeline <br />
 (1) Extract 5 minutes before awakening <br />
 (1) Find that awakening matches to experiment entry <br />
