@@ -13,8 +13,8 @@
 <br />
 (4) Identify bad stretches according to component activations, and save rejected data <br />
 <br />
-(5) Run AMICA on EEG w/ bad streches removed
+(5) Run AMICA on EEG w/ bad streches removed <br />
 <br />
-(6) Remove artifactual components with help from ICLabel
+(6) Remove artifactual components with help from ICLabel <br />
 <br />
 (7) Resplit awakenings and low-pass filter (50 Hz)

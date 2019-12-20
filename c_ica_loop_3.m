@@ -12,6 +12,12 @@ close;
 
 inputlist = uigetfile_n_dir;
 
+% manually set max threads - TJV: 3, TA: 6
+max_threads = inputdlg('Input Max Threads',...
+         'Sample', [1 50]);
+max_threads = str2num(max_threads{1});
+
+
 %% loop through input file list
 
 for mff_input_file = 1:length(inputlist)
@@ -62,10 +68,10 @@ for mff_input_file = 1:length(inputlist)
     if ~exist(AMICA_DIR,'dir')
         mkdir(AMICA_DIR)
     end
-
+ 
     runamica15(EEG.data, 'num_chans', EEG.nbchan,...
         'outdir', AMICA_DIR,...
-        'num_models', 1, 'num_mix_comps', 3, 'max_threads',6);
+        'num_models', 1, 'num_mix_comps', 3, 'max_threads', max_threads);
 
     EEG.etc.amica  = loadmodout15(AMICA_DIR);
     EEG.etc.amica.S = EEG.etc.amica.S(1:EEG.etc.amica.num_pcs, :); 

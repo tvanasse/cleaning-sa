@@ -13,6 +13,12 @@ close;
 
 inputlist = uigetfile_n_dir;
 
+% manually set max threads - TJV: 3, TA: 6    
+max_threads = inputdlg('Input Max Threads',...
+         'Sample', [1 50]);
+max_threads = str2num(max_threads{1});
+
+
 %% loop through input file list
 
 for mff_input_file = 1:length(inputlist)
@@ -71,11 +77,11 @@ for mff_input_file = 1:length(inputlist)
     
     % amica15 was failing on my (TJV) machine when manually setting threads
     % to 6
-    
+
     runamica15(EEG.data, 'num_chans', EEG.nbchan,...
         'outdir', AMICA_DIR,...
-        'num_models', 1, 'num_mix_comps', 3);
-
+        'num_models', 1, 'num_mix_comps', 3, 'max_threads', max_threads);
+    
     EEG.etc.amica  = loadmodout15(AMICA_DIR);
     EEG.etc.amica.S = EEG.etc.amica.S(1:EEG.etc.amica.num_pcs, :); % Weirdly, I saw size(S,1) be larger than rank. This process does not hurt anyway.
     EEG.icaweights = EEG.etc.amica.W; % unmixing weights

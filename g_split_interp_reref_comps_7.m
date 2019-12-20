@@ -54,13 +54,25 @@ for mff_input_file = 1:length(inputlist)
     
     load([sesdir '/nrem_index'])
     
-    EEG_all = pop_loadset([sesdir '/nrem_ica2_subcomps.set']);
-
-    load([sesdir '/cleaned_lengths.mat']);
+    EEG_all = pop_loadset([sesdir '/nrem_merged_ica2_subcomps.set']);
     
-    cumul_sample = 1; %keep track of sample 
+    bs = EEG_all.badsections;
+    save([sesdir '/badsections.mat'], 'bs');
     
 for awak = 1:length(nrem_index)
+    
+    length_extract = EEG.srate*(60*5-2); %length of trimmed awakening before cleaning (4:58)
+    for rmv = 1:length(EEG_all.badsections)
+        if EEG_all.badsections(rmv,1) < (awak-1)*EEG.srate*(60*5-2)
+            length_extract_before = length_extract - (EEG_all.badsections(rmv,2) - EEG_all.badsections(rmv,1));
+            fprintf("rmv\n")
+        elseif EEG_all.badsections(rmv,1) < (awak-1)*EEG.srate*(60*5-2)  
+            length_extract_after = length_extract - (EEG_all.badsections(rmv,2) - EEG_all.badsections(rmv,1));
+            fprintf("rmv\n")
+        else
+            break
+        end
+    end        
   
     %get entire five minutes
     start_sample = cumul_sample;
