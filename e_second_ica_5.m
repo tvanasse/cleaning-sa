@@ -23,7 +23,6 @@ max_threads = str2num(max_threads{1});
 
 for mff_input_file = 1:length(inputlist)
     
-    %TABLE = readtable('NCCAM3_06_SADreamReports_10-20-18.csv','ReadVariableNames',true); %read experimenter input file
     filename = char(inputlist(mff_input_file)); %mff raw data filename
     subid = filename(end-9:end-6); %subject ID
     
@@ -71,7 +70,7 @@ for mff_input_file = 1:length(inputlist)
 
     load([sesdir '/nrem_index'])
     
-    % merge cleaned data
+    % merge cleaned data and document awakening lengths after cleaning
     cleaned_lengths = [];
     for x = 1:length(nrem_index)
         if x == 1
@@ -85,15 +84,25 @@ for mff_input_file = 1:length(inputlist)
     end
     
     EEG = MERGEDEEG;
+    clear MERGEDEEG;
+    
     
     save([sesdir '/cleaned_lengths.mat'], 'cleaned_lengths');
     
 
     % amica15 was failing on my (TJV) machine when manually setting threads
     % to 6
+    if max_threads == 0
+     runamica15(EEG.data, 'num_chans', EEG.nbchan,...
+    'outdir', AMICA_DIR,...
+    'num_models', 1, 'num_mix_comps', 3)
+   % 'blk_min', 64, 'blk_step', 64, 'blk_max', 256); 
+        
+    else 
     runamica15(EEG.data, 'num_chans', EEG.nbchan,...
         'outdir', AMICA_DIR,...
         'num_models', 1, 'num_mix_comps', 3, 'max_threads', max_threads);
+    end
     
     EEG.etc.amica  = loadmodout15(AMICA_DIR);
     EEG.etc.amica.S = EEG.etc.amica.S(1:EEG.etc.amica.num_pcs, :); % Weirdly, I saw size(S,1) be larger than rank. This process does not hurt anyway.
@@ -105,7 +114,12 @@ for mff_input_file = 1:length(inputlist)
     
     EEG = pop_saveset(EEG, 'filename', ['nrem_merged_ica2.set'], 'filepath', sesdir); % '_ica'
     
-    
 end
 
+for mff_input_file = 1:length(inputlist)
+
+    filename = char(inputlist(mff_input_file)); %mff raw data filename
+    fprintf([filename ' second ica finished\n']);
+    
+end
 

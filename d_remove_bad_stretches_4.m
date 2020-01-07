@@ -59,6 +59,10 @@ for mff_input_file = 1:length(inputlist)
     
     EEG_all = pop_loadset([sesdir '/nrem_awakening_eeg_hp_trim_merged_nobadch_ica.set']);
     
+    if isempty(EEG_all.icaact) 
+        EEG_all.icaact = (EEG_all.icaweights*EEG_all.icasphere)*EEG_all.data(EEG_all.icachansind,:);
+    end
+    
     for awak = 1:length(nrem_index)
 
         % get entire five minutes

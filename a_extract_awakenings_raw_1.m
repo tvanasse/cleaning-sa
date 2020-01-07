@@ -27,6 +27,11 @@ for mff_input_file = 1:length(inputlist)
     TABLE = readtable('NCCAM3_06_SADreamReports_10-20-18.csv','ReadVariableNames',true); %read experimenter input file
     filename = char(inputlist(mff_input_file)); %mff raw data filename
     subid = filename(end-9:end-6); %subject ID
+    session = filename(end-4:end-3); % session number T1/T2/T3
+    
+    %% manually insert subid for certain files
+%     subid = '2140';
+%     session = 'T1';
     
     %% create directory if it does not already exist
     subdir = ['/Volumes/data/NCCAM3/SA/wDreamReport/aligned/extraction_TJV' '/sub-' subid];
@@ -38,7 +43,7 @@ for mff_input_file = 1:length(inputlist)
        eegdir = [subdir '/eeg'];
     end
 
-    session = filename(end-4:end-3);
+    
     if strcmp(session,'T1')
         sesdir = [eegdir '/ses-1'];
         timepoint=1;
@@ -70,7 +75,8 @@ for mff_input_file = 1:length(inputlist)
     
     fprintf('\nExtracting data for subject %s, %s... \n\n', subid, session)
 
-    extr_filname = ['/Volumes/data/NCCAM3/SA/wDreamReport/aligned/' filename(end-15:end) '/' filename(end-15:end) '.mff'];
+    k = strfind(filename, 'NCCAM_'); % get start index for filename (from full path)
+    extr_filname = ['/Volumes/data/NCCAM3/SA/wDreamReport/aligned/' filename(k:end) '/' filename(k:end) '.mff'];
     extr_dir = filename;
 
     %% find data entry indexes for the appropriate subject & timepoint
@@ -91,7 +97,7 @@ for mff_input_file = 1:length(inputlist)
     end
 
     % add java file necessary for mff function
-    eeglab_filepath = which('eeglab')
+    eeglab_filepath = which('eeglab');
     javaaddpath([eeglab_filepath(1:end-8) 'plugins/MFFimport2.2/mffimport/MFF-1.2.jar']);
     
     mff_header = read_mff_header(extr_filname,0);
@@ -151,7 +157,6 @@ for mff_input_file = 1:length(inputlist)
                 timestamps{its}(12:16), ...
                 mff_events.(events_field).code{din100_idx(its)}, ...
                 duration_between_dins(its));
-            %timenum(its) = datenum(timestamps{its}(12:19), 'HH:MM:SS')*(24*60*60);
         end
         fclose(fileID);
         
@@ -298,7 +303,8 @@ for mff_input_file = 1:length(inputlist)
                     nrem_index = [nrem_index ent_matched_awakening];
                     
                     % find N2/N3 samples only, [ignore last 30 seconds of
-                    % data] because scoring may be misleading here
+                    % data] because scoring may be misleading here because
+                    % data is epoched every 30 seconds
                     n2n3_samples = find(scoring(1:end-30*EEG.srate) ~= -2 & scoring(1:end-30*EEG.srate) ~= -3);
                     
                     if n2n3_iter == 0

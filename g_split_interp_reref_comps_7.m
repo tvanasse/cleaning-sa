@@ -7,6 +7,7 @@
 % ------------------------------------------------------------------------
 
 addpath('other/');
+addpath('functions/');
 
 inputlist = uigetfile_n_dir;
 
@@ -104,7 +105,7 @@ for awak = 1:length(nrem_index)
         'srate',500,'xmin',0,'nbchan',EEG_all.nbchan, 'chanlocs', EEG_all.chanlocs);
 
     % load bad sections
-    load([sesdir '/awakening-' num2str(nrem_index(awak))' '-badsections.mat');
+    load([sesdir '/awakening-' num2str(nrem_index(awak))' '-badsections.mat']);
     EEG.badsections = badsections;
     
     % identify and interpoloate bad channels
@@ -141,7 +142,7 @@ for awak = 1:length(nrem_index)
 
     for freq_l = 1:length(freq_bans)
         % psd -> channels x frequency_bins x epochs
-        %Average across frequency bins between designations
+        % average across frequency bins between designations
         temp_topo = squeeze(mean(psd(:,freq_bans{freq_l},:),2));
 
         % average across all six-second epochs (no overlap)
