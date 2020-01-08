@@ -8,7 +8,7 @@
 (1) Convert from 256 to "inside" 185 channels <br />
 (1) High-pass Filter (1 Hz) <br />
 (1) Clean Line Noise <br />
-(1) Mark if awakening (0-30 seconds before) was during N2 or N3 sleep. <br />
+(1) Mark if awakening (0-30 seconds before) was during N2 or N3 sleep. Also, 5 minutes of awakening could not contain any REM to be marked as NREM awakening <br />
 (1) Merge NREM awakenings <br />
 <br />
 (2) Manually remove bad channels from merged file <br />

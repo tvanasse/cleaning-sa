@@ -10,28 +10,24 @@
 eeglab;
 close;
 
-%add path to mff functions
+% add path to mff functions
 addpath('mffs');
 addpath('functions');
 
 CHANNEL_LOCATION_FILE = 'channel_location_file/HydroCelGSN256v10.sfp';
 
 %% input filenames
-
 inputlist = uigetfile_n_dir;
 
 %% loop through input file list
-
 for mff_input_file = 1:length(inputlist)
     
     TABLE = readtable('NCCAM3_06_SADreamReports_10-20-18.csv','ReadVariableNames',true); %read experimenter input file
     filename = char(inputlist(mff_input_file)); %mff raw data filename
-    subid = filename(end-9:end-6); %subject ID
-    session = filename(end-4:end-3); % session number T1/T2/T3
     
-    %% manually insert subid for certain files
-%     subid = '2140';
-%     session = 'T1';
+    k = strfind(filename, 'NCCAM_'); % get start index for filename (from full path)
+    subid = filename(k+6:k+9);
+    session = filename(k+11:k+12);
     
     %% create directory if it does not already exist
     subdir = ['/Volumes/data/NCCAM3/SA/wDreamReport/aligned/extraction_TJV' '/sub-' subid];
@@ -77,6 +73,11 @@ for mff_input_file = 1:length(inputlist)
 
     k = strfind(filename, 'NCCAM_'); % get start index for filename (from full path)
     extr_filname = ['/Volumes/data/NCCAM3/SA/wDreamReport/aligned/' filename(k:end) '/' filename(k:end) '.mff'];
+    
+    %% manually set mff file (if data is split into two parts)
+%     mff_file = uigetfile_n_dir;
+%     extr_filname = char(mff_file(1));
+   
     extr_dir = filename;
 
     %% find data entry indexes for the appropriate subject & timepoint

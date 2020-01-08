@@ -19,7 +19,10 @@ for mff_input_file = 1:length(inputlist)
     
     TABLE = readtable('NCCAM3_06_SADreamReports_10-20-18.csv','ReadVariableNames',true); %read experimenter input file
     filename = char(inputlist(mff_input_file)); %mff raw data filename
-    subid = filename(end-9:end-6); %subject ID
+    
+    k = strfind(filename, 'NCCAM_'); % get start index for filename (from full path)
+    subid = filename(k+6:k+9);
+    session = filename(k+11:k+12);
     
     %% create directory if it does not already exist
     subdir = ['/Volumes/data/NCCAM3/SA/wDreamReport/aligned/extraction_TJV' '/sub-' subid];
@@ -31,7 +34,6 @@ for mff_input_file = 1:length(inputlist)
        eegdir = [subdir '/eeg'];
     end
 
-    session = filename(end-4:end-3);
     if strcmp(session,'T1')
         sesdir = [eegdir '/ses-1'];
         timepoint=1;
