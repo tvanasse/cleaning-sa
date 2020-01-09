@@ -110,8 +110,9 @@ for mff_input_file = 1:length(inputlist)
 
             % calculate percentage of removed sections
             sum_rmv = 0;
-            for rmv = 1:length(size(TMPREJ,1))
+            for rmv = 1:size(TMPREJ,1)
                 sum_rmv = sum_rmv + (TMPREJ(rmv,2)-TMPREJ(rmv,1));
+                fprintf(num2str(rmv));
             end
 
             fid = fopen([sesdir '/log.txt'], 'at');
