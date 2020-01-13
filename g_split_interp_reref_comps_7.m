@@ -67,8 +67,9 @@ for awak = 1:length(nrem_index)
         %get entire five minutes
         start_sample = cumul_sample;
         end_sample = cumul_sample + cleaned_lengths(awak) - 1; 
+        fprintf(['start: ' num2str(start_sample) ' end: ' num2str(end_sample) '\n'])
         cumul_sample = cumul_sample + cleaned_lengths(awak);
-
+        
         EEG = pop_select(EEG_all, 'point', [start_sample, end_sample]);
 
 %     subdir = ['awakening-' num2str(nrem_index(awak)) '-spectrograms'];

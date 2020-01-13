@@ -143,6 +143,7 @@ for mff_input_file = 1:length(inputlist)
     end
     
     % subtract artifactual components (from non-ref-averaged EEG)
+    save([sesdir '/ic_artifacts.mat'],'ic_artifacts_all');
     EEG_subcomps = pop_subcomp(EEG, ic_artifacts_all, 1);
     pop_saveset(EEG_subcomps, 'filename',[EEG.filename(1:end-4) '_subcomps.set'],'filepath', sesdir);
 

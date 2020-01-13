@@ -119,8 +119,8 @@ for mff_input_file = 1:length(inputlist)
             fprintf(fid, 'Percentage of data removed, awakening-%d: %.2f\n', nrem_index(awak), sum_rmv/EEG.pnts*100);
             fclose(fid);
         
-        % remove bad streches, but keep badsections data in 'badsections' field
-        EEG = epi_log(@pop_select, EEG, 'nopoint', TMPREJ(:,1:2));
+            % remove bad streches, but keep badsections data in 'badsections' field
+            EEG = epi_log(@pop_select, EEG, 'nopoint', TMPREJ(:,1:2));
         
         end 
 
