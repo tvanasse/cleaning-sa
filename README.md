@@ -1,6 +1,10 @@
 ## TO-DO <br />
-(1) Check with Brady that I am extracting correctly (aligned files)
-(2) Create script to handle Pt 1 & Pt 2 files
+(1) Check with Brady that I am extracting correctly (aligned files) <br />
+
+(2) Plot spindle activity (12 - 15) <br />
+(3) Do multi-taper topos <br />
+(4) Plot power spectra <br />
+(5) FILTER THEN SPLIT/INTERP <br />
 
 ## Processing Pipeline <br />
 (1) Extract 5 minutes before awakening <br />
