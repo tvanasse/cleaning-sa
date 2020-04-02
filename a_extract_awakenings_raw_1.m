@@ -30,7 +30,7 @@ for mff_input_file = 1:length(inputlist)
     session = filename(k+11:k+12);
     
     %% create directory if it does not already exist
-    subdir = ['/Volumes/data/NCCAM3/SA/wDreamReport/aligned/extraction_TJV' '/sub-' subid];
+    subdir = ['/Volumes/data-2/NCCAM3/SA/wDreamReport/aligned/extraction_TJV' '/sub-' subid];
     if ~exist(subdir, 'dir')
        mkdir(subdir);
        eegdir = [subdir '/eeg'];
@@ -71,9 +71,10 @@ for mff_input_file = 1:length(inputlist)
     
     fprintf('\nExtracting data for subject %s, %s... \n\n', subid, session)
 
+    mff_name = dir(fullfile(filename, '*.mff'));
+    extr_filname = strcat(filename, '/', mff_name.name);
     k = strfind(filename, 'NCCAM_'); % get start index for filename (from full path)
-    extr_filname = ['/Volumes/data/NCCAM3/SA/wDreamReport/aligned/' filename(k:end) '/' filename(k:end) '.mff'];
-    
+   
     %% manually set mff file (if data is split into two parts)
 %     mff_file = uigetfile_n_dir;
 %     extr_filname = char(mff_file(1));
@@ -99,7 +100,7 @@ for mff_input_file = 1:length(inputlist)
 
     % add java file necessary for mff function
     eeglab_filepath = which('eeglab');
-    javaaddpath([eeglab_filepath(1:end-8) 'plugins/MFFimport2.2/mffimport/MFF-1.2.jar']);
+    javaaddpath([eeglab_filepath(1:end-8) 'plugins/MFFimport2.3/mffimport/MFF-1.2.jar']);
     
     mff_header = read_mff_header(extr_filname,0);
     
@@ -267,11 +268,13 @@ for mff_input_file = 1:length(inputlist)
                 EEG = pop_saveset(EEG,sprintf('awakening-%d_eeg',ent_matched_awakening), sesdir);                 
                 
                 % save scoring for each entry matched awakening
-                if ~isfile([extr_dir '/alignedscoring.raw'])
+                aligned_folder = dir(fullfile(extr_dir, '*.aligned'));
+                scoring_dir = strcat(extr_dir, '/', aligned_folder.name);
+                if ~isfile([scoring_dir '/alignedscoring.raw'])
                     TABLE.N1(de_index(din_event_match(i,1))) = 'NO ALIGNED SCORING FILE FOUND';
                     
                 else 
-                    scoring = readalignmentraw(extr_dir, {'alignedscoring.raw'}, events(din100_idx(i),2)-(mff_header.Fs*60*5), events(din100_idx(i),2)-1);
+                    scoring = readalignmentraw(scoring_dir, {'alignedscoring.raw'}, events(din100_idx(i),2)-(mff_header.Fs*60*5), events(din100_idx(i),2)-1);
                     plot(scoring)
                     saveas(gcf, [sesdir '/awakening-' num2str(ent_matched_awakening) '-scoring.png'], 'png');
                     close all;
