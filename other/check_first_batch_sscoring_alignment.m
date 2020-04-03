@@ -1,3 +1,4 @@
+
 % ------------------------------------------------------------------------
 % Get every mff files and find the awakening times from the DIN, extract EEG
 % data 5 minutes before awakening. If there are DINS within 2 minutes of
@@ -17,7 +18,7 @@ addpath('functions');
 CHANNEL_LOCATION_FILE = 'channel_location_file/HydroCelGSN256v10.sfp';
 
 %% input filenames
-inputlist = uigetfile_n_dir;
+inputlist = uigetfile_n_dir('/Volumes/data-2/NCCAM3/SA/wDreamReport/aligned');
 
 %% loop through input file list
 for mff_input_file = 1:length(inputlist)
@@ -30,8 +31,7 @@ for mff_input_file = 1:length(inputlist)
     session = filename(k+11:k+12);
     
     %% create directory if it does not already exist
-    current_dir = pwd;
-    subdir = [current_dir '/../sub-' subid];
+    subdir = ['/Volumes/data-2/NCCAM3/SA/wDreamReport/aligned/extraction_TJV' '/sub-' subid];
     if ~exist(subdir, 'dir')
        mkdir(subdir);
        eegdir = [subdir '/eeg'];
@@ -72,10 +72,9 @@ for mff_input_file = 1:length(inputlist)
     
     fprintf('\nExtracting data for subject %s, %s... \n\n', subid, session)
 
-    mff_name = dir(fullfile(filename, '*.mff'));
-    extr_filname = strcat(filename, '/', mff_name.name);
     k = strfind(filename, 'NCCAM_'); % get start index for filename (from full path)
-   
+    extr_filname = ['/Volumes/data-2/NCCAM3/SA/wDreamReport/aligned/' filename(k:end) '/' filename(k:end) '.mff'];
+    
     %% manually set mff file (if data is split into two parts)
 %     mff_file = uigetfile_n_dir;
 %     extr_filname = char(mff_file(1));
@@ -95,27 +94,27 @@ for mff_input_file = 1:length(inputlist)
     if ~isfolder(extr_filname)
         TABLE.FILE_NOT_FOUND(de_index(1)) = 1;
         continue;
+    else 
+        mff_meta_data = mff_import_meta_data(extr_filname);
     end
 
     % add java file necessary for mff function
     eeglab_filepath = which('eeglab');
-    javaaddpath([eeglab_filepath(1:end-8) 'plugins/MFFimport2.3/mffimport/MFF-1.2.jar']);
-            
-    % load absolute datetime of raw file
-    aligned_file = dir(fullfile(extr_dir, '*.aligned'));
-    aligned_folder = strcat(extr_dir, '/', aligned_file.name);
-    timing = load([aligned_folder filesep 'properties.mat']);
-    absolute_datetime = timing.properties.recording_start_datetime;
+    javaaddpath([eeglab_filepath(1:end-8) 'plugins/MFFimport2.2/mffimport/MFF-1.2.jar']);
     
-    chaninfo = load([aligned_folder filesep 'channels.mat']);
-    srate = chaninfo.channels.sampling_rate;
+    mff_header = read_mff_header(extr_filname,0);
     
+    if mff_header.nTrials > 1
+        fprintf('subject %s, %s has more than 2 trials in the continuous data \n', subid, session);
+    end
+    
+    % find timestamp from the first sample
+    absolute_timestamp = mff_find_absolute_timestamp(extr_filname);
+    absolute_datetime  = datetime(absolute_timestamp.timestamp,...
+                'InputFormat','yyyy-MM-dd''T''HH:mm:ss.SSS');
+
     % for each event, convert timestamp to sample
-%     mff_events = mff_import_events(extr_filname);
-    mff_filename = dir(fullfile(aligned_folder, '*mff_events.mat'));
-    mff_events = load([aligned_folder filesep mff_filename.name]);
-    mff_events = mff_events.mff_events;
-    
+    mff_events = mff_import_events(extr_filname);
     events_field = 'Events_DIN_1';
     
     if ~isempty(mff_events)
@@ -139,7 +138,7 @@ for mff_input_file = 1:length(inputlist)
             datetime_start = datetime(mff_events.(events_field).recording_timestamp(ievt),...
                         'InputFormat','yyyy-MM-dd''T''HH:mm:ss.SSS');
             events(ievt, 2) =  round(seconds(datetime_start - absolute_datetime) *...
-                srate);
+                mff_meta_data.signal_binaries.channels.sampling_rate(1));
         end   
 
         % keep only events with code DIN100 (in theory the code for Serial Awakening)
@@ -148,7 +147,7 @@ for mff_input_file = 1:length(inputlist)
 
          % also impose that it has at least 20 minutes and multiple DINs in one
 
-        duration_between_dins = [events(din100_idx(1),2)/srate/60 diff(events(din100_idx,2))'/srate/60];
+        duration_between_dins = [events(din100_idx(1),2)/mff_header.Fs/60 diff(events(din100_idx,2))'/mff_header.Fs/60];
         timestamps = mff_events.(events_field).recording_timestamp(din100_idx)';
         timenum = zeros(1,length(timestamps));
 
@@ -237,67 +236,53 @@ for mff_input_file = 1:length(inputlist)
         n2n3_iter = 0; %for merging nrem
         nrem_index = [];
         for i = 1:length(timestamps)
-            %if events(din100_idx(i),2)-(srate*60*5) > 0 %check if event did not occur 5 min. to start time, skip otherwise
+            %if events(din100_idx(i),2)-(mff_header.Fs*60*5) > 0 %check if event did not occur 5 min. to start time, skip otherwise
             if ((din_event_match(i,1) > 0) && din_event_match(i,4) > 0) %DIN matches with awakening AND is the shortest time away from recoreded awakening   
                 fprintf("DIN %d \n");
                 %mark time away from 
                 TABLE.DIFF_FROM_EVENT_SECONDS(de_index(din_event_match(i,1))) = din_event_match(i,2);
                 TABLE.ENTRY_MATCHED_AWAKENING_NO(de_index(din_event_match(i,1))) = ent_matched_awakening;
                      
-                %EXTRACTING 5 MINUTES BEFORE AWAKENING
-                samples_before_awakening = mff_read_samples(extr_filname,'all',...
-                    events(din100_idx(i),2)-(srate*60*5), ...
-                    events(din100_idx(i),2)-1);
+%                 %EXTRACTING 5 MINUTES BEFORE AWAKENING
+%                 samples_before_awakening = mff_read_samples(extr_filname,'all', events(din100_idx(i),2)-(mff_header.Fs*60*5), events(din100_idx(i),2)-1);
+%            
+%                 eloc = readlocs(CHANNEL_LOCATION_FILE);
+% 
+%                 %eloc_no257 = eloc(1:257); %remove channel 257... so it won't affect bad channel removal
+%                 EEG = pop_importdata('dataformat','array','data',samples_before_awakening,...
+%                     'srate',500,'xmin',0,'nbchan',257,'setname', sprintf('awakening-%d',ent_matched_awakening), 'chanlocs', eloc);
+% 
+%                 EEG.condition = sprintf('session_start_time: %s, awakening_timestamp: %s, DIN_code: %s, time_since_last_event (min): %2.2f)', ...
+%                     absolute_datetime, ... %start time of scan session (night)
+%                     timestamps{i}(12:16), ... 
+%                     mff_events.(events_field).code{din100_idx(i)}, ...
+%                     duration_between_dins(i));
+%                 EEG.subject = subid;
+%                 
+%                 % convert 256 to "inseide 185 channels
+%                 load('channel_location_file/inside185ch.mat');
+%                 EEG.chanlocs = EEG.chanlocs(inside185ch);
+%                 EEG.nbchan = 185;
+%                 EEG.data = EEG.data(inside185ch,:);
 
-                aligned_file = dir(fullfile(extr_dir, '*.aligned'));
-                aligned_folder = strcat(extr_dir, '/', aligned_file.name);
-                aligned_events_raw = load([aligned_folder filesep 'alignedevents.mat']);
-                egi_offset = aligned_events_raw.alignedevents.egi_start_offset;
-
-%                 the following code would read .raw files instead,
-%                 accounting for egi offset              
-%                 % get mffraw files
-                f = dir(fullfile(aligned_folder,'MFF*'));
-                C = struct2cell(f);
-                input = {};
-                for chan = 1:257
-                    input{end+1} = C{1,chan};
-                end 
-                samples_before_awakneing = readalignmentraw(aligned_folder, input, events(din100_idx(i),2)-(srate*60*5), events(din100_idx(i),2)-1);               
+                %EEG = pop_saveset(EEG,sprintf('awakening-%d_eeg',ent_matched_awakening), sesdir);                 
                 
-                eloc = readlocs(CHANNEL_LOCATION_FILE);
-
-                %eloc_no257 = eloc(1:257); %remove channel 257... so it won't affect bad channel removal
-                EEG = pop_importdata('dataformat','array','data',samples_before_awakening,...
-                    'srate',500,'xmin',0,'nbchan',257,'setname', sprintf('awakening-%d',ent_matched_awakening), 'chanlocs', eloc);
-
-                EEG.condition = sprintf('session_start_time: %s, awakening_timestamp: %s, DIN_code: %s, time_since_last_event (min): %2.2f)', ...
-                    absolute_datetime, ... %start time of scan session (night)
-                    timestamps{i}(12:16), ... 
-                    mff_events.(events_field).code{din100_idx(i)}, ...
-                    duration_between_dins(i));
-                EEG.subject = subid;
-                
-                % convert 256 to "inseide 185 channels
-                load('channel_location_file/inside185ch.mat');
-                EEG.chanlocs = EEG.chanlocs(inside185ch);
-                EEG.nbchan = 185;
-                EEG.data = EEG.data(inside185ch,:);
-
-                EEG = pop_saveset(EEG,sprintf('awakening-%d_eeg',ent_matched_awakening), sesdir);                 
-                
-                if ~isfile([aligned_folder '/alignedscoring.raw'])
+                % save scoring for each entry matched awakening
+                if ~isfile([extr_dir '/alignedscoring.raw'])
                     TABLE.N1(de_index(din_event_match(i,1))) = 'NO ALIGNED SCORING FILE FOUND';
                     
                 else 
-                    scoring = readalignmentraw(aligned_folder, {'alignedscoring.raw'}, ...
-                        events(din100_idx(i),2)-(srate*60*5),...
-                        events(din100_idx(i),2) + (srate*30));
-                    plot(scoring,'LineWidth',5)
-                    hold on
-                    xline(srate*60*5-(srate*60),'LineWidth', 5); %plot point where sleep soring is being assessed
-                    xline(srate*60*5-(srate*30),'LineWidth', 5, 'Color','r');
-                    saveas(gcf, [sesdir '/awakening-' num2str(ent_matched_awakening) '-scoring.png'], 'png');
+                    aligned_file = dir(fullfile(extr_dir, '*.aligned'));
+                    aligned_folder = strcat(extr_dir, '/', aligned_file.name);
+                    alignmat = load([extr_dir filesep 'alignedevents.mat']);
+                    offset = alignmat.alignedevents.egi_start_offset;
+                    
+                    scoring = readalignmentraw(extr_dir, {'alignedscoring.raw'}, events(din100_idx(i),2)-(mff_header.Fs*60*5)...
+                        + offset*mff_header.Fs, events(din100_idx(i),2)-1 + offset*mff_header.Fs);
+                    plot(scoring)
+                    hold on 
+                    xline((mff_header.Fs*60*5) - mff_header.Fs*30)
+                    saveas(gcf, [sesdir '/awakening-' num2str(ent_matched_awakening) '-scoring_CHECK.png'], 'png');
                     close all;
                     
                     TABLE.N1(de_index(din_event_match(i,1))) = any(scoring(:) == -1);
@@ -307,22 +292,23 @@ for mff_input_file = 1:length(inputlist)
                     TABLE.WAKE(de_index(din_event_match(i,1))) = any(scoring(:) == 0);
                 end
                 
-                writetable(TABLE,'NCCAM3_06_SADreamReports_10-20-18.csv');
+                %writetable(TABLE,'NCCAM3_06_SADreamReports_10-20-18.csv');
                 
-                % high-pass Filter (1 Hz)
-                EEG = pop_eegfiltnew(EEG, 1, [], [], 0, [], 0);
-                 
-                % clean Line Noise
-                EEG = pop_cleanline(EEG,'ChanCompIndices',[1:EEG.nbchan],'SignalType','Channels','LineFrequencies',60);
+%                 % high-pass Filter (1 Hz)
+%                 EEG = pop_eegfiltnew(EEG, 1, [], [], 0, [], 0);
+%                  
+%                 % clean Line Noise
+%                 % EEG = pop_cleanline(EEG,'ChanCompIndices',[1:EEG.nbchan],'SignalType','Channels','LineFrequencies',60);
+%                 
+%                 % trim 1 second from beginning and end
+%                 EEG = pop_select(EEG,'point', [0 + EEG.srate*1, EEG.pnts - EEG.srate*1]); 
+%                 %pop_saveset(EEG,sprintf('awakening-%d_eeg_hp_trim',ent_matched_awakening), sesdir);
+%                 
+%                 % assess if awakening occured in N2/N3 (look at 30 seconds
+%                 % before din event
+                cutoff = 35;
+                awakening_n2n3_samples = find(scoring(149001-cutoff*500:149001) == -2 | scoring(149001-cutoff*500:149001) == -3);
                 
-                % trim 1 second from beginning and end
-                EEG = pop_select(EEG,'point', [0 + EEG.srate*1, EEG.pnts - EEG.srate*1]); 
-                pop_saveset(EEG,sprintf('awakening-%d_eeg_hp_trim',ent_matched_awakening), sesdir);
-                
-                % assess if awakening occured in N2/N3 (look at 30 seconds
-                % before din event
-                awakening_n2n3_samples = find(scoring(EEG.pnts-60*EEG.srate:EEG.pnts) == -2 | scoring(EEG.pnts-60*EEG.srate:EEG.pnts) == -3);
-                    
                 % five minutes cannot contain any rem
                 if (~isempty(awakening_n2n3_samples) & TABLE.REM(de_index(din_event_match(i,1))) ~= 1)
                     nrem_index = [nrem_index ent_matched_awakening];
@@ -330,14 +316,12 @@ for mff_input_file = 1:length(inputlist)
                     % find N2/N3 samples only, [ignore last 30 seconds of
                     % data] because scoring may be misleading here because
                     % data is epoched every 30 seconds
-                    % (-60 because we are looking at scoring 30 s after
-                    % awakening
-                    n2n3_samples = find(scoring(1:end-60*EEG.srate) ~= -2 & scoring(1:end-60*EEG.srate) ~= -3);
+                    n2n3_samples = find(scoring(1:end-cutoff*500) ~= -2 & scoring(1:end-cutoff*500) ~= -3);
                     
                     if n2n3_iter == 0
-                        MERGEDEEG = EEG;
+%                         MERGEDEEG = EEG;
                     else
-                        MERGEDEEG = pop_mergeset(MERGEDEEG,EEG);
+%                         MERGEDEEG = pop_mergeset(MERGEDEEG,EEG);
                     end
                     n2n3_iter = n2n3_iter + 1;                 
                 end   
@@ -347,20 +331,23 @@ for mff_input_file = 1:length(inputlist)
             end          
         end
     
-    save([sesdir '/nrem_index.mat'],'nrem_index');
-    pop_saveset(MERGEDEEG,'filename', 'nrem_awakening_eeg_hp_trim_merged','filepath', sesdir); 
+    save([sesdir '/nrem_index_CHECK.mat'],'nrem_index');
+    %pop_saveset(MERGEDEEG,'filename', 'nrem_awakening_eeg_hp_trim_merged','filepath', sesdir); 
         
     else 
         
-        fprintf('subject %s, %s mff file has no events to import\n', subid, session);
-        TABLE.MFF_FILE_HAS_NO_EVENTS_TO_IMPORT(de_index(1)) = 1;
-        writetable(TABLE,'NCCAM3_06_SADreamReports_10-20-18.csv');
+        %fprintf('subject %s, %s mff file has no events to import\n', subid, session);
+        %TABLE.MFF_FILE_HAS_NO_EVENTS_TO_IMPORT(de_index(1)) = 1;
+        %writetable(TABLE,'NCCAM3_06_SADreamReports_10-20-18.csv');
 
     end 
     
-end 
+end
 
+fprintf('AFTER CORRECTING FOR ALIGNMENT')
+a = load([sesdir '/' 'nrem_index_CHECK.mat']);
+a.nrem_index
 
-
-
-
+fprintf('BEFORE CORRECTING FOR ALIGNMENT')
+x = load([sesdir '/' 'nrem_index.mat']);
+x.nrem_index

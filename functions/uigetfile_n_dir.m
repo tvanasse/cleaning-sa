@@ -3,8 +3,10 @@ function [pathname] = uigetdir2(start_path, dialog_title)
 
 import javax.swing.JFileChooser;
 
+currentdir = pwd
+
 if nargin == 0 % Allow a null argument.
-    start_path = '/Volumes/data-2/NCCAM3/SA/Batch_0401202';
+    start_path = [currentdir '/../../../../Batch_0401202'];
 end
 
 jchooser = javaObjectEDT('javax.swing.JFileChooser', start_path);
