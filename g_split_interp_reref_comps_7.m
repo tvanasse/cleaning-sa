@@ -59,6 +59,9 @@ for mff_input_file = 1:length(inputlist)
     
     EEG_all = pop_loadset([sesdir '/nrem_merged_ica2_subcomps.set']);
     
+    %50 Hz low-pass filter
+    EEG_all = pop_eegfiltnew(EEG_all, [], 50, [], 0, [], 0); 
+    
     load([sesdir '/cleaned_lengths.mat']);
     cumul_sample = 1; %keep track of sample 
     
@@ -121,10 +124,7 @@ for awak = 1:length(nrem_index)
     % identify and interpoloate bad channels
     load([sesdir '/chanlocs_185.mat'])
     EEG.urchanlocs = origEEGchanlocs;   
-    EEG = epi_log(@eeg_interp, EEG, EEG.urchanlocs); 
-    
-    %50 Hz low-pass filter
-    EEG = pop_eegfiltnew(EEG, [], 50, [], 0, [], 0); 
+    EEG = epi_log(@eeg_interp, EEG, EEG.urchanlocs);
     
     % average reference
     EEG = epi_log(@pop_reref, EEG, []);
