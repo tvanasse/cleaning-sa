@@ -1,10 +1,5 @@
 ## TO-DO <br />
-(1) Check with Brady that I am extracting correctly (aligned files) <br />
-
-(2) Plot spindle activity (12 - 15) <br />
-(3) Do multi-taper topos <br />
-(4) Plot power spectra <br />
-(5) FILTER THEN SPLIT/INTERP <br />
+(1) Do multi-taper time/freq <br />
 
 ## Processing Pipeline <br />
 (1) Extract 5 minutes before awakening <br />
@@ -25,4 +20,4 @@
 <br />
 (6) Remove artifactual components with help from ICLabel <br />
 <br />
-(7) Resplit awakenings and low-pass filter (50 Hz)
+(7) Low-pass filter (50 Hz), then re-split awakenings, and perform qa plots.
