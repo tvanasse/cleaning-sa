@@ -94,27 +94,27 @@ for mff_input_file = 1:length(inputlist)
     if ~isfolder(extr_filname)
         TABLE.FILE_NOT_FOUND(de_index(1)) = 1;
         continue;
-    else 
-        mff_meta_data = mff_import_meta_data(extr_filname);
     end
 
     % add java file necessary for mff function
     eeglab_filepath = which('eeglab');
     javaaddpath([eeglab_filepath(1:end-8) 'plugins/MFFimport2.3/mffimport/MFF-1.2.jar']);
+            
+    % load absolute datetime of raw file
+    aligned_file = dir(fullfile(extr_dir, '*.aligned'));
+    aligned_folder = strcat(extr_dir, '/', aligned_file.name);
+    timing = load([aligned_folder filesep 'properties.mat']);
+    absolute_datetime = timing.properties.recording_start_datetime;
     
-    mff_header = read_mff_header(extr_filname,0);
+    chaninfo = load([aligned_folder filesep 'channels.mat']);
+    srate = chaninfo.channels.sampling_rate;
     
-    if mff_header.nTrials > 1
-        fprintf('subject %s, %s has more than 2 trials in the continuous data \n', subid, session);
-    end
-    
-    % find timestamp from the first sample
-    absolute_timestamp = mff_find_absolute_timestamp(extr_filname);
-    absolute_datetime  = datetime(absolute_timestamp.timestamp,...
-                'InputFormat','yyyy-MM-dd''T''HH:mm:ss.SSS');
-
     % for each event, convert timestamp to sample
-    mff_events = mff_import_events(extr_filname);
+%     mff_events = mff_import_events(extr_filname);
+    mff_filename = dir(fullfile(aligned_folder, '*mff_events.mat'));
+    mff_events = load([aligned_folder filesep mff_filename.name]);
+    mff_events = mff_events.mff_events;
+    
     events_field = 'Events_DIN_1';
     
     if ~isempty(mff_events)
@@ -138,7 +138,7 @@ for mff_input_file = 1:length(inputlist)
             datetime_start = datetime(mff_events.(events_field).recording_timestamp(ievt),...
                         'InputFormat','yyyy-MM-dd''T''HH:mm:ss.SSS');
             events(ievt, 2) =  round(seconds(datetime_start - absolute_datetime) *...
-                mff_meta_data.signal_binaries.channels.sampling_rate(1));
+                srate);
         end   
 
         % keep only events with code DIN100 (in theory the code for Serial Awakening)
@@ -147,7 +147,7 @@ for mff_input_file = 1:length(inputlist)
 
          % also impose that it has at least 20 minutes and multiple DINs in one
 
-        duration_between_dins = [events(din100_idx(1),2)/mff_header.Fs/60 diff(events(din100_idx,2))'/mff_header.Fs/60];
+        duration_between_dins = [events(din100_idx(1),2)/srate/60 diff(events(din100_idx,2))'/srate/60];
         timestamps = mff_events.(events_field).recording_timestamp(din100_idx)';
         timenum = zeros(1,length(timestamps));
 
@@ -236,7 +236,7 @@ for mff_input_file = 1:length(inputlist)
         n2n3_iter = 0; %for merging nrem
         nrem_index = [];
         for i = 1:length(timestamps)
-            %if events(din100_idx(i),2)-(mff_header.Fs*60*5) > 0 %check if event did not occur 5 min. to start time, skip otherwise
+            %if events(din100_idx(i),2)-(srate*60*5) > 0 %check if event did not occur 5 min. to start time, skip otherwise
             if ((din_event_match(i,1) > 0) && din_event_match(i,4) > 0) %DIN matches with awakening AND is the shortest time away from recoreded awakening   
                 fprintf("DIN %d \n");
                 %mark time away from 
@@ -244,8 +244,26 @@ for mff_input_file = 1:length(inputlist)
                 TABLE.ENTRY_MATCHED_AWAKENING_NO(de_index(din_event_match(i,1))) = ent_matched_awakening;
                      
                 %EXTRACTING 5 MINUTES BEFORE AWAKENING
-                samples_before_awakening = mff_read_samples(extr_filname,'all', events(din100_idx(i),2)-(mff_header.Fs*60*5), events(din100_idx(i),2)-1);
-           
+                samples_before_awakening = mff_read_samples(extr_filname,'all',...
+                    events(din100_idx(i),2)-(srate*60*5), ...
+                    events(din100_idx(i),2)-1);
+
+                aligned_file = dir(fullfile(extr_dir, '*.aligned'));
+                aligned_folder = strcat(extr_dir, '/', aligned_file.name);
+                aligned_events_raw = load([aligned_folder filesep 'alignedevents.mat']);
+                egi_offset = aligned_events_raw.alignedevents.egi_start_offset;
+
+%                 the following code would read .raw files instead,
+%                 accounting for egi offset              
+%                 % get mffraw files
+                f = dir(fullfile(aligned_folder,'MFF*'));
+                C = struct2cell(f);
+                input = {};
+                for chan = 1:257
+                    input{end+1} = C{1,chan};
+                end 
+                samples_before_awakneing = readalignmentraw(aligned_folder, input, events(din100_idx(i),2)-(srate*60*5), events(din100_idx(i),2)-1);               
+                
                 eloc = readlocs(CHANNEL_LOCATION_FILE);
 
                 %eloc_no257 = eloc(1:257); %remove channel 257... so it won't affect bad channel removal
@@ -267,14 +285,13 @@ for mff_input_file = 1:length(inputlist)
 
                 EEG = pop_saveset(EEG,sprintf('awakening-%d_eeg',ent_matched_awakening), sesdir);                 
                 
-                % save scoring for each entry matched awakening
-                aligned_folder = dir(fullfile(extr_dir, '*.aligned'));
-                scoring_dir = strcat(extr_dir, '/', aligned_folder.name);
-                if ~isfile([scoring_dir '/alignedscoring.raw'])
+                if ~isfile([aligned_folder '/alignedscoring.raw'])
                     TABLE.N1(de_index(din_event_match(i,1))) = 'NO ALIGNED SCORING FILE FOUND';
                     
                 else 
-                    scoring = readalignmentraw(scoring_dir, {'alignedscoring.raw'}, events(din100_idx(i),2)-(mff_header.Fs*60*5), events(din100_idx(i),2)-1);
+                    scoring = readalignmentraw(aligned_folder, {'alignedscoring.raw'}, ...
+                        events(din100_idx(i),2)-(srate*60*5),...
+                        events(din100_idx(i),2) - 1);
                     plot(scoring)
                     saveas(gcf, [sesdir '/awakening-' num2str(ent_matched_awakening) '-scoring.png'], 'png');
                     close all;

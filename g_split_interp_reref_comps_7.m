@@ -23,7 +23,7 @@ for mff_input_file = 1:length(inputlist)
     session = filename(k+11:k+12);
     
     %% create directory if it does not already exist
-    subdir = ['/Volumes/data/NCCAM3/SA/wDreamReport/aligned/extraction_TJV' '/sub-' subid];
+    subdir = ['/Volumes/data-2/NCCAM3/SA/wDreamReport/aligned/extraction_TJV' '/sub-' subid];
     if ~exist(subdir, 'dir')
        mkdir(subdir);
        eegdir = [subdir '/eeg'];
