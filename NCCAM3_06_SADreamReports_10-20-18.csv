@@ -711,8 +711,8 @@ ID,Visit,SA,Date_Time,Date,Time,Stage,Q1ExperienceNum,Q1Experience,Q1Report,Q2Aw
 2033,3,10,10/02/0015 03:51,,3:51 AM,2,2,Something,"",2,Asleep,,,,,,,,,,,,,"","",,,,,,"","",AD,NaN,NaN,0,NaN,NaN,NaN,NaN,NaN,NaN,NaN
 2033,3,11,10/02/0015 04:30,,4:30 AM,R,2,Something,"",2,Asleep,,,,,,,,,,,,,"","",,,,,,"","",AD,NaN,NaN,0,NaN,NaN,NaN,NaN,NaN,NaN,NaN
 2034,1,1,07/25/0015 00:06,,12:06 AM,2,2,Something,"Participant was feeling curiosity but couldn't remember anything else",2,Asleep,,,,,,,,,,,,,"","",,,,,,"","",KL,NaN,50.347,1,NaN,1,1,1,0,0,1
-2034,1,2,07/25/0015 01:08,,1:08 AM,R,3,Report,"Participant was heading to North Face store in his car to meet some people for a run",2,Asleep,5,4,4,3,3,3,3,0,1,3,-2,0,"","1",0,0,0,1,2,"happy and excited","",KL,NaN,23.25,1,NaN,2,0,0,0,1,1
-2034,1,3,07/25/0015 01:41,,1:41 AM,2,2,Something,"could not recall any details",2,Asleep,,,,,,,,,,,,,"","",,,,,,"","",KL,NaN,2.117,1,NaN,3,1,1,0,0,1
+2034,1,2,07/25/0015 01:08,,1:08 AM,R,3,Report,"Participant was heading to North Face store in his car to meet some people for a run",2,Asleep,5,4,4,3,3,3,3,0,1,3,-2,0,"","1",0,0,0,1,2,"happy and excited","",KL,NaN,NaN,1,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+2034,1,3,07/25/0015 01:41,,1:41 AM,2,2,Something,"could not recall any details",2,Asleep,,,,,,,,,,,,,"","",,,,,,"","",KL,NaN,NaN,1,NaN,NaN,NaN,NaN,NaN,NaN,NaN
 2034,1,4,07/25/0015 02:18,,2:18 AM,2,1,NoReport,"",2,Asleep,,,,,,,,,,,,,"","",,,,,,"","",KL,NaN,NaN,1,NaN,NaN,NaN,NaN,NaN,NaN,NaN
 2034,1,5,07/25/0015 02:52,,2:52 AM,R,3,Report,"biking down a hill",2,Asleep,4,3,3,2,3,2,2,0,1,2,-1,1,"legs on bike","2",1,0,1,1,1,"excitement, exhilaration","",KL,NaN,NaN,1,NaN,NaN,NaN,NaN,NaN,NaN,NaN
 2034,1,6,07/25/0015 03:18,,3:18 AM,2,2,Something,"trying to work out a problem",2,Asleep,,,,,,,,,,,,,"","",,,,,,"","",KL,NaN,NaN,1,NaN,NaN,NaN,NaN,NaN,NaN,NaN
@@ -1121,9 +1121,9 @@ ID,Visit,SA,Date_Time,Date,Time,Stage,Q1ExperienceNum,Q1Experience,Q1Report,Q2Aw
 2052,3,10,12/07/0016 04:47,,4:47 AM,R,1,NoReport,"",2,Asleep,,,,,,,,,,,,,"","",,,,,,"","",AMV,NaN,3.952,2,NaN,10,0,1,0,0,0
 2052,3,11,12/07/0016 05:09,,5:09 AM,R,3,Report,"Talking with relatives about ppt's job",2,Asleep,3,3,3,4,3,4,3,0,0,1,-2,0,"","1",1,0,1,0,-1,"nervous","",AMV,NaN,5.578,2,NaN,11,0,0,0,1,0
 2052,3,12,12/07/0016 05:36,,5:36 AM,2,2,Something,"",2,Asleep,,,,,,,,,,,,,"","",,,,,,"","",AMV,NaN,4.258,1,NaN,12,0,1,0,0,0
-2053,1,1,07/17/0015 01:32,,1:32 AM,2,3,Report,"A wagon. That's it.",1,Awake,1,1,1,1,0,1,1 and 2,1,0,0,2,0,"","3",0,0,0,0,0,"","",KL,NaN,NaN,0,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+2053,1,1,07/17/0015 01:32,,1:32 AM,2,3,Report,"A wagon. That's it.",1,Awake,1,1,1,1,0,1,1 and 2,1,0,0,2,0,"","3",0,0,0,0,0,"","",KL,NaN,45.97,1,NaN,1,0,1,0,0,1
 2053,1,2,07/17/0015 03:41,,3:41 AM,2,1,NoReport,"",2,Asleep,,,,,,,,,,,,,"","",,,,,,"","",KL,NaN,NaN,0,NaN,NaN,NaN,NaN,NaN,NaN,NaN
-2053,1,3,07/17/0015 04:08,,4:08 AM,2,1,NoReport,"",2,Asleep,,,,,,,,,,,,,"","",,,,,,"","",KL,NaN,NaN,0,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+2053,1,3,07/17/0015 04:08,,4:08 AM,2,1,NoReport,"",2,Asleep,,,,,,,,,,,,,"","",,,,,,"","",KL,NaN,74.578,1,NaN,2,1,1,0,0,1
 2053,1,4,07/17/0015 05:29,,5:29 AM,2,3,Report,"Umbrella, closed silver. Outside and there was a boat trailer, had a little compartment that was opening up; like a hinged door/latch or top.  Inside was the umbrella; a weird fancy umbrella set/kit with multiple pieces to it.  He had the feeling that it was very useful, but also stupid and useless.  Then it turned into something else, still umbrella shaped but..no other people",2,Asleep,3,3,3,3,4,4,0,1,4,3,-1,1,"whole body, manipulating things with arms and moving forward","2",0,0,0,1,1,"A little confused and curious","",KL,NaN,NaN,0,NaN,NaN,NaN,NaN,NaN,NaN,NaN
 2053,2,1,12/03/0015 01:30,,1:30 AM,2,2,Something,"ideas swirling around head, not sure what but something",1,Awake,,,,,,,,,,,,,"","",,,,,,"","",AMV,NaN,NaN,0,NaN,NaN,NaN,NaN,NaN,NaN,NaN
 2053,2,2,12/03/0015 02:50,,2:50 AM,2,2,Something,"thinking about things, not sure exactly",1,Awake,,,,,,,,,,,,,"","",,,,,,"","",AMV,NaN,NaN,0,NaN,NaN,NaN,NaN,NaN,NaN,NaN
@@ -1150,13 +1150,13 @@ ID,Visit,SA,Date_Time,Date,Time,Stage,Q1ExperienceNum,Q1Experience,Q1Report,Q2Aw
 2054,3,8,04/20/0016 05:51,,5:51 AM,2,1,NoReport,"",2,Asleep,,,,,,,,,,,,,"","",,,,,,"","",AMV,NaN,NaN,0,NaN,NaN,NaN,NaN,NaN,NaN,NaN
 2054,3,9,04/20/0016 06:16,,6:16 AM,2,2,Something,"",2,Asleep,,,,,,,,,,,,,"","",,,,,,"","",AMV,NaN,NaN,0,NaN,NaN,NaN,NaN,NaN,NaN,NaN
 2054,3,10,04/20/0016 06:39,,6:39 AM,2,1,NoReport,"",3,Unsure,,,,,,,,,,,,,"","",,,,,,"","",AMV,NaN,NaN,0,NaN,NaN,NaN,NaN,NaN,NaN,NaN
-2055,1,1,07/18/0015 00:12,,12:12 AM,2,2,Something,"I want to go to the bathroom",2,Asleep,,,,,,,,,,,,,"","",,,,,,"","",KL,NaN,NaN,0,NaN,NaN,NaN,NaN,NaN,NaN,NaN
-2055,1,2,07/18/0015 01:02,,1:02 AM,2,2,Something,"that was comfortable in bed",2,Asleep,,,,,,,,,,,,,"","",,,,,,"","",KL,NaN,NaN,0,NaN,NaN,NaN,NaN,NaN,NaN,NaN
-2055,1,3,07/18/0015 01:32,,1:32 AM,2,1,NoReport,"",2,Asleep,,,,,,,,,,,,,"","",,,,,,"","",KL,NaN,NaN,0,NaN,NaN,NaN,NaN,NaN,NaN,NaN
-2055,1,4,07/18/0015 01:53,,1:53 AM,2,2,Something,"vague feeling of dreaming",2,Asleep,,,,,,,,,,,,,"","",,,,,,"","",KL,NaN,NaN,0,NaN,NaN,NaN,NaN,NaN,NaN,NaN
-2055,1,5,07/18/0015 02:31,,2:31 AM,2,1,NoReport,"",2,Asleep,,,,,,,,,,,,,"","",,,,,,"","",KL,NaN,NaN,0,NaN,NaN,NaN,NaN,NaN,NaN,NaN
-2055,1,6,07/18/0015 04:33,,4:33 AM,2,2,Something,"deeply asleep, dreaming something, but don't recall",2,Asleep,,,,,,,,,,,,,"","",,,,,,"","",KL,NaN,NaN,0,NaN,NaN,NaN,NaN,NaN,NaN,NaN
-2055,1,7,07/18/0015 05:26,,5:26 AM,2,1,NoReport,"",2,Asleep,,,,,,,,,,,,,"","",,,,,,"","",KL,NaN,NaN,0,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+2055,1,1,07/18/0015 00:12,,12:12 AM,2,2,Something,"I want to go to the bathroom",2,Asleep,,,,,,,,,,,,,"","",,,,,,"","",KL,NaN,0.576,1,NaN,1,0,1,0,0,1
+2055,1,2,07/18/0015 01:02,,1:02 AM,2,2,Something,"that was comfortable in bed",2,Asleep,,,,,,,,,,,,,"","",,,,,,"","",KL,NaN,3.586,2,NaN,2,1,1,0,0,1
+2055,1,3,07/18/0015 01:32,,1:32 AM,2,1,NoReport,"",2,Asleep,,,,,,,,,,,,,"","",,,,,,"","",KL,NaN,8.947,1,NaN,3,0,1,0,0,1
+2055,1,4,07/18/0015 01:53,,1:53 AM,2,2,Something,"vague feeling of dreaming",2,Asleep,,,,,,,,,,,,,"","",,,,,,"","",KL,NaN,20.563,1,NaN,4,1,1,0,0,1
+2055,1,5,07/18/0015 02:31,,2:31 AM,2,1,NoReport,"",2,Asleep,,,,,,,,,,,,,"","",,,,,,"","",KL,NaN,1.008,1,NaN,5,1,1,0,0,1
+2055,1,6,07/18/0015 04:33,,4:33 AM,2,2,Something,"deeply asleep, dreaming something, but don't recall",2,Asleep,,,,,,,,,,,,,"","",,,,,,"","",KL,NaN,0.765,1,NaN,6,0,1,0,0,1
+2055,1,7,07/18/0015 05:26,,5:26 AM,2,1,NoReport,"",2,Asleep,,,,,,,,,,,,,"","",,,,,,"","",KL,NaN,34.64,1,NaN,7,1,1,0,0,1
 2055,2,1,10/24/0015 00:28,,12:28 AM,2,1,NoReport,"",2,Asleep,,,,,,,,,,,,,"","",,,,,,"","",AC,NaN,NaN,0,NaN,NaN,NaN,NaN,NaN,NaN,NaN
 2055,2,2,10/24/0015 01:46,,1:46 AM,2,1,NoReport,"",2,Asleep,,,,,,,,,,,,,"","",,,,,,"","",AC,NaN,NaN,0,NaN,NaN,NaN,NaN,NaN,NaN,NaN
 2055,2,3,10/24/0015 02:21,,2:21 AM,3,2,Something,"(nothing written)",2,Asleep,,,,,,,,,,,,,"","",,,,,,"","",AC,NaN,NaN,0,NaN,NaN,NaN,NaN,NaN,NaN,NaN
@@ -1264,17 +1264,17 @@ ID,Visit,SA,Date_Time,Date,Time,Stage,Q1ExperienceNum,Q1Experience,Q1Report,Q2Aw
 2059,3,14,04/25/0016 05:20,,5:20 AM,r,3,Report,"causing someone to fall in water",2,Asleep,5,4,4,4,5,3,5,0,0,4,0,1,"walkin, tried dragging a boat","both",1,1,1,1,-2,"anger, annoyance, worry","",MS,NaN,NaN,0,NaN,NaN,NaN,NaN,NaN,NaN,NaN
 2059,3,15,04/25/0016 05:46,,5:46 AM,2,2,Something,"research study",2,Asleep,,,,,,,,,,,,,"","",,,,,,"","",MS,NaN,NaN,0,NaN,NaN,NaN,NaN,NaN,NaN,NaN
 2059,3,16,04/25/0016 06:08,,6:08 AM,2,2,Something,"maybe shopping",2,Asleep,,,,,,,,,,,,,"","",,,,,,"","",MS,NaN,NaN,0,NaN,NaN,NaN,NaN,NaN,NaN,NaN
-2060,1,1,07/22/0015 23:02,,11:02 PM,2,3,Report,"Pp was watching a badminton game at the park",2,Asleep,3,3,3,3,3,2,2,0,1,0,1,,"","2",0,0,1,0,0,"","",AMV,NaN,NaN,0,NaN,NaN,NaN,NaN,NaN,NaN,NaN
-2060,1,2,07/22/0015 23:41,,11:41 PM,2,3,Report,"Pp was playing tennis at the park on a nice day near the water",2,Asleep,3,3,3,4,3,2,2,0,0,0,1,1,"legs","2",1,0,1,1,0,"","",AMV,NaN,NaN,0,NaN,NaN,NaN,NaN,NaN,NaN,NaN
-2060,1,3,07/23/0015 00:48,,12:48 AM,2,2,Something,"Pp was dreaming but can't remember what it was about. The content may have been similar to dreams from earlier night.",2,Asleep,,,,,,,,,,,,,"","",,,,,,"","",AMV,NaN,NaN,0,NaN,NaN,NaN,NaN,NaN,NaN,NaN
-2060,1,4,07/23/0015 01:28,,1:28 AM,2,2,Something,"Pp thinks his family may have been in the dream",2,Asleep,,,,,,,,,,,,,"","",,,,,,"","",AMV,NaN,NaN,0,NaN,NaN,NaN,NaN,NaN,NaN,NaN
-2060,1,5,07/23/0015 02:17,,2:17 AM,2,2,Something,"Pp thinks he may have been outside with people but it is difficult to recall any details",2,Asleep,,,,,,,,,,,,,"","",,,,,,"","",AMV,NaN,NaN,0,NaN,NaN,NaN,NaN,NaN,NaN,NaN
-2060,1,6,07/23/0015 03:00,,3:00 AM,R,3,Report,"Pp was fishing with his son and telling his son not to tangle his fishing pole with the other poles ",2,Asleep,4,3,4,4,4,4,5,0,1,3,2,1,"arms, legs, mouth","2",1,0,1,1,1,"happy, nervous that his son would get hurt","",AMV,NaN,NaN,0,NaN,NaN,NaN,NaN,NaN,NaN,NaN
-2060,1,7,07/23/0015 03:34,,3:34 AM,2,3,Report,"fishing with other people, but he can't remember whom",2,Asleep,3,3,3,3,2,2,3,0,1,1,0,1,"legs","2",0,0,0,0,0,"","",AMV,NaN,NaN,0,NaN,NaN,NaN,NaN,NaN,NaN,NaN
-2060,1,8,07/23/0015 04:18,,4:18 AM,R,3,Report,"Pp was winding a clock while cooking. He thinks it was likely an egg timer",2,Asleep,3,2,3,3,2,1,1,0,1,1,1,1,"arms and hands","1",0,0,0,0,0,"","",AMV,NaN,NaN,0,NaN,NaN,NaN,NaN,NaN,NaN,NaN
-2060,1,9,07/23/0015 04:46,,4:46 AM,2,2,Something,"Pp was dreaming but couldn’t remember any details",2,Asleep,,,,,,,,,,,,,"","",,,,,,"","",AMV,NaN,NaN,0,NaN,NaN,NaN,NaN,NaN,NaN,NaN
-2060,1,10,07/23/0015 05:16,,5:16 AM,R,3,Report,"Pp was outside at a parade",2,Asleep,3,3,2,2,1,1,1,0,1,1,1,0,"","2",0,0,0,0,0,"","",AMV,NaN,NaN,0,NaN,NaN,NaN,NaN,NaN,NaN,NaN
-2060,1,11,07/23/0015 06:00,,6:00 AM,2,2,Something,"",2,Asleep,,,,,,,,,,,,,"","",,,,,,"","",AMV,NaN,NaN,0,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+2060,1,1,07/22/0015 23:02,,11:02 PM,2,3,Report,"Pp was watching a badminton game at the park",2,Asleep,3,3,3,3,3,2,2,0,1,0,1,,"","2",0,0,1,0,0,"","",AMV,NaN,14.324,5,NaN,1,0,1,0,0,1
+2060,1,2,07/22/0015 23:41,,11:41 PM,2,3,Report,"Pp was playing tennis at the park on a nice day near the water",2,Asleep,3,3,3,4,3,2,2,0,0,0,1,1,"legs","2",1,0,1,1,0,"","",AMV,NaN,96.902,1,NaN,2,0,1,0,0,1
+2060,1,3,07/23/0015 00:48,,12:48 AM,2,2,Something,"Pp was dreaming but can't remember what it was about. The content may have been similar to dreams from earlier night.",2,Asleep,,,,,,,,,,,,,"","",,,,,,"","",AMV,NaN,75.409,1,NaN,3,0,1,0,0,1
+2060,1,4,07/23/0015 01:28,,1:28 AM,2,2,Something,"Pp thinks his family may have been in the dream",2,Asleep,,,,,,,,,,,,,"","",,,,,,"","",AMV,NaN,41.078,1,NaN,4,0,1,0,0,1
+2060,1,5,07/23/0015 02:17,,2:17 AM,2,2,Something,"Pp thinks he may have been outside with people but it is difficult to recall any details",2,Asleep,,,,,,,,,,,,,"","",,,,,,"","",AMV,NaN,23.426,1,NaN,5,0,1,0,0,1
+2060,1,6,07/23/0015 03:00,,3:00 AM,R,3,Report,"Pp was fishing with his son and telling his son not to tangle his fishing pole with the other poles ",2,Asleep,4,3,4,4,4,4,5,0,1,3,2,1,"arms, legs, mouth","2",1,0,1,1,1,"happy, nervous that his son would get hurt","",AMV,NaN,204.983,1,NaN,6,0,0,0,1,1
+2060,1,7,07/23/0015 03:34,,3:34 AM,2,3,Report,"fishing with other people, but he can't remember whom",2,Asleep,3,3,3,3,2,2,3,0,1,1,0,1,"legs","2",0,0,0,0,0,"","",AMV,NaN,4.693,1,NaN,7,0,1,0,0,1
+2060,1,8,07/23/0015 04:18,,4:18 AM,R,3,Report,"Pp was winding a clock while cooking. He thinks it was likely an egg timer",2,Asleep,3,2,3,3,2,1,1,0,1,1,1,1,"arms and hands","1",0,0,0,0,0,"","",AMV,NaN,85.483,1,NaN,8,0,1,0,1,1
+2060,1,9,07/23/0015 04:46,,4:46 AM,2,2,Something,"Pp was dreaming but couldn’t remember any details",2,Asleep,,,,,,,,,,,,,"","",,,,,,"","",AMV,NaN,43.649,1,NaN,9,0,1,0,0,1
+2060,1,10,07/23/0015 05:16,,5:16 AM,R,3,Report,"Pp was outside at a parade",2,Asleep,3,3,2,2,1,1,1,0,1,1,1,0,"","2",0,0,0,0,0,"","",AMV,NaN,202.666,1,NaN,10,0,0,0,1,1
+2060,1,11,07/23/0015 06:00,,6:00 AM,2,2,Something,"",2,Asleep,,,,,,,,,,,,,"","",,,,,,"","",AMV,NaN,13.787,1,NaN,11,0,1,0,0,1
 2060,2,1,10/21/0015 23:13,,11:13 PM,2,2,Something,"",2,Asleep,,,,,,,,,,,,,"","",,,,,,"","",PR,NaN,NaN,0,NaN,NaN,NaN,NaN,NaN,NaN,NaN
 2060,2,2,10/21/0015 23:58,,11:58 AM,2,2,Something,"there were people in it",2,Asleep,,,,,,,,,,,,,"","",,,,,,"","",PR,NaN,NaN,0,NaN,NaN,NaN,NaN,NaN,NaN,NaN
 2060,2,3,10/22/0015 01:16,,1:16 AM,2,3,Report,"dreaming about being in the study, in a research study",2,Asleep,3,3,2,2,3,1,1,0,0,0,0,0,"","2",1,0,0,1,0,"","",PR,NaN,NaN,0,NaN,NaN,NaN,NaN,NaN,NaN,NaN
@@ -1445,13 +1445,13 @@ ID,Visit,SA,Date_Time,Date,Time,Stage,Q1ExperienceNum,Q1Experience,Q1Report,Q2Aw
 2067,2,9,11/24/0015 04:43,,4:43 AM,2,1,NoReport,"",2,Asleep,,,,,,,,,,,,,"","",,,,,,"","",AMV,NaN,NaN,0,NaN,NaN,NaN,NaN,NaN,NaN,NaN
 2067,2,10,11/24/0015 05:18,,5:18 AM,2,2,Something,"",2,Asleep,,,,,,,,,,,,,"","",,,,,,"","",AMV,NaN,NaN,0,NaN,NaN,NaN,NaN,NaN,NaN,NaN
 2067,2,11,11/24/0015 06:13,,6:13 AM,1,2,Something,"",2,Asleep,,,,,,,,,,,,,"","",,,,,,"","",AMV,NaN,NaN,0,NaN,NaN,NaN,NaN,NaN,NaN,NaN
-2068,1,1,08/01/0015 01:20,,1:20 AM,2,2,Something,"",2,Asleep,,,,,,,,,,,,,"","",,,,,,"","",PR,NaN,NaN,0,NaN,NaN,NaN,NaN,NaN,NaN,NaN
-2068,1,2,08/01/0015 01:40,,1:40 AM,2,2,Something,"some activity but don’t remember",2,Asleep,,,,,,,,,,,,,"","",,,,,,"","",PR,NaN,NaN,0,NaN,NaN,NaN,NaN,NaN,NaN,NaN
-2068,1,3,08/01/0015 02:51,,2:51 AM,2,1,NoReport,"",2,Asleep,,,,,,,,,,,,,"","",,,,,,"","",PR,NaN,NaN,0,NaN,NaN,NaN,NaN,NaN,NaN,NaN
-2068,1,4,08/01/0015 04:25,,4:25 AM,2,3,Report,"singing",2,Asleep,3,3,3,1,4,1,3,0,2,3,-2,0,"","1",1,0,1,0,2,"enjoy singing","",PR,NaN,NaN,0,NaN,NaN,NaN,NaN,NaN,NaN,NaN
-2068,1,5,08/01/0015 05:39,,5:39 AM,R,3,Report,"thinking about locking bike",2,Asleep,4,3,4,3,3,4,1,3,2,2,-2,0,"","1",0,0,0,0,0,"none","Q10: maybe",PR,NaN,NaN,0,NaN,NaN,NaN,NaN,NaN,NaN,NaN
-2068,1,6,08/01/0015 06:16,,6:16 AM,2,1,NoReport,"",2,Asleep,,,,,,,,,,,,,"","",,,,,,"","",PR,NaN,NaN,0,NaN,NaN,NaN,NaN,NaN,NaN,NaN
-2068,1,7,08/01/0015 06:42,,6:42 AM,R,3,Report,"hair oil",2,Asleep,1,1,1,1,2,3,2,0,0,0,-1,0,"","1",0,0,0,0,0,"none","",PR,NaN,NaN,0,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+2068,1,1,08/01/0015 01:20,,1:20 AM,2,2,Something,"",2,Asleep,,,,,,,,,,,,,"","",,,,,,"","",PR,NaN,67.297,1,NaN,1,0,1,0,0,1
+2068,1,2,08/01/0015 01:40,,1:40 AM,2,2,Something,"some activity but don’t remember",2,Asleep,,,,,,,,,,,,,"","",,,,,,"","",PR,NaN,68.361,1,NaN,2,0,1,0,0,1
+2068,1,3,08/01/0015 02:51,,2:51 AM,2,1,NoReport,"",2,Asleep,,,,,,,,,,,,,"","",,,,,,"","",PR,NaN,13.514,1,NaN,3,0,1,0,0,1
+2068,1,4,08/01/0015 04:25,,4:25 AM,2,3,Report,"singing",2,Asleep,3,3,3,1,4,1,3,0,2,3,-2,0,"","1",1,0,1,0,2,"enjoy singing","",PR,NaN,47.509,1,NaN,4,1,1,0,0,1
+2068,1,5,08/01/0015 05:39,,5:39 AM,R,3,Report,"thinking about locking bike",2,Asleep,4,3,4,3,3,4,1,3,2,2,-2,0,"","1",0,0,0,0,0,"none","Q10: maybe",PR,NaN,29.974,1,NaN,5,0,0,0,1,1
+2068,1,6,08/01/0015 06:16,,6:16 AM,2,1,NoReport,"",2,Asleep,,,,,,,,,,,,,"","",,,,,,"","",PR,NaN,1.476,1,NaN,6,0,1,0,0,1
+2068,1,7,08/01/0015 06:42,,6:42 AM,R,3,Report,"hair oil",2,Asleep,1,1,1,1,2,3,2,0,0,0,-1,0,"","1",0,0,0,0,0,"none","",PR,NaN,26.909,2,NaN,7,0,0,0,1,1
 2068,2,1,11/16/0015 23:19,,11:19 PM,3,2,Something,"",2,Asleep,,,,,,,,,,,,,"","",,,,,,"","",PR,NaN,NaN,0,NaN,NaN,NaN,NaN,NaN,NaN,NaN
 2068,2,2,11/16/0015 23:53,,11:53 PM,3,1,NoReport,"",2,Asleep,,,,,,,,,,,,,"","",,,,,,"","",PR,NaN,NaN,0,NaN,NaN,NaN,NaN,NaN,NaN,NaN
 2068,2,3,11/17/0015 00:27,,12:27 AM,3,2,Something,"a table?",2,Asleep,,,,,,,,,,,,,"","",,,,,,"","",PR,NaN,NaN,0,NaN,NaN,NaN,NaN,NaN,NaN,NaN
@@ -1530,13 +1530,13 @@ ID,Visit,SA,Date_Time,Date,Time,Stage,Q1ExperienceNum,Q1Experience,Q1Report,Q2Aw
 2071,1,2,02/01/0016 11:57,2/1/16,11:57 AM,2,1,NoReport,"",2,Asleep,,,,,,,,,,,,,"","",,,,,,"","",PR,NaN,NaN,0,NaN,NaN,NaN,NaN,NaN,NaN,NaN
 2071,1,3,02/02/0016 00:43,2/2/16,12:43 AM,2,1,NoReport,"",2,Asleep,,,,,,,,,,,,,"","",,,,,,"","",PR,NaN,4.786,1,NaN,2,1,1,0,0,1
 2071,1,4,02/02/0016 01:05,2/2/16,1:05 AM,2,3,Report,"swimming in big pond or lake",2,Asleep,4,4,4,3,4,2,3,0,0,3,1,1,"legs and arms","2",0,0,1,1,1,"happy, excited","",PR,NaN,16.041,1,NaN,3,0,1,0,0,1
-2071,1,5,02/02/0016 01:33,2/2/16,1:33 AM,2,1,NoReport,"",2,Asleep,,,,,,,,,,,,,"","",,,,,,"","",PR,NaN,NaN,1,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+2071,1,5,02/02/0016 01:33,2/2/16,1:33 AM,2,1,NoReport,"",2,Asleep,,,,,,,,,,,,,"","",,,,,,"","",PR,NaN,23.954,1,NaN,4,0,1,0,0,1
 2071,1,7,02/02/0016 02:48,2/2/16,2:48 AM,R,3,Report,"at work, considering a math problem",2,Asleep,4,4,4,4,4,4,0,0,0,4,-2,1,"hands","1",0,0,1,0,0,"","",PR,NaN,NaN,0,NaN,NaN,NaN,NaN,NaN,NaN,NaN
-2071,1,8,02/02/0016 03:24,2/2/16,3:24 AM,2,1,NoReport,"",2,Asleep,,,,,,,,,,,,,"","",,,,,,"","",PR,NaN,NaN,1,NaN,NaN,NaN,NaN,NaN,NaN,NaN
-2071,1,9,02/02/0016 04:02,2/2/16,4:02 AM,2,1,NoReport,"",2,Asleep,,,,,,,,,,,,,"","",,,,,,"","",PR,NaN,NaN,1,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+2071,1,8,02/02/0016 03:24,2/2/16,3:24 AM,2,1,NoReport,"",2,Asleep,,,,,,,,,,,,,"","",,,,,,"","",PR,NaN,13.836,1,NaN,5,0,1,0,0,1
+2071,1,9,02/02/0016 04:02,2/2/16,4:02 AM,2,1,NoReport,"",2,Asleep,,,,,,,,,,,,,"","",,,,,,"","",PR,NaN,76.403,1,NaN,6,1,1,0,0,1
 2071,1,10,02/02/0016 04:40,2/2/16,4:40 AM,R,3,Report,"dreaming about superman",2,Asleep,4,2,2,4,3,0,3,0,0,2,0,1,"legs","1",1,1,1,0,0,"","",PR,NaN,NaN,0,NaN,NaN,NaN,NaN,NaN,NaN,NaN
-2071,1,11,02/02/0016 05:15,2/2/16,5:15 AM,R,2,Something,"just starting to wake up on own",1,Awake,,,,,,,,,,,,,"","",,,,,,"","",PR,NaN,NaN,1,NaN,NaN,NaN,NaN,NaN,NaN,NaN
-2071,1,12,02/02/0016 06:01,2/2/16,6:01 AM,2,3,Report,"thinking about work and at the same time classroom with little boy being a bully",1,Awake,5,4,4,4,4,4,1,0,1,0,2,0,"","1",1,0,1,0,0,"","",PR,NaN,NaN,1,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+2071,1,11,02/02/0016 05:15,2/2/16,5:15 AM,R,2,Something,"just starting to wake up on own",1,Awake,,,,,,,,,,,,,"","",,,,,,"","",PR,NaN,111.98,1,NaN,7,0,0,0,1,1
+2071,1,12,02/02/0016 06:01,2/2/16,6:01 AM,2,3,Report,"thinking about work and at the same time classroom with little boy being a bully",1,Awake,5,4,4,4,4,4,1,0,1,0,2,0,"","1",1,0,1,0,0,"","",PR,NaN,266.256,1,NaN,8,1,1,0,0,1
 2071,2,1,07/12/0016 23:17,7/12/16,11:17 PM,2,3,Report,"""walking my dog to a park""",2,Asleep,3,3,3,2,4,1,2,0,1,1,1,1,"legs","2",0,0,0,1,0,"none","",AMV,NaN,NaN,0,NaN,NaN,NaN,NaN,NaN,NaN,NaN
 2071,2,2,07/12/0016 23:53,7/12/16,11:53 AM,2,2,Something,"",2,Asleep,,,,,,,,,,,,,"","",,,,,,"","",AMV,NaN,NaN,0,NaN,NaN,NaN,NaN,NaN,NaN,NaN
 2071,2,3,07/13/0016 00:27,7/13/16,12:27 AM,2,3,Report,"sitting at a table doing crafts of some kind",1,Awake,3,3,3,3,3,2,1,0,3,3,0,1,"hands and arms","1",0,0,0,0,1,"contentment","",AMV,NaN,NaN,0,NaN,NaN,NaN,NaN,NaN,NaN,NaN
@@ -1574,15 +1574,15 @@ ID,Visit,SA,Date_Time,Date,Time,Stage,Q1ExperienceNum,Q1Experience,Q1Report,Q2Aw
 2072,1,13,02/20/0016 06:01,2/20/16,6:01 AM,2,1,NoReport,"",2,Asleep,,,,,,,,,,,,,"","",,,,,,"","",PR,NaN,NaN,0,NaN,NaN,NaN,NaN,NaN,NaN,NaN
 2072,1,14,02/20/0016 06:30,2/20/16,6:30 AM,R,1,NoReport,"",2,Asleep,,,,,,,,,,,,,"","",,,,,,"","",PR,NaN,NaN,0,NaN,NaN,NaN,NaN,NaN,NaN,NaN
 2072,1,15,02/20/0016 07:02,2/20/16,7:02 AM,2,1,NoReport,"",2,Asleep,,,,,,,,,,,,,"","",,,,,,"","",PR,NaN,NaN,0,NaN,NaN,NaN,NaN,NaN,NaN,NaN
-2073,1,1,02/08/0016 23:20,2/8/16,11:20 PM,2,1,NoReport,"",2,Asleep,,,,,,,,,,,,,"","",,,,,,"","",PR,NaN,NaN,0,NaN,NaN,NaN,NaN,NaN,NaN,NaN
-2073,1,2,02/09/0016 00:04,2/9/16,12:04 AM,2,2,Something,"in some sort of room",2,Asleep,,,,,,,,,,,,,"","",,,,,,"","",PR,NaN,NaN,0,NaN,NaN,NaN,NaN,NaN,NaN,NaN
-2073,1,3,02/09/0016 00:47,2/9/16,12:47 AM,2,3,Report,"taking a walk somewhere",2,Asleep,4,3,3,3,2,1,3,1,0,1,-1,1,"legs","2",0,0,0,1,0,"","",PR,NaN,NaN,0,NaN,NaN,NaN,NaN,NaN,NaN,NaN
-2073,1,4,02/09/0016 01:25,2/9/16,1:25 AM,2,1,NoReport,"",2,Asleep,,,,,,,,,,,,,"","",,,,,,"","",PR,NaN,NaN,0,NaN,NaN,NaN,NaN,NaN,NaN,NaN
-2073,1,5,02/09/0016 02:18,2/9/16,2:18 AM,2,2,Something,"",2,Asleep,,,,,,,,,,,,,"","",,,,,,"","",PR,NaN,NaN,0,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+2073,1,1,02/08/0016 23:20,2/8/16,11:20 PM,2,1,NoReport,"",2,Asleep,,,,,,,,,,,,,"","",,,,,,"","",PR,NaN,61.457,1,NaN,1,0,1,1,0,1
+2073,1,2,02/09/0016 00:04,2/9/16,12:04 AM,2,2,Something,"in some sort of room",2,Asleep,,,,,,,,,,,,,"","",,,,,,"","",PR,NaN,26.94,1,NaN,2,0,1,0,0,1
+2073,1,3,02/09/0016 00:47,2/9/16,12:47 AM,2,3,Report,"taking a walk somewhere",2,Asleep,4,3,3,3,2,1,3,1,0,1,-1,1,"legs","2",0,0,0,1,0,"","",PR,NaN,272.203,1,NaN,3,0,1,1,0,1
+2073,1,4,02/09/0016 01:25,2/9/16,1:25 AM,2,1,NoReport,"",2,Asleep,,,,,,,,,,,,,"","",,,,,,"","",PR,NaN,63.833,2,NaN,4,0,1,0,1,1
+2073,1,5,02/09/0016 02:18,2/9/16,2:18 AM,2,2,Something,"",2,Asleep,,,,,,,,,,,,,"","",,,,,,"","",PR,NaN,57.535,2,NaN,5,0,1,0,0,1
 2073,1,6,02/06/0016 03:00,2/9/16,3:00 AM,2,2,Something,"",2,Asleep,,,,,,,,,,,,,"","",,,,,,"","",PR,NaN,NaN,0,NaN,NaN,NaN,NaN,NaN,NaN,NaN
-2073,1,7,02/09/0016 04:12,2/9/16,4:12 AM,2,2,Something,"a bunch of random thoughts",2,Asleep,,,,,,,,,,,,,"","",,,,,,"","",PR,NaN,NaN,0,NaN,NaN,NaN,NaN,NaN,NaN,NaN
-2073,1,8,02/09/0016 04:44,2/9/16,4:44 AM,R,2,Something,"high school friends",2,Asleep,,,,,,,,,,,,,"","",,,,,,"","",PR,NaN,NaN,0,NaN,NaN,NaN,NaN,NaN,NaN,NaN
-2073,1,9,02/09/0016 05:23,2/9/16,5:23 AM,2,2,Something,"some thoughts",na,FALSE,,,,,,,,,,,,,"","",,,,,,"","",PR,NaN,NaN,0,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+2073,1,7,02/09/0016 04:12,2/9/16,4:12 AM,2,2,Something,"a bunch of random thoughts",2,Asleep,,,,,,,,,,,,,"","",,,,,,"","",PR,NaN,31.523,1,NaN,6,0,1,0,0,1
+2073,1,8,02/09/0016 04:44,2/9/16,4:44 AM,R,2,Something,"high school friends",2,Asleep,,,,,,,,,,,,,"","",,,,,,"","",PR,NaN,37.509,1,NaN,7,0,0,0,1,1
+2073,1,9,02/09/0016 05:23,2/9/16,5:23 AM,2,2,Something,"some thoughts",na,FALSE,,,,,,,,,,,,,"","",,,,,,"","",PR,NaN,16.233,1,NaN,8,1,1,0,0,1
 2073,2,1,06/22/0016 22:42,6/22/16,10:42 PM,2,3,Report,"something about her children, being outside",2,Asleep,4,3,3,3,5,2,1,0,1,1,0,0,"","2",1,0,1,0,1,"happy","",AMV,NaN,NaN,0,NaN,NaN,NaN,NaN,NaN,NaN,NaN
 2073,2,2,06/22/0016 23:18,6/22/16,11:18 PM,2,2,Something,"in a call",2,Asleep,,,,,,,,,,,,,"","",,,,,,"","",AMV,NaN,NaN,0,NaN,NaN,NaN,NaN,NaN,NaN,NaN
 2073,2,3,06/22/0016 23:48,6/22/16,11:48 PM,2,2,Something,"",2,Asleep,,,,,,,,,,,,,"","",,,,,,"","",AMV,NaN,NaN,0,NaN,NaN,NaN,NaN,NaN,NaN,NaN
@@ -1643,11 +1643,11 @@ ID,Visit,SA,Date_Time,Date,Time,Stage,Q1ExperienceNum,Q1Experience,Q1Report,Q2Aw
 2075,3,5,12/13/0016 03:35,12/13/16,3:35 AM,2,1,NoReport,"",2,Asleep,,,,,,,,,,,,,"","",,,,,,"","",AMV,NaN,NaN,0,NaN,NaN,NaN,NaN,NaN,NaN,NaN
 2075,3,6,12/13/0016 04:28,12/13/16,4:28 AM,R,3,Report,"",2,Asleep,4,4,4,3,4,2,2,1,0,1,-1,1,"walking","1",1,0,0,1,1,"upbeat, friendly","",AMV,NaN,NaN,0,NaN,NaN,NaN,NaN,NaN,NaN,NaN
 2075,3,7,12/13/0016 05:05,12/13/16,5:05 AM,2,2,Something,"",1,Awake,,,,,,,,,,,,,"","",,,,,,"","",AMV,NaN,NaN,0,NaN,NaN,NaN,NaN,NaN,NaN,NaN
-2076,1,1,02/02/0016 23:27,2/2/16,11:27 PM,2,2,Something,"",2,Asleep,,,,,,,,,,,,,"","",,,,,,"","",PR,NaN,NaN,0,NaN,NaN,NaN,NaN,NaN,NaN,NaN
-2076,1,2,02/03/0016 02:42,2/3/16,2:42 AM,R,3,Report,"Was in a car. Was tasting food samples",2,Asleep,4,3,3,4,5,4,1,1,3,4,0,1,"walking","1",1,0,1,1,1,"","",PR,NaN,NaN,0,NaN,NaN,NaN,NaN,NaN,NaN,NaN
-2076,1,3,02/03/0016 03:27,2/3/16,3:27 AM,2,2,Something,"",2,Asleep,,,,,,,,,,,,,"","",,,,,,"","",PR,NaN,NaN,0,NaN,NaN,NaN,NaN,NaN,NaN,NaN
-2076,1,4,02/03/0016 04:04,2/3/16,4:04 AM,2,2,Something,"",2,Asleep,,,,,,,,,,,,,"","",,,,,,"","",PR,NaN,NaN,0,NaN,NaN,NaN,NaN,NaN,NaN,NaN
-2076,1,5,02/03/0016 04:33,2/3/16,4:33 AM,R,3,Report,"was having a discussion. Was telling a friend why I couldn’t volunteer tomorrow",2,Asleep,3,3,4,4,5,4,1,0,5,3,0,1,"hands","1",1,0,1,0,-1,"frustrated","",PR,NaN,NaN,0,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+2076,1,1,02/02/0016 23:27,2/2/16,11:27 PM,2,2,Something,"",2,Asleep,,,,,,,,,,,,,"","",,,,,,"","",PR,NaN,10.382,2,NaN,1,0,1,0,1,1
+2076,1,2,02/03/0016 02:42,2/3/16,2:42 AM,R,3,Report,"Was in a car. Was tasting food samples",2,Asleep,4,3,3,4,5,4,1,1,3,4,0,1,"walking","1",1,0,1,1,1,"","",PR,NaN,45.624,1,NaN,2,0,0,0,1,1
+2076,1,3,02/03/0016 03:27,2/3/16,3:27 AM,2,2,Something,"",2,Asleep,,,,,,,,,,,,,"","",,,,,,"","",PR,NaN,34.097,2,NaN,3,0,1,0,0,1
+2076,1,4,02/03/0016 04:04,2/3/16,4:04 AM,2,2,Something,"",2,Asleep,,,,,,,,,,,,,"","",,,,,,"","",PR,NaN,5.529,1,NaN,4,0,1,0,0,1
+2076,1,5,02/03/0016 04:33,2/3/16,4:33 AM,R,3,Report,"was having a discussion. Was telling a friend why I couldn’t volunteer tomorrow",2,Asleep,3,3,4,4,5,4,1,0,5,3,0,1,"hands","1",1,0,1,0,-1,"frustrated","",PR,NaN,32.237,1,NaN,5,0,0,0,1,1
 2076,2,1,06/14/0016 23:43,6/14/16,11:43 PM,2,2,Something,"none",2,Asleep,,,,,,,,,,,,,"","",,,,,,"","",AC,NaN,NaN,0,NaN,NaN,NaN,NaN,NaN,NaN,NaN
 2076,2,2,06/15/0016 00:04,6/15/16,12:04 AM,2,2,Something,"none",2,Asleep,,,,,,,,,,,,,"","",,,,,,"","",AC,NaN,NaN,0,NaN,NaN,NaN,NaN,NaN,NaN,NaN
 2076,2,3,06/15/0016 00:26,6/15/16,12:26 AM,2,2,Something,"none",2,Asleep,,,,,,,,,,,,,"","",,,,,,"","",AC,NaN,NaN,0,NaN,NaN,NaN,NaN,NaN,NaN,NaN
@@ -1672,7 +1672,7 @@ ID,Visit,SA,Date_Time,Date,Time,Stage,Q1ExperienceNum,Q1Experience,Q1Report,Q2Aw
 2076,3,10,11/16/0016 03:37,11/16/16,3:37 AM,2,2,Something,"",2,Asleep,,,,,,,,,,,,,"","",,,,,,"","",AMV,NaN,NaN,0,NaN,NaN,NaN,NaN,NaN,NaN,NaN
 2076,3,11,11/16/0016 04:55,11/16/16,4:55 AM,R,3,Report,"she and her husband were trying to figure out insurance, balance checkbooks, bank cards, etc. ",2,Asleep,4,3,3,4,1,4,4,1,1,4,-1,1,"arms, hands","1",1,0,1,1,0,"","",AMV,NaN,NaN,0,NaN,NaN,NaN,NaN,NaN,NaN,NaN
 2076,3,12,11/16/0016 05:24,11/16/16,5:24 AM,2,3,Report,"talking about pillow shopping",2,Asleep,3,3,3,3,1,4,0,0,3,2,-1,1,"arms","1",1,0,0,1,1,"","",AMV,NaN,NaN,0,NaN,NaN,NaN,NaN,NaN,NaN,NaN
-2077,1,1,02/23/0016 00:20,2/23/16,12:20 AM,2,3,Report,"riding in a car",2,Asleep,4,4,4,4,4,4,2,0,3,2,2,1,"upper body ","2",0,1,0,0,-1,"anxiety, fear","",PR,NaN,NaN,0,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+2077,1,1,02/23/0016 00:20,2/23/16,12:20 AM,2,3,Report,"riding in a car",2,Asleep,4,4,4,4,4,4,2,0,3,2,2,1,"upper body ","2",0,1,0,0,-1,"anxiety, fear","",PR,NaN,NaN,0,1,NaN,NaN,NaN,NaN,NaN,NaN
 2077,1,2,02/23/0016 01:00,2/23/16,1:00 AM,2,3,Report,"at a writing desk",1,Awake,4,4,4,4,4,4,5,1,3,4,-1,0,"","1",0,1,0,0,1,"excited","",PR,NaN,NaN,0,NaN,NaN,NaN,NaN,NaN,NaN,NaN
 2077,1,3,02/23/0016 01:31,2/23/16,1:31 AM,2,3,Report,"riding in a car",1,Awake,4,5,4,4,4,4,3,1,2,4,2,1,"upper body, arms","2",0,1,0,0,1,"scared, nervous","",PR,NaN,NaN,0,NaN,NaN,NaN,NaN,NaN,NaN,NaN
 2077,1,4,02/23/0016 02:16,2/23/16,2:16 AM,2,1,NoReport,"",1,Awake,,,,,,,,,,,,,"","",,,,,,"","sweating",PR,NaN,NaN,0,NaN,NaN,NaN,NaN,NaN,NaN,NaN

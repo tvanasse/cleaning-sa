@@ -7,12 +7,12 @@
 % ------------------------------------------------------------------------
 
 addpath('other/');
-addpath('functions/');
+addpath(genpath('functions/'));
 
-start_dir = 0;
-start_dir = '/Volumes/data-2/NCCAM3/SA/wDreamReport/aligned';
+% start_dir = 0;
+% start_dir = '/Volumes/data-2/NCCAM3/SA/wDreamReport/aligned';
 
-inputlist = uigetfile_n_dir(start_dir);
+inputlist = uigetfile_n_dir();
 
 %% loop through input file list
 
@@ -170,15 +170,15 @@ for awak = 1:length(nrem_index)
       
     figure('Renderer', 'painters', 'Position', [100 900 1500 200],'Name', sprintf('Awakening-%d-cleaned_nrem, 5 min.',nrem_index(awak)))
     hold on;
-    ax1 = subplot(1,6,1); topoplot(raw_topo(:,1), EEG_avgref.chanlocs,'maplimits',[min(raw_topo(:,1)),max(raw_topo(:,1))],'electrodes','on','style','map'); title('Delta'); colorbar; colormap(ax1,jet)
-    ax2 = subplot(1,6,2); topoplot(raw_topo(:,2), EEG_avgref.chanlocs,'maplimits',[min(raw_topo(:,2)),max(raw_topo(:,2))],'electrodes','on','style','map'); title('Theta '); colorbar; colormap(ax2,jet)
-    ax3 = subplot(1,6,3); topoplot(raw_topo(:,3), EEG_avgref.chanlocs,'maplimits',[min(raw_topo(:,3)),max(raw_topo(:,3))],'electrodes','on','style','map'); title('Alpha'); colorbar; colormap(ax3,jet)
-    ax4 = subplot(1,6,4); topoplot(raw_topo(:,4), EEG_avgref.chanlocs,'maplimits',[min(raw_topo(:,4)),max(raw_topo(:,4))],'electrodes','on','style','map'); title('Spindle'); colorbar; colormap(ax3,jet)
-    ax5 = subplot(1,6,5); topoplot(raw_topo(:,5), EEG_avgref.chanlocs,'maplimits',[min(raw_topo(:,5)),max(raw_topo(:,5))],'electrodes','on','style','map'); title('Beta'); colorbar; colormap(ax5,jet)
-    ax8 = subplot(1,6,6); topoplot(raw_topo(:,6), EEG_avgref.chanlocs,'maplimits',[min(raw_topo(:,6)),max(raw_topo(:,6))],'electrodes','on','style','map'); title('Gamma'); colorbar; colormap(ax8,jet)
+    ax1 = subplot(1,6,1); topoplot(raw_topo(:,1), EEG_avgref.chanlocs,'maplimits',[min(raw_topo(:,1)),max(raw_topo(:,1))],'electrodes','on','style','map'); title(sprintf('Delta-A%d', nrem_index(awak))); colorbar; colormap(ax1,jet)
+    ax2 = subplot(1,6,2); topoplot(raw_topo(:,2), EEG_avgref.chanlocs,'maplimits',[min(raw_topo(:,2)),max(raw_topo(:,2))],'electrodes','on','style','map'); title(sprintf('Theta-A%d', nrem_index(awak))); colorbar; colormap(ax2,jet)
+    ax3 = subplot(1,6,3); topoplot(raw_topo(:,3), EEG_avgref.chanlocs,'maplimits',[min(raw_topo(:,3)),max(raw_topo(:,3))],'electrodes','on','style','map'); title(sprintf('Alpha-A%d', nrem_index(awak))); colorbar; colormap(ax3,jet)
+    ax4 = subplot(1,6,4); topoplot(raw_topo(:,4), EEG_avgref.chanlocs,'maplimits',[min(raw_topo(:,4)),max(raw_topo(:,4))],'electrodes','on','style','map'); title(sprintf('Spindles-A%d', nrem_index(awak))); colorbar; colormap(ax3,jet)
+    ax5 = subplot(1,6,5); topoplot(raw_topo(:,5), EEG_avgref.chanlocs,'maplimits',[min(raw_topo(:,5)),max(raw_topo(:,5))],'electrodes','on','style','map'); title(sprintf('Beta-A%d', nrem_index(awak))); colorbar; colormap(ax5,jet)
+    ax8 = subplot(1,6,6); topoplot(raw_topo(:,6), EEG_avgref.chanlocs,'maplimits',[min(raw_topo(:,6)),max(raw_topo(:,6))],'electrodes','on','style','map'); title(sprintf('Gamma-A%d', nrem_index(awak))); colorbar; colormap(ax8,jet)
 
     saveas(gcf, [sesdir '/' sprintf('awakening-%d-cleaned2_nrem.tif', nrem_index(awak))], 'tif');
-    
+    export_fig([sesdir '/' 'qa_figs.tiff'],'-append')
     close all
     % Plot power spectra of awakening:
     mat_path = sesdir;
@@ -198,6 +198,12 @@ for awak = 1:length(nrem_index)
     
     % "plot the spectra"
     Spectra_Plotter(fft_all,1:size(fft_all,3), options);
+    export_fig([sesdir '/' 'qa_figs.tiff'],'-append')
+    close all;
+    
+    [X,cmap] = imread([sesdir sprintf('/awakening-%d-scoring.png', nrem_index(awak))]);
+    imshow(X,cmap);
+    export_fig([sesdir '/' 'qa_figs.tiff'],'-append')
     close all;
   
 end
