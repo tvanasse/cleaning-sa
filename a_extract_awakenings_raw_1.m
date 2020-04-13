@@ -244,26 +244,25 @@ for mff_input_file = 1:length(inputlist)
                 TABLE.DIFF_FROM_EVENT_SECONDS(de_index(din_event_match(i,1))) = din_event_match(i,2);
                 TABLE.ENTRY_MATCHED_AWAKENING_NO(de_index(din_event_match(i,1))) = ent_matched_awakening;
                      
-                %EXTRACTING 5 MINUTES BEFORE AWAKENING
-                samples_before_awakening = mff_read_samples(extr_filname,'all',...
-                    events(din100_idx(i),2)-(srate*60*5), ...
-                    events(din100_idx(i),2)-1);
+                %EXTRACTING 5 MINUTES BEFORE AWAKENING(retired)
+%                 samples_before_awakening = mff_read_samples(extr_filname,'all',...
+%                     events(din100_idx(i),2)-(srate*60*5), ...
+%                     events(din100_idx(i),2)-1);
 
                 aligned_file = dir(fullfile(extr_dir, '*.aligned'));
                 aligned_folder = strcat(extr_dir, '/', aligned_file.name);
                 aligned_events_raw = load([aligned_folder filesep 'alignedevents.mat']);
                 egi_offset = aligned_events_raw.alignedevents.egi_start_offset;
 
-%                 the following code would read .raw files instead,
-%                 accounting for egi offset              
-%                 % get mffraw files
+%               % Extract samples from raw data instead
                 f = dir(fullfile(aligned_folder,'MFF*'));
                 C = struct2cell(f);
                 input = {};
                 for chan = 1:257
                     input{end+1} = C{1,chan};
                 end 
-                samples_before_awakneing = readalignmentraw(aligned_folder, input, events(din100_idx(i),2)-(srate*60*5), events(din100_idx(i),2)-1);               
+                samples_before_awakening = readalignmentraw(aligned_folder, input, ...
+                    events(din100_idx(i),2)-(srate*60*5), events(din100_idx(i),2)-1);               
                 
                 eloc = readlocs(CHANNEL_LOCATION_FILE);
 
@@ -295,8 +294,8 @@ for mff_input_file = 1:length(inputlist)
                         events(din100_idx(i),2) + (srate*30));
                     plot(scoring,'LineWidth',5)
                     hold on
-                    xline(srate*60*5-(srate*60),'LineWidth', 5); %plot point where sleep soring is being assessed
-                    xline(srate*60*5-(srate*30),'LineWidth', 5, 'Color','r');
+                    xline(size(scoring,2)-(srate*60),'LineWidth', 5); %plot point where sleep soring is being assessed
+                    xline(size(scoring,2)-(srate*30),'LineWidth', 5, 'Color','r');
                     saveas(gcf, [sesdir '/awakening-' num2str(ent_matched_awakening) '-scoring.png'], 'png');
                     close all;
                     
