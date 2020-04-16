@@ -11,13 +11,10 @@ addpath('functions');
 eeglab;
 close;
 
-%readfilename
-% fileID=fopen(strcat([pwd '/input_files/input_sub_comps_loop.csv']));
-% C = textscan(fileID, '%s','delimiter',',');
-% fclose('all');
-
 log_file = 'log/log_file.txt';
-inputlist = uigetfile_n_dir;
+
+batch_folder = uigetfile_n_dir();
+inputlist = uigetfile_n_dir(batch_folder);
 
 %% loop through input file list
 

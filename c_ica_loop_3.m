@@ -12,7 +12,8 @@ addpath('functions');
 eeglab;
 close;
 
-inputlist = uigetfile_n_dir;
+batch_folder = uigetfile_n_dir();
+inputlist = uigetfile_n_dir(batch_folder);
 
 % manually set max threads - TJV: 3, TA: 6
 max_threads = inputdlg('Input Max Threads',...

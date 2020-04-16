@@ -6,7 +6,7 @@ import javax.swing.JFileChooser;
 currentdir = pwd
 
 if nargin == 0 % Allow a null argument.
-    start_path = [currentdir '/../../../../Batch_0401202'];
+    start_path = [currentdir '/../../../..'];
 end
 
 jchooser = javaObjectEDT('javax.swing.JFileChooser', start_path);

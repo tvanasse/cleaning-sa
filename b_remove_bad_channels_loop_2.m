@@ -8,10 +8,12 @@
 CHANNEL_LOCATION_FILE = 'channel_location_file/HydroCelGSN256v10.sfp';
 
 addpath('functions');
+eeglab;
+close;
 
 %% read allfilenames
-
-inputlist = uigetfile_n_dir;
+batch_folder = uigetfile_n_dir();
+inputlist = uigetfile_n_dir(batch_folder);
 
 %% loop through input file list
 

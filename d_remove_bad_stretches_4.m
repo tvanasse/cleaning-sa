@@ -11,7 +11,8 @@ addpath('functions/');
 eeglab;
 close;
 
-inputlist = uigetfile_n_dir;
+batch_folder = uigetfile_n_dir();
+inputlist = uigetfile_n_dir(batch_folder);
 
 %% loop through input file list
 

@@ -11,7 +11,8 @@ addpath(genpath('functions/'));
 
 % start_dir = 0;
 
-inputlist = uigetfile_n_dir();
+batch_folder = uigetfile_n_dir();
+inputlist = uigetfile_n_dir(batch_folder);
 
 % process earlier batch
 % start_dir = '/Volumes/data-2/NCCAM3/SA/wDreamReport/aligned';
@@ -71,6 +72,9 @@ for mff_input_file = 1:length(inputlist)
     
     EEG_avgref_beforeica2 = iclabel(EEG_avgref_beforeica2); % prior to computing features, each dataset was converted to a common average reference
     
+    % load badcomps
+    badcomps = load([sesdir '/ic_artifacts.mat']);
+    
     good_comps = [];
     for x = 1:size(EEG_avgref_beforeica2.icaweights,2)
         if isempty(find(badcomps.ic_artifacts_all==x))
@@ -94,6 +98,11 @@ for mff_input_file = 1:length(inputlist)
         export_fig([sesdir '/' 'qa_figs.tiff'],'-append',figHandles(x))
     end
     
+    close all;
+    
+    [X,cmap] = imread([sesdir '/nrem_badchannels.tif']);
+    imshow(X,cmap);
+    export_fig([sesdir '/' 'qa_figs.tiff'],'-append')
     close all;
     
     %% continue with script

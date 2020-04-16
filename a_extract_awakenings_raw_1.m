@@ -17,7 +17,8 @@ addpath('functions');
 CHANNEL_LOCATION_FILE = 'channel_location_file/HydroCelGSN256v10.sfp';
 
 %% input filenames
-inputlist = uigetfile_n_dir;
+batch_folder = uigetfile_n_dir();
+inputlist = uigetfile_n_dir(batch_folder);
 
 %% loop through input file list
 for mff_input_file = 1:length(inputlist)
