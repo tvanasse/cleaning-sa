@@ -1,0 +1,5 @@
+Percentage of data removed, awakening-1: 0.88
+Percentage of data removed, awakening-3: 1.49
+Percentage of data removed, awakening-4: 2.36
+Percentage of data removed, awakening-6: 0.72
+Percentage of data removed, awakening-7: 0.62
