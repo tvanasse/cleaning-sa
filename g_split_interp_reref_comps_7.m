@@ -8,6 +8,8 @@
 
 addpath('other/');
 addpath(genpath('functions/'));
+eeglab;
+close;
 
 % start_dir = 0;
 
@@ -76,7 +78,7 @@ for mff_input_file = 1:length(inputlist)
     badcomps = load([sesdir '/ic_artifacts.mat']);
     
     good_comps = [];
-    for x = 1:size(EEG_avgref_beforeica2.icaweights,2)
+    for x = 1:size(EEG_avgref_beforeica2.icaweights,1)
         if isempty(find(badcomps.ic_artifacts_all==x))
             good_comps = [good_comps x];
         end      
@@ -110,6 +112,9 @@ for mff_input_file = 1:length(inputlist)
     
     EEG_all = pop_loadset([sesdir '/nrem_merged_ica2_subcomps.set']);
     
+    % remove additionally identified bad channels
+%     EEG = epi_log(@pop_select, EEG, 'nochannel', EEG.badchannels);
+    
     %50 Hz low-pass filter
     EEG_all = pop_eegfiltnew(EEG_all, [], 50, [], 0, [], 0); 
     
@@ -139,6 +144,7 @@ for awak = 1:length(nrem_index)
         EEG.badsections = []; % no bad sections
     end
     
+
     % identify and interpoloate bad channels
     load([sesdir '/chanlocs_185.mat'])
     EEG.urchanlocs = origEEGchanlocs;   

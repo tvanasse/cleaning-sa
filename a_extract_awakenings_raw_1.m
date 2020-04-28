@@ -73,10 +73,6 @@ for mff_input_file = 1:length(inputlist)
     
     fprintf('\nExtracting data for subject %s, %s... \n\n', subid, session)
 
-    mff_name = dir(fullfile(filename, '*.mff'));
-    extr_filname = strcat(filename, '/', mff_name.name);
-    k = strfind(filename, 'NCCAM_'); % get start index for filename (from full path)
-   
     %% manually set mff file (if data is split into two parts)
 %     mff_file = uigetfile_n_dir;
 %     extr_filname = char(mff_file(1));
@@ -92,19 +88,20 @@ for mff_input_file = 1:length(inputlist)
         end
     end 
     
-    % check if file exists, if not--mark and go to next file
-    if ~isfolder(extr_filname)
-        TABLE.FILE_NOT_FOUND(de_index(1)) = 1;
-        continue;
-    end
 
     % add java file necessary for mff function
     eeglab_filepath = which('eeglab');
-    javaaddpath([eeglab_filepath(1:end-8) 'plugins/MFFimport2.3/mffimport/MFF-1.2.jar']);
-            
+        
     % load absolute datetime of raw file
     aligned_file = dir(fullfile(extr_dir, '*.aligned'));
     aligned_folder = strcat(extr_dir, '/', aligned_file.name);
+    
+     % check if file exists, if not--mark and go to next file
+    if ~isfolder(aligned_folder)
+        TABLE.FILE_NOT_FOUND(de_index(1)) = 1;
+        continue;
+    end
+    
     timing = load([aligned_folder filesep 'properties.mat']);
     absolute_datetime = timing.properties.recording_start_datetime;
     
