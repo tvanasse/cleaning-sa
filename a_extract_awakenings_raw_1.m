@@ -145,7 +145,6 @@ for mff_input_file = 1:length(inputlist)
         din100_idx = find(din100);
 
          % also impose that it has at least 20 minutes and multiple DINs in one
-
         duration_between_dins = [events(din100_idx(1),2)/srate/60 diff(events(din100_idx,2))'/srate/60];
         timestamps = mff_events.(events_field).recording_timestamp(din100_idx)';
         timenum = zeros(1,length(timestamps));
@@ -161,7 +160,7 @@ for mff_input_file = 1:length(inputlist)
         end
         fclose(fileID);
         
-        %%  match one din event to one awakening (closest within +/- 2 minutes)
+        %%  match one din event to one awakening (closest within +/- 8 minutes)
         din_event_match = zeros(length(timestamps),4); % create array to mark
         din_event_match(:,4) = 1; % keeps track if this DIN event has the shortest time away from data entry event
         
@@ -169,20 +168,19 @@ for mff_input_file = 1:length(inputlist)
             
                 for awake_idx = 1:length(de_index) % check to see if it matches to an awakening
                 % get awakening data into datetime format
-                awake_date = char(TABLE.Date_Time(de_index(awake_idx)));
-                awake_date = [awake_date(1:6) '20' awake_date(9:16)];
+                awake_date = char(TABLE.Date_Time(de_index(awake_idx)));             
+                awake_date = [awake_date(1:6) '20' awake_date(9:16)];    
                 awake = datetime(awake_date,'InputFormat','MM/dd/yyyy HH:mm');
                 % get din timestamp data into datetime format
                 din_timestamp = char(timestamps(time_idx));
                 din_timestamp = [din_timestamp(1:10) ' ' din_timestamp(12:23)]; 
                 din_timestamp = datetime(din_timestamp,'InputFormat','yyyy-MM-dd HH:mm:ss.SSS');
-                    
-                [Y, M, filename, H, MN, S] = datevec(awake - din_timestamp);
-                seconds_diff = abs(H*3600 + MN*60 + S); 
+                
+                time_interval_in_seconds = abs(etime(datevec(awake),datevec(din_timestamp)));
 
-                if seconds_diff < 300 % +/- 5 minutes
+                if time_interval_in_seconds < 480 % +/- 8 minutes
                     din_event_match(time_idx,1) = awake_idx; %match din to specific awakening
-                    din_event_match(time_idx,2) = seconds_diff; %track error (seconds)
+                    din_event_match(time_idx,2) = time_interval_in_seconds; %track error (seconds)
                     break
                 else 
                     continue
@@ -228,6 +226,8 @@ for mff_input_file = 1:length(inputlist)
                 TABLE.DIN_EVENTS_WITHIN_TWO_MINUTES(de_index(din_event_match(k,1))) = 1; 
             end 
         end 
+        
+
         
         %% save five minutes of data for each awakening
         
@@ -289,11 +289,11 @@ for mff_input_file = 1:length(inputlist)
                 else 
                     scoring = readalignmentraw(aligned_folder, {'alignedscoring.raw'}, ...
                         events(din100_idx(i),2)-(srate*60*5),...
-                        events(din100_idx(i),2) + (srate*30));
+                        events(din100_idx(i),2) + (srate*60));
                     plot(scoring,'LineWidth',5)
                     hold on
-                    xline(size(scoring,2)-(srate*60),'LineWidth', 5); %plot point where sleep soring is being assessed
-                    xline(size(scoring,2)-(srate*30),'LineWidth', 5, 'Color','r');
+                    xline(size(scoring,2)-(srate*90),'LineWidth', 5); %plot point where sleep soring is being assessed
+                    xline(size(scoring,2)-(srate*60),'LineWidth', 5, 'Color','r');
                     saveas(gcf, [sesdir '/awakening-' num2str(ent_matched_awakening) '-scoring.png'], 'png');
                     close all;
                     
@@ -353,7 +353,12 @@ for mff_input_file = 1:length(inputlist)
         TABLE.MFF_FILE_HAS_NO_EVENTS_TO_IMPORT(de_index(1)) = 1;
         writetable(TABLE,'NCCAM3_06_SADreamReports_10-20-18.csv');
 
-    end 
+    end
+    
+    %% save number of awakenings found
+    fid = fopen([sesdir '/log.txt'], 'at');
+    fprintf(fid, 'Found %d of %d awakenings\n', ent_matched_awakening-1, length(de_index));
+    fclose(fid);
     
 end 
 
