@@ -15,6 +15,9 @@ close;
 batch_folder = uigetfile_n_dir();
 inputlist = uigetfile_n_dir(batch_folder);
 
+% set local folder to run ica
+local_folder = uigetfile_n_dir('~');
+
 % manually set max threads - TJV: 3, TA: 6
 max_threads = inputdlg('Input Max Threads',...
          'Sample', [1 50]);
@@ -71,12 +74,15 @@ for mff_input_file = 1:length(inputlist)
     
     EEG = pop_loadset([sesdir '/nrem_awakening_eeg_hp_trim_merged_nobadch.set']);
 
-    AMICA_DIR = [sesdir '/amicaout/']; % good to have a separate dir for each file
+    AMICA_DIR = [local_folder{1} '/amicaout/'];  % good to have a separate dir for each file
     if ~exist(AMICA_DIR,'dir')
         mkdir(AMICA_DIR)
     end
- 
-
+    
+    % change to local directory to save output
+    scripts_dir = pwd;
+    cd(local_folder{1})
+    
     % amica15 was failing on my (TJV) machine when manually setting threads
     % to 6
     if max_threads == 0
@@ -103,6 +109,9 @@ for mff_input_file = 1:length(inputlist)
     
     EEG = pop_saveset(EEG, 'filename', [EEG.filename(1:end-4), '_ica.set'], 'filepath', sesdir); % '_ica'
 
+    % change back to scripts directory
+    copyfile(AMICA_DIR, sesdir)
+    cd(scripts_dir)
     
     
 end 

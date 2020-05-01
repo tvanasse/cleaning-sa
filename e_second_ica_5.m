@@ -14,6 +14,9 @@ close;
 batch_folder = uigetfile_n_dir();
 inputlist = uigetfile_n_dir(batch_folder);
 
+% set local folder to run ica
+local_folder = uigetfile_n_dir('~');
+
 % manually set max threads - TJV: 3, TA: 6    
 max_threads = inputdlg('Input Max Threads',...
          'Sample', [1 50]);
@@ -64,15 +67,14 @@ for mff_input_file = 1:length(inputlist)
         sesdir = [eegdir '/error'];
     end 
     
-    AMICA_DIR = [sesdir '/amicaout2/']; % good to have a separate dir for each file
+    AMICA_DIR = [local_folder{1} '/amicaout2/'];  % good to have a separate dir for each file
     if ~exist(AMICA_DIR,'dir')
         mkdir(AMICA_DIR)
-    else 
-        rmdir(AMICA_DIR, 's')
-        mkdir(AMICA_DIR)
     end
-
-    load([sesdir '/nrem_index'])
+    
+    % change to local directory to save output
+    scripts_dir = pwd;
+    cd(local_folder{1})
     
     % merge cleaned data and document awakening lengths after cleaning
     cleaned_lengths = [];
@@ -118,6 +120,9 @@ for mff_input_file = 1:length(inputlist)
     
     EEG = pop_saveset(EEG, 'filename', ['nrem_merged_ica2.set'], 'filepath', sesdir); % '_ica'
     
+    % change back to scripts directory
+    copyfile(AMICA_DIR, sesdir)
+    cd(scripts_dir)
 end
 
 for mff_input_file = 1:length(inputlist)

@@ -318,19 +318,12 @@ for mff_input_file = 1:length(inputlist)
                 
                 % assess if awakening occured in N2/N3 (look at 30 seconds
                 % before din event
-                awakening_n2n3_samples = find(scoring(EEG.pnts-60*EEG.srate:EEG.pnts) == -2 | scoring(EEG.pnts-60*EEG.srate:EEG.pnts) == -3);
+                awakening_n2n3_samples = find(scoring(EEG.pnts-90*EEG.srate:EEG.pnts) == -2 | scoring(EEG.pnts-90*EEG.srate:EEG.pnts) == -3);
                     
-                % five minutes cannot contain any rem
-                if (~isempty(awakening_n2n3_samples) & TABLE.REM(de_index(din_event_match(i,1))) ~= 1)
+                % 4.5 minutes cannot contain any rem
+                if (~isempty(awakening_n2n3_samples) && ~(any(scoring(1,EEG.pnts-90*EEG.srate) == 1)))
                     nrem_index = [nrem_index ent_matched_awakening];
-                    
-                    % find N2/N3 samples only, [ignore last 30 seconds of
-                    % data] because scoring may be misleading here because
-                    % data is epoched every 30 seconds
-                    % (-60 because we are looking at scoring 30 s after
-                    % awakening
-                    n2n3_samples = find(scoring(1:end-60*EEG.srate) ~= -2 & scoring(1:end-60*EEG.srate) ~= -3);
-                    
+                   
                     if n2n3_iter == 0
                         MERGEDEEG = EEG;
                     else
