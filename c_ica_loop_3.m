@@ -12,8 +12,22 @@ addpath('functions');
 eeglab;
 close;
 
+%% input filenames
+more_files = 'Yes';
+first_iter = 0;
+while strcmp(more_files, 'No') ~= 1
 batch_folder = uigetfile_n_dir();
-inputlist = uigetfile_n_dir(batch_folder);
+if first_iter == 0;
+    inputlist = uigetfile_n_dir(batch_folder);
+else
+    inputlist = [inputlist uigetfile_n_dir(batch_folder)];
+end
+
+more_files = questdlg('Add more subjects from different batch folder?', ...
+	'??', ...
+	'Yes','No','No');
+first_iter = first_iter + 1;
+end
 
 % set local folder to run ica
 local_folder = uigetfile_n_dir('~');
@@ -109,8 +123,12 @@ for mff_input_file = 1:length(inputlist)
     
     EEG = pop_saveset(EEG, 'filename', [EEG.filename(1:end-4), '_ica.set'], 'filepath', sesdir); % '_ica'
 
-    % change back to scripts directory
+    % copy files to sesdir and change back to scripts directory
+    if ~exist([sesdir '/amicaout'],'dir')
+        mkdir(AMICA_DIR)
+    end
     copyfile(AMICA_DIR, sesdir)
+    
     cd(scripts_dir)
     
     

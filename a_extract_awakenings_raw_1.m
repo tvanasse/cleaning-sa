@@ -17,8 +17,21 @@ addpath('functions');
 CHANNEL_LOCATION_FILE = 'channel_location_file/HydroCelGSN256v10.sfp';
 
 %% input filenames
-batch_folder = uigetfile_n_dir();
-inputlist = uigetfile_n_dir(batch_folder);
+more_files = 'Yes';
+first_iter = 0;
+while strcmp(more_files, 'No') ~= 1
+    batch_folder = uigetfile_n_dir();
+    if first_iter == 0;
+        inputlist = uigetfile_n_dir(batch_folder);
+    else
+        inputlist = [inputlist uigetfile_n_dir(batch_folder)];
+    end
+
+    more_files = questdlg('Add more subjects from different batch folder?', ...
+        '??', ...
+        'Yes','No','No');
+    first_iter = first_iter + 1;
+end
 
 %% loop through input file list
 for mff_input_file = 1:length(inputlist)
