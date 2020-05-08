@@ -33,10 +33,13 @@ while strcmp(more_files, 'No') ~= 1
     first_iter = first_iter + 1;
 end
 
+% add table name
+TABLE_name = uigetfile_n_dir(pwd,'Pick Specific DREAM REPORT FILE');
+
 %% loop through input file list
 for mff_input_file = 1:length(inputlist)
     
-    TABLE = readtable('NCCAM3_06_SADreamReports_10-20-18.csv','ReadVariableNames',true); %read experimenter input file
+    TABLE = readtable(TABLE_name{1},'ReadVariableNames',true); %read experimenter input file
     filename = char(inputlist(mff_input_file)); %mff raw data filename
     
     k = strfind(filename, 'NCCAM_'); % get start index for filename (from full path)
@@ -305,6 +308,7 @@ for mff_input_file = 1:length(inputlist)
                         events(din100_idx(i),2) + (srate*60));
                     plot(scoring,'LineWidth',5)
                     hold on
+                    title(datestr(absolute_datetime + seconds(events(din100_idx(i),2)/500)));
                     xline(size(scoring,2)-(srate*90),'LineWidth', 5); %plot point where sleep soring is being assessed
                     xline(size(scoring,2)-(srate*60),'LineWidth', 5, 'Color','r');
                     saveas(gcf, [sesdir '/awakening-' num2str(ent_matched_awakening) '-scoring.png'], 'png');
@@ -352,7 +356,9 @@ for mff_input_file = 1:length(inputlist)
     
     save([sesdir '/nrem_index.mat'],'nrem_index');
     pop_saveset(MERGEDEEG,'filename', 'nrem_awakening_eeg_hp_trim_merged','filepath', sesdir); 
-        
+    
+    clear MERGEDEEG   
+    
     else 
         
         fprintf('subject %s, %s mff file has no events to import\n', subid, session);
@@ -360,6 +366,18 @@ for mff_input_file = 1:length(inputlist)
         writetable(TABLE,'NCCAM3_06_SADreamReports_10-20-18.csv');
 
     end
+    %% plot all awakenings
+    scoring = readalignmentraw(aligned_folder, {'alignedscoring.raw'});
+    plot(scoring,'LineWidth',2);
+    hold on;
+    for i = 1:length(timestamps)
+           if ((din_event_match(i,1) > 0) && din_event_match(i,4) > 0) %DIN matches with awakening AND is the shortest time away from recoreded awakening   
+                xline(events(din100_idx(i),2),'LineWidth',3,'Color','r');
+           end
+    end
+    set(gcf, 'Units', 'Inches', 'Position', [0, 0, 18, 7]);
+    saveas(gcf, [sesdir '/all_awakenings.png'], 'png');
+    close all;
     
     %% save number of awakenings found
     fid = fopen([sesdir '/log.txt'], 'at');

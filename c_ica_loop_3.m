@@ -118,18 +118,21 @@ for mff_input_file = 1:length(inputlist)
     EEG.icawinv = EEG.etc.amica.A; % model component matrices
     
     %EEG.icaact = (EEG.icaweights*EEG.icasphere)*EEG.data(EEG.icachansind,:);
-
     EEG = eeg_checkset(EEG, 'ica'); % update EEG.icaact
     
+    
+    %% if script fails to save run lines up to cd(scripts_dir)
     EEG = pop_saveset(EEG, 'filename', [EEG.filename(1:end-4), '_ica.set'], 'filepath', sesdir); % '_ica'
 
     % copy files to sesdir and change back to scripts directory
     if ~exist([sesdir '/amicaout'],'dir')
-        mkdir(AMICA_DIR)
+        mkdir([sesdir '/amicaout'])
     end
-    copyfile(AMICA_DIR, sesdir)
+    copyfile(AMICA_DIR, [sesdir '/amicaout'])
     
     cd(scripts_dir)
+    
+  
     
     
 end 

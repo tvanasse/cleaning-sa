@@ -86,12 +86,16 @@ for mff_input_file = 1:length(inputlist)
         mkdir(AMICA_DIR)
     end
     
+    %load index of nrem awakenings
+    load([sesdir '/nrem_index'])
+    
     % change to local directory to save output
     scripts_dir = pwd;
     cd(local_folder{1})
     
     % merge cleaned data and document awakening lengths after cleaning
     cleaned_lengths = [];
+    
     for x = 1:length(nrem_index)
         if x == 1
            MERGEDEEG = pop_loadset([sesdir '/awakening-' num2str(nrem_index(x)) '-nrem-posICA1-cleaned.set']);
@@ -136,9 +140,9 @@ for mff_input_file = 1:length(inputlist)
     
     % change back to scripts directory
     if ~exist([sesdir '/amicaout2'],'dir')
-        mkdir(AMICA_DIR)
+        mkdir([sesdir '/amicaout2'])
     end
-    copyfile(AMICA_DIR, sesdir)
+    copyfile(AMICA_DIR, [sesdir '/amicaout2'])
     cd(scripts_dir)
 end
 
