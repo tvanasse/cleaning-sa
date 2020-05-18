@@ -1,2 +1,6 @@
-Percentage of data removed, awakening-1: 6.63
-Percentage of data removed, awakening-3: 1.24
+Found 6 of 6 awakenings
+Found 6 of 6 awakenings
+Percentage of data removed, awakening-1: 6.69
+Percentage of data removed, awakening-3: 0.98
+Percentage of data removed, awakening-6: 5.42
+Found 6 of 6 awakenings

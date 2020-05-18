@@ -80,6 +80,15 @@ for mff_input_file = 1:length(inputlist)
         sesdir = [eegdir '/error'];
     end
     
+    %% plot all awakenings and sleep scoring data
+    if isfile([sesdir '/all_awakenings.png'])
+        
+            [X,cmap] = imread([sesdir '/all_awakenings.png']);
+            imshow(X,cmap);
+            export_fig([sesdir '/' 'qa_figs.tiff'],'-append')
+            close all;
+    end
+    
     %% plot good/bad components
     EEG = pop_loadset([sesdir '/nrem_merged_ica2.set']);
     

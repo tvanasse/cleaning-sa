@@ -1,0 +1,3 @@
+Found 3 of 4 awakenings
+Percentage of data removed, awakening-2: 5.56
+Percentage of data removed, awakening-3: 7.98

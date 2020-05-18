@@ -321,7 +321,7 @@ for mff_input_file = 1:length(inputlist)
                     TABLE.WAKE(de_index(din_event_match(i,1))) = any(scoring(:) == 0);
                 end
                 
-                writetable(TABLE,'NCCAM3_06_SADreamReports_10-20-18.csv');
+                writetable(TABLE,TABLE_name{1});
                 
                 % high-pass Filter (1 Hz)
                 EEG = pop_eegfiltnew(EEG, 1, [], [], 0, [], 0);
@@ -363,7 +363,7 @@ for mff_input_file = 1:length(inputlist)
         
         fprintf('subject %s, %s mff file has no events to import\n', subid, session);
         TABLE.MFF_FILE_HAS_NO_EVENTS_TO_IMPORT(de_index(1)) = 1;
-        writetable(TABLE,'NCCAM3_06_SADreamReports_10-20-18.csv');
+        writetable(TABLE,TABLE_name{1});
 
     end
     %% plot all awakenings
