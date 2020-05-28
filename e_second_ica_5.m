@@ -115,12 +115,11 @@ for mff_input_file = 1:length(inputlist)
     
 
     % amica15 was failing on my (TJV) machine when manually setting threads
-    % to 6
+    % to 6, 0 specifies default number of threads
     if max_threads == 0
      runamica15(EEG.data, 'num_chans', EEG.nbchan,...
     'outdir', AMICA_DIR,...
     'num_models', 1, 'num_mix_comps', 3)
-   % 'blk_min', 64, 'blk_step', 64, 'blk_max', 256); 
         
     else 
     runamica15(EEG.data, 'num_chans', EEG.nbchan,...
@@ -129,14 +128,14 @@ for mff_input_file = 1:length(inputlist)
     end
     
     EEG.etc.amica  = loadmodout15(AMICA_DIR);
-    EEG.etc.amica.S = EEG.etc.amica.S(1:EEG.etc.amica.num_pcs, :); % Weirdly, I saw size(S,1) be larger than rank. This process does not hurt anyway.
+    EEG.etc.amica.S = EEG.etc.amica.S(1:EEG.etc.amica.num_pcs, :); 
     EEG.icaweights = EEG.etc.amica.W; % unmixing weights
     EEG.icasphere  = EEG.etc.amica.S; % sphering matrix
     EEG.icawinv = EEG.etc.amica.A; % model component matrices
 
     EEG = eeg_checkset(EEG, 'ica'); % update EEG.icaact
     
-    EEG = pop_saveset(EEG, 'filename', ['nrem_merged_ica2.set'], 'filepath', sesdir); % '_ica'
+    EEG = pop_saveset(EEG, 'filename', ['nrem_merged_ica2.set'], 'filepath', sesdir); 
     
     % change back to scripts directory
     if ~exist([sesdir '/amicaout2'],'dir')
