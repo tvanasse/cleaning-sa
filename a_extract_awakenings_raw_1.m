@@ -1,7 +1,9 @@
 % ------------------------------------------------------------------------
-% Get every mff files and find the awakening times from the DIN, extract EEG
-% data 5 minutes before awakening. If there are DINS within 2 minutes of
-% each other, use the DIN closest to awakening entry time
+% Find DIN events that match to experimenter reported awakening. If there
+% are multiple DIN events for one awakening, then find the closest DIN
+% event to the reported one. For each awakening found, extract five minutes
+% of data before awakening. Concatenate those files that were awoke in NREM
+% sleep for ICA cleaning. 
 
 % Author: Thomas Vanasse
 % Center for Sleep and Consciousness, University of Wisconsin - Madison
@@ -10,13 +12,12 @@
 eeglab;
 close;
 
-% add path to mff functions
-addpath('mffs');
+% add functions from folder
 addpath('functions');
 
 CHANNEL_LOCATION_FILE = 'channel_location_file/HydroCelGSN256v10.sfp';
 
-%% input filenames
+%% input filenames from separate batch folders
 more_files = 'Yes';
 first_iter = 0;
 while strcmp(more_files, 'No') ~= 1
@@ -33,7 +34,7 @@ while strcmp(more_files, 'No') ~= 1
     first_iter = first_iter + 1;
 end
 
-% add table name
+% add table name (so we aren't simultaneously i/o'ing csv file)
 TABLE_name = uigetfile_n_dir(pwd,'Pick Specific DREAM REPORT FILE');
 
 %% loop through input file list
@@ -88,10 +89,6 @@ for mff_input_file = 1:length(inputlist)
     end 
     
     fprintf('\nExtracting data for subject %s, %s... \n\n', subid, session)
-
-    %% manually set mff file (if data is split into two parts)
-%     mff_file = uigetfile_n_dir;
-%     extr_filname = char(mff_file(1));
    
     extr_dir = filename;
 
@@ -103,10 +100,6 @@ for mff_input_file = 1:length(inputlist)
         else
         end
     end 
-    
-
-    % add java file necessary for mff function
-    eeglab_filepath = which('eeglab');
         
     % load absolute datetime of raw file
     aligned_file = dir(fullfile(extr_dir, '*.aligned'));
@@ -125,13 +118,14 @@ for mff_input_file = 1:length(inputlist)
     srate = chaninfo.channels.sampling_rate;
     
     % for each event, convert timestamp to sample
-%     mff_events = mff_import_events(extr_filname);
     mff_filename = dir(fullfile(aligned_folder, '*mff_events.mat'));
     mff_events = load([aligned_folder filesep mff_filename.name]);
     mff_events = mff_events.mff_events;
     
     events_field = 'Events_DIN_1';
     
+    % search if events are labelled under something separate than
+    % Events_DIN_1
     if ~isempty(mff_events)
         events_field = 'Events_DIN_1';
 
@@ -243,32 +237,24 @@ for mff_input_file = 1:length(inputlist)
             end 
         end 
         
-
-        
         %% save five minutes of data for each awakening
         
         ent_matched_awakening = 1; %create entry matched awakening number for file names
         n2n3_iter = 0; %for merging nrem
         nrem_index = [];
         for i = 1:length(timestamps)
-            %if events(din100_idx(i),2)-(srate*60*5) > 0 %check if event did not occur 5 min. to start time, skip otherwise
-            if ((din_event_match(i,1) > 0) && din_event_match(i,4) > 0) %DIN matches with awakening AND is the shortest time away from recoreded awakening   
+           if ((din_event_match(i,1) > 0) && din_event_match(i,4) > 0) %DIN matches with awakening AND is the shortest time away from recoreded awakening   
                 fprintf("DIN %d \n");
-                %mark time away from 
+                % mark time away from experimenter marked time (+/- 60 seconds)
                 TABLE.DIFF_FROM_EVENT_SECONDS(de_index(din_event_match(i,1))) = din_event_match(i,2);
                 TABLE.ENTRY_MATCHED_AWAKENING_NO(de_index(din_event_match(i,1))) = ent_matched_awakening;
-                     
-                %EXTRACTING 5 MINUTES BEFORE AWAKENING(retired)
-%                 samples_before_awakening = mff_read_samples(extr_filname,'all',...
-%                     events(din100_idx(i),2)-(srate*60*5), ...
-%                     events(din100_idx(i),2)-1);
 
                 aligned_file = dir(fullfile(extr_dir, '*.aligned'));
                 aligned_folder = strcat(extr_dir, '/', aligned_file.name);
                 aligned_events_raw = load([aligned_folder filesep 'alignedevents.mat']);
                 egi_offset = aligned_events_raw.alignedevents.egi_start_offset;
 
-%               % Extract samples from raw data instead
+                % extract samples from raw data instead
                 f = dir(fullfile(aligned_folder,'MFF*'));
                 C = struct2cell(f);
                 input = {};
@@ -279,9 +265,8 @@ for mff_input_file = 1:length(inputlist)
                     events(din100_idx(i),2)-(srate*60*5), events(din100_idx(i),2)-1);               
                 
                 eloc = readlocs(CHANNEL_LOCATION_FILE);
-
-                %eloc_no257 = eloc(1:257); %remove channel 257... so it won't affect bad channel removal
-                EEG = pop_importdata('dataformat','array','data',samples_before_awakening,...
+                EEG = pop_importdata('dataformat','array','data', ...
+                    samples_before_awakening, ...
                     'srate',500,'xmin',0,'nbchan',257,'setname', sprintf('awakening-%d',ent_matched_awakening), 'chanlocs', eloc);
 
                 EEG.condition = sprintf('session_start_time: %s, awakening_timestamp: %s, DIN_code: %s, time_since_last_event (min): %2.2f)', ...
@@ -297,7 +282,8 @@ for mff_input_file = 1:length(inputlist)
                 EEG.nbchan = 185;
                 EEG.data = EEG.data(inside185ch,:);
 
-                EEG = pop_saveset(EEG,sprintf('awakening-%d_eeg',ent_matched_awakening), sesdir);                 
+                EEG = pop_saveset(EEG,sprintf('awakening-%d_eeg', ...
+                    ent_matched_awakening), sesdir);                 
                 
                 if ~isfile([aligned_folder '/alignedscoring.raw'])
                     TABLE.N1(de_index(din_event_match(i,1))) = 'NO ALIGNED SCORING FILE FOUND';
@@ -314,6 +300,8 @@ for mff_input_file = 1:length(inputlist)
                     saveas(gcf, [sesdir '/awakening-' num2str(ent_matched_awakening) '-scoring.png'], 'png');
                     close all;
                     
+                    % mark in table if the scoring 5 minutes before, 1
+                    % minute after contained score
                     TABLE.N1(de_index(din_event_match(i,1))) = any(scoring(:) == -1);
                     TABLE.N2(de_index(din_event_match(i,1))) = any(scoring(:) == -2);
                     TABLE.N3(de_index(din_event_match(i,1))) = any(scoring(:) == -3);
@@ -334,11 +322,11 @@ for mff_input_file = 1:length(inputlist)
                 pop_saveset(EEG,sprintf('awakening-%d_eeg_hp_trim',ent_matched_awakening), sesdir);
                 
                 % assess if awakening occured in N2/N3 (look at 30 seconds
-                % before din event
+                % before din event, 60 seconds after)
                 awakening_n2n3_samples = find(scoring(EEG.pnts-90*EEG.srate:EEG.pnts) == -2 | scoring(EEG.pnts-90*EEG.srate:EEG.pnts) == -3);
                     
-                % 4.5 minutes cannot contain any rem
-                if (~isempty(awakening_n2n3_samples) && ~(any(scoring(1,EEG.pnts-90*EEG.srate) == 1)))
+                % cannot contain any REM
+                if (~isempty(awakening_n2n3_samples) && ~(any(scoring(:) == 1)))
                     nrem_index = [nrem_index ent_matched_awakening];
                    
                     if n2n3_iter == 0
@@ -383,6 +371,10 @@ for mff_input_file = 1:length(inputlist)
     fid = fopen([sesdir '/log.txt'], 'at');
     fprintf(fid, 'Found %d of %d awakenings\n', ent_matched_awakening-1, length(de_index));
     fclose(fid);
+    
+    %% clear timestamps/din_event_match
+    clear timestamps
+    clear din_event_match
     
 end 
 
