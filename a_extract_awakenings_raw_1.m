@@ -321,9 +321,9 @@ for mff_input_file = 1:length(inputlist)
                 EEG = pop_select(EEG,'point', [0 + EEG.srate*1, EEG.pnts - EEG.srate*1]); 
                 pop_saveset(EEG,sprintf('awakening-%d_eeg_hp_trim',ent_matched_awakening), sesdir);
                 
-                % assess if awakening occured in N2/N3 (look at 30 seconds
-                % before din event, 60 seconds after)
-                awakening_n2n3_samples = find(scoring(EEG.pnts-90*EEG.srate:EEG.pnts) == -2 | scoring(EEG.pnts-90*EEG.srate:EEG.pnts) == -3);
+                % assess if awakening occured in N2/N3 (look at 60 seconds
+                % before awakening).
+                awakening_n2n3_samples = find(scoring(EEG.pnts-60*EEG.srate:EEG.pnts) == -2 | scoring(EEG.pnts-60*EEG.srate:EEG.pnts) == -3);
                     
                 % cannot contain any REM
                 if (~isempty(awakening_n2n3_samples) && ~(any(scoring(:) == 1)))
