@@ -21,3 +21,15 @@
 (6) Remove artifactual components with help from ICLabel <br />
 <br />
 (7) Low-pass filter (50 Hz), then re-split awakenings, and perform qa plots.
+
+## Intermediary Data Naming <br />
+*_eeg.set - 5 min. raw eeg data before awakening din <br />
+*_eeg_hp_trim.set - data high-pass filetered and trimmed (1 sec. beginning and end) <br />
+*_eeg_hp_trim_merged.set - merged nrem data <br />
+*_eeg_hp_trim_merged_nobadch.set - merged nrem data with bad channels removed <br />
+*_eeg_hp_trim_meged_bobadch_ica.set - post ica data on merged nrem data <br />
+*-posICA1-cleaned.set - awakening data where bad time-stretches are removed based upon component activations <br />
+*-badsection.mat - matrix data of stretches removed per awakening <br />
+*nrem_merged_ica2.set - merged nrem awakenings after bad stretch removal and ica <br />
+*nrem_merged_ica2_.set - merged nrem awakenings after bad stretch removal and component subtration <br />
+*awakening-x-cleaned2_nrem.set cleaned data per awakening <br />
