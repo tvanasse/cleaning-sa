@@ -126,7 +126,7 @@ for mff_input_file = 1:length(inputlist)
     close(gcf)
     
     pop_viewprops(EEG_avgref, 0,ic_good_all);
-    pop_eegplot(EEG,0,0,0);
+    csc_eeg_plotter(EEG);
     
     waitfor(gcf)
     
@@ -140,7 +140,7 @@ for mff_input_file = 1:length(inputlist)
     end
     
     pop_viewprops(EEG_avgref, 0 ,ic_artifacts_all);
-    pop_eegplot(EEG,0,0,0);
+    csc_eeg_plotter(EEG);
     waitfor(gcf)
     
     manual_keep_components = [];

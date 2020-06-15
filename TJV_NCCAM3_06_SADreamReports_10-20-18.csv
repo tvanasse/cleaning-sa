@@ -1608,16 +1608,16 @@ ID,Visit,SA,Date_Time,Date,Time,Stage,Q1ExperienceNum,Q1Experience,Q1Report,Q2Aw
 2074,1,3,02/16/0016 04:46,NaN,4:46 AM,2,2,Something,"pleasant general feelings",2,Asleep,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,"",NaN,NaN,NaN,NaN,NaN,NaN,"","",PR,NaN,NaN,0,NaN,NaN,NaN,NaN,NaN,NaN,NaN
 2074,1,4,02/16/0016 06:00,NaN,6:00 AM,NaN,3,Report,"riding the L in chicago",2,Asleep,4,4,4,4,4,5,4,0,3,5,2,1,"legs-walking fast",1,0,1,1,0,1,"glas to be able to make it on time and proud was able to accomplish task","",PR,NaN,NaN,0,NaN,NaN,NaN,NaN,NaN,NaN,NaN
 2074,1,5,02/16/0016 06:49,NaN,6:49 AM,2,2,Something,"neutral to positive",2,Asleep,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,"",NaN,NaN,NaN,NaN,NaN,NaN,"","",PR,NaN,NaN,0,NaN,NaN,NaN,NaN,NaN,NaN,NaN
-2074,2,1,07/14/0016 23:40,NaN,11:40 PM,2,3,Report,"thinking about being outside",2,Asleep,3,3,4,3,4,4,3,0,2,4,-2,1,"arms",2,0,0,1,1,2,"having fun, enjoying","",AMV,NaN,NaN,0,NaN,NaN,NaN,NaN,NaN,NaN,NaN
-2074,2,2,07/15/0016 00:14,NaN,12:14 AM,2,NaN,,"",NaN,,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,"",NaN,NaN,NaN,NaN,NaN,NaN,"","didn't run through questionnaire, earphones sounded bad, I also suspect ppt is hard of hearing.",AMV,NaN,NaN,0,NaN,NaN,NaN,NaN,NaN,NaN,NaN
-2074,2,3,07/15/0016 01:07,NaN,1:07 AM,2,3,Report,"enjoying himself",2,Asleep,3,3,3,3,4,4,4,0,0,3,1,1,"arms and legs",2,0,0,1,1,2,"having fun, having a good time","",AMV,NaN,NaN,0,NaN,NaN,NaN,NaN,NaN,NaN,NaN
-2074,2,4,07/15/0016 01:29,NaN,1:29 AM,2,3,Report,"walking in a garden",2,Asleep,3,3,4,2,4,5,4,0,3,5,1,1,"legs",2,0,0,1,1,1,"euphoria","",AMV,NaN,NaN,0,NaN,NaN,NaN,NaN,NaN,NaN,NaN
-2074,2,5,07/15/0016 01:54,NaN,1:54 AM,2,3,Report,"enjoying himself",2,Asleep,3,3,3,3,2,2,2,0,0,2,1,1,"arms and legs",2,0,0,1,1,2,"happiness and euphoria","",AMV,NaN,NaN,0,NaN,NaN,NaN,NaN,NaN,NaN,NaN
-2074,2,6,07/15/0016 03:20,NaN,3:20 AM,2,1,NoReport,"",2,Asleep,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,"",NaN,NaN,NaN,NaN,NaN,NaN,"","",AMV,NaN,NaN,0,NaN,NaN,NaN,NaN,NaN,NaN,NaN
-2074,2,7,07/15/0016 04:02,NaN,4:02 AM,2,2,Something,"wondering when the experiment will be done",1,Awake,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,"",NaN,NaN,NaN,NaN,NaN,NaN,"","",AMV,NaN,NaN,0,NaN,NaN,NaN,NaN,NaN,NaN,NaN
-2074,2,8,07/15/0016 04:35,NaN,4:35 AM,NaN,2,Something,"Feelis like it was a very active dream but couldn't remember anything about it",2,Asleep,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,"",NaN,NaN,NaN,NaN,NaN,NaN,"","",AMV,NaN,NaN,0,NaN,NaN,NaN,NaN,NaN,NaN,NaN
-2074,2,9,07/15/0016 04:57,NaN,4:57 AM,2,3,Report,"looking through a stack of newspapers",2,Asleep,4,3,3,2,3,3,2,0,4,4,0,1,"hands and arms ",2,0,0,0,0,1,"puzzled","",AMV,NaN,NaN,0,NaN,NaN,NaN,NaN,NaN,NaN,NaN
-2074,2,10,07/15/0016 06:17,NaN,6:17 AM,2,2,Something,"at home?",2,Asleep,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,"",NaN,NaN,NaN,NaN,NaN,NaN,"","",AMV,NaN,NaN,0,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+2074,2,1,07/14/0016 23:40,NaN,11:40 PM,2,3,Report,"thinking about being outside",2,Asleep,3,3,4,3,4,4,3,0,2,4,-2,1,"arms",2,0,0,1,1,2,"having fun, enjoying","",AMV,NaN,32.381,3,NaN,1,0,0,0,0,0
+2074,2,2,07/15/0016 00:14,NaN,12:14 AM,2,NaN,,"",NaN,,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,"",NaN,NaN,NaN,NaN,NaN,NaN,"","didn't run through questionnaire, earphones sounded bad, I also suspect ppt is hard of hearing.",AMV,NaN,30.659,2,NaN,2,0,0,0,0,0
+2074,2,3,07/15/0016 01:07,NaN,1:07 AM,2,3,Report,"enjoying himself",2,Asleep,3,3,3,3,4,4,4,0,0,3,1,1,"arms and legs",2,0,0,1,1,2,"having fun, having a good time","",AMV,NaN,64.457,1,NaN,3,0,0,0,0,0
+2074,2,4,07/15/0016 01:29,NaN,1:29 AM,2,3,Report,"walking in a garden",2,Asleep,3,3,4,2,4,5,4,0,3,5,1,1,"legs",2,0,0,1,1,1,"euphoria","",AMV,NaN,16.716,1,NaN,4,0,0,0,0,0
+2074,2,5,07/15/0016 01:54,NaN,1:54 AM,2,3,Report,"enjoying himself",2,Asleep,3,3,3,3,2,2,2,0,0,2,1,1,"arms and legs",2,0,0,1,1,2,"happiness and euphoria","",AMV,NaN,15.65,1,NaN,5,0,0,0,0,0
+2074,2,6,07/15/0016 03:20,NaN,3:20 AM,2,1,NoReport,"",2,Asleep,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,"",NaN,NaN,NaN,NaN,NaN,NaN,"","",AMV,NaN,64.918,1,NaN,6,0,0,0,0,0
+2074,2,7,07/15/0016 04:02,NaN,4:02 AM,2,2,Something,"wondering when the experiment will be done",1,Awake,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,"",NaN,NaN,NaN,NaN,NaN,NaN,"","",AMV,NaN,40.019,1,NaN,7,0,0,0,0,0
+2074,2,8,07/15/0016 04:35,NaN,4:35 AM,NaN,2,Something,"Feelis like it was a very active dream but couldn't remember anything about it",2,Asleep,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,"",NaN,NaN,NaN,NaN,NaN,NaN,"","",AMV,NaN,19.799,1,NaN,8,0,0,0,0,0
+2074,2,9,07/15/0016 04:57,NaN,4:57 AM,2,3,Report,"looking through a stack of newspapers",2,Asleep,4,3,3,2,3,3,2,0,4,4,0,1,"hands and arms ",2,0,0,0,0,1,"puzzled","",AMV,NaN,32.349,1,NaN,9,0,0,0,0,0
+2074,2,10,07/15/0016 06:17,NaN,6:17 AM,2,2,Something,"at home?",2,Asleep,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,"",NaN,NaN,NaN,NaN,NaN,NaN,"","",AMV,NaN,13.99,1,NaN,10,0,0,0,0,0
 2075,1,1,02/09/0016 00:12,NaN,12:12 AM,2,1,NoReport,"",2,Asleep,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,"",NaN,NaN,NaN,NaN,NaN,NaN,"","",PR,NaN,22.961,1,NaN,1,1,1,0,0,1
 2075,1,2,02/09/0016 00:50,NaN,12:50 AM,2,1,NoReport,"",2,Asleep,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,"",NaN,NaN,NaN,NaN,NaN,NaN,"","",PR,NaN,26.053,1,NaN,2,1,1,0,0,1
 2075,1,3,02/09/0016 01:52,NaN,1:52 AM,2,3,Report,"camping, calling something, being with a group of people",2,Asleep,4,4,2,2,2,4,2,0,0,1,1,0,"",2,0,0,0,0,1,"","",PR,NaN,50.426,1,NaN,3,1,1,0,0,1
@@ -1801,7 +1801,7 @@ ID,Visit,SA,Date_Time,Date,Time,Stage,Q1ExperienceNum,Q1Experience,Q1Report,Q2Aw
 2082,2,12,06/15/0016 05:30,NaN,5:30 AM,NaN,3,Report,"with a group of people, paying for a plant",2,Asleep,4,4,4,4,3,1,0,0,1,2,0,1,"arms",3,1,0,1,0,1,"happy","",KL,NaN,NaN,0,NaN,NaN,NaN,NaN,NaN,NaN,NaN
 2082,2,13,06/15/0016 06:07,NaN,6:07 AM,2,3,Report,"waking up to turn alarm off",1,Awake,3,3,3,2,1,3,1,0,0,0,1,0,"",1,0,0,0,0,0,"","",KL,NaN,NaN,0,NaN,NaN,NaN,NaN,NaN,NaN,NaN
 2083,1,1,02/11/0016 00:16,NaN,12:16 AM,2,2,Something,"something to do with her kids",2,Asleep,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,"",NaN,NaN,NaN,NaN,NaN,NaN,"","",AMV,NaN,NaN,0,NaN,NaN,NaN,NaN,NaN,NaN,NaN
-2083,1,2,02/11/0016 12:42,NaN,12:42 AM,2,2,Something,"something about football",2,Asleep,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,"",NaN,NaN,NaN,NaN,NaN,NaN,"","",AMV,NaN,NaN,0,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+2083,1,2,02/11/0016 00:42,NaN,12:42 AM,2,2,Something,"something about football",2,Asleep,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,"",NaN,NaN,NaN,NaN,NaN,NaN,"","",AMV,NaN,NaN,0,NaN,NaN,NaN,NaN,NaN,NaN,NaN
 2083,1,3,02/11/0016 01:17,NaN,1:17 AM,2,3,Report,"doing something with kids they were discribing something that was prurple.",2,Asleep,3,3,3,1,3,1,2,0,0,0,0,1,"legs walking",2,1,0,0,1,1,"satisfaction","",AMV,NaN,NaN,0,NaN,NaN,NaN,NaN,NaN,NaN,NaN
 2083,1,4,02/11/0016 01:52,NaN,1:52 AM,2,1,NoReport,"",2,Asleep,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,"",NaN,NaN,NaN,NaN,NaN,NaN,"","",AMV,NaN,NaN,0,NaN,NaN,NaN,NaN,NaN,NaN,NaN
 2083,1,5,02/11/0016 02:15,NaN,2:15 AM,2,1,NoReport,"",2,Asleep,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,"",NaN,NaN,NaN,NaN,NaN,NaN,"","",AMV,NaN,NaN,0,NaN,NaN,NaN,NaN,NaN,NaN,NaN
@@ -2546,10 +2546,10 @@ ID,Visit,SA,Date_Time,Date,Time,Stage,Q1ExperienceNum,Q1Experience,Q1Report,Q2Aw
 2111,3,10,11/08/0017 04:41,NaN,4:41 AM,2,1,NoReport,"",2,Asleep,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,"",NaN,NaN,NaN,NaN,NaN,NaN,"","",AMV,NaN,NaN,0,NaN,NaN,NaN,NaN,NaN,NaN,NaN
 2112,1,1,02/13/0017 23:50,NaN,11:50 PM,2,1,NoReport,"",2,Asleep,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,"",NaN,NaN,NaN,NaN,NaN,NaN,"","",AMV,NaN,29.544,2,NaN,1,0,0,0,0,0
 2112,1,2,02/14/0017 01:22,NaN,1:22 AM,2,1,NoReport,"",2,Asleep,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,"",NaN,NaN,NaN,NaN,NaN,NaN,"","",AMV,NaN,30.816,1,NaN,2,0,0,0,0,0
-2112,1,3,02/14/0017 02:32,NaN,2:32 AM,2,2,Something,"",2,Asleep,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,"",NaN,NaN,NaN,NaN,NaN,NaN,"","",AMV,NaN,NaN,1,NaN,NaN,NaN,NaN,NaN,NaN,NaN
-2112,1,4,02/14/0017 02:59,NaN,2:59 AM,NaN,2,Something,"",2,Asleep,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,"",NaN,NaN,NaN,NaN,NaN,NaN,"","",AMV,NaN,NaN,1,NaN,NaN,NaN,NaN,NaN,NaN,NaN
-2112,1,5,02/14/0017 03:17,NaN,3:17 AM,2,2,Something,"",2,Asleep,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,"",NaN,NaN,NaN,NaN,NaN,NaN,"","",AMV,NaN,NaN,1,NaN,NaN,NaN,NaN,NaN,NaN,NaN
-2112,1,6,02/14/0017 03:39,NaN,3:39 AM,2,2,Something,"",2,Asleep,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,"",NaN,NaN,NaN,NaN,NaN,NaN,"","",AMV,NaN,NaN,1,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+2112,1,3,02/14/0017 02:32,NaN,2:32 AM,2,2,Something,"",2,Asleep,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,"",NaN,NaN,NaN,NaN,NaN,NaN,"","",AMV,NaN,1.852,1,NaN,3,0,0,0,0,0
+2112,1,4,02/14/0017 02:59,NaN,2:59 AM,NaN,2,Something,"",2,Asleep,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,"",NaN,NaN,NaN,NaN,NaN,NaN,"","",AMV,NaN,25.666,1,NaN,4,0,0,0,0,0
+2112,1,5,02/14/0017 03:17,NaN,3:17 AM,2,2,Something,"",2,Asleep,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,"",NaN,NaN,NaN,NaN,NaN,NaN,"","",AMV,NaN,23.052,1,NaN,5,0,0,0,0,0
+2112,1,6,02/14/0017 03:39,NaN,3:39 AM,2,2,Something,"",2,Asleep,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,"",NaN,NaN,NaN,NaN,NaN,NaN,"","",AMV,NaN,28.672,1,NaN,6,0,0,0,0,0
 2112,1,7,02/14/0017 03:59,NaN,3:59 AM,NaN,2,Something,"",2,Asleep,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,"",NaN,NaN,NaN,NaN,NaN,NaN,"","",AMV,NaN,NaN,1,NaN,NaN,NaN,NaN,NaN,NaN,NaN
 2112,1,8,02/14/0017 04:24,NaN,4:24 AM,NaN,2,Something,"",2,Asleep,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,"",NaN,NaN,NaN,NaN,NaN,NaN,"","",AMV,NaN,NaN,1,NaN,NaN,NaN,NaN,NaN,NaN,NaN
 2112,1,9,02/14/0017 05:00,NaN,5:00 AM,2,1,NoReport,"",2,Asleep,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,"",NaN,NaN,NaN,NaN,NaN,NaN,"","",AMV,NaN,NaN,1,NaN,NaN,NaN,NaN,NaN,NaN,NaN
@@ -2582,15 +2582,15 @@ ID,Visit,SA,Date_Time,Date,Time,Stage,Q1ExperienceNum,Q1Experience,Q1Report,Q2Aw
 2113,3,9,12/12/0017 06:00,NaN,6:00 AM,2,1,NoReport,"",2,Asleep,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,"",NaN,NaN,NaN,NaN,NaN,NaN,"","",AMV,NaN,NaN,0,NaN,NaN,NaN,NaN,NaN,NaN,NaN
 2113,3,10,12/12/0017 06:19,NaN,6:19 AM,NaN,3,Report,"mushroom spores in a bag",1,Awake,3,3,3,3,3,2,0,0,3,1,-1,0,"",3,0,0,0,0,0,"","",AMV,NaN,NaN,0,NaN,NaN,NaN,NaN,NaN,NaN,NaN
 2113,3,11,NaT,NaN,no time,NaN,3,Report,"talking to his friend about cello, plaing music he liked, telling his friend that the musician was amazing. In a concert hall, lost his shirt there. Telling his friend he needed to get a new shirt from the local thrift store. Grabbing a couple of muffins from the cart, walking around the stadium looking for his shirt. Women smoking where he thought he left his shirt. Told them they were doing something illegal, that they were stupid, called a cop over. the show had already ended, people still hanging around. at a baketball ourt, rofessionap players practicing. ppt was assisting one guy who was having trouble. he was shooting from his knees to prove his accuracy. end of practice, a guy threw basketballs toward him, he stopped them lik a soccer ball. started dribbling ball it was leather, it didn't feel good. he's not a basketball player. transitioned ino a previous dream, his friend playing cellio in the stadium, stage right.",1,Awake,5,4,5,4,5,5,1,0,5,5,0,1,"legs, arms",1,1,1,1,1,-2,"fear of being judged, confrontation, happy bc of muffins","",AMV,NaN,NaN,0,NaN,NaN,NaN,NaN,NaN,NaN,NaN
-2114,1,1,02/20/0017 11:47,NaN,11:47 PM,2,1,NoReport,"",1,Awake,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,"",NaN,NaN,NaN,NaN,NaN,NaN,"","",AMV,NaN,NaN,0,NaN,NaN,NaN,NaN,NaN,NaN,NaN
-2114,1,2,02/21/0017 00:34,NaN,12:34 PM,2,1,NoReport,"ppt has a headache and was thinking about that; I let her take a single dose of ibuprofen",1,Awake,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,"",NaN,NaN,NaN,NaN,NaN,NaN,"","",AMV,NaN,NaN,0,NaN,NaN,NaN,NaN,NaN,NaN,NaN
-2114,1,3,02/21/0017 02:11,NaN,2:11 AM,2,1,NoReport,"",2,Asleep,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,"",NaN,NaN,NaN,NaN,NaN,NaN,"","",AMV,NaN,NaN,0,NaN,NaN,NaN,NaN,NaN,NaN,NaN
-2114,1,4,02/21/0017 02:29,NaN,2:29 AM,2,2,Something,"felt content",2,Asleep,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,"",NaN,NaN,NaN,NaN,NaN,NaN,"","",AMV,NaN,NaN,0,NaN,NaN,NaN,NaN,NaN,NaN,NaN
-2114,1,5,02/21/0017 03:00,NaN,3:00 AM,2,1,NoReport,"",1,Awake,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,"",NaN,NaN,NaN,NaN,NaN,NaN,"","",AMV,NaN,NaN,0,NaN,NaN,NaN,NaN,NaN,NaN,NaN
-2114,1,6,02/21/0017 03:21,NaN,3:21 AM,2,2,Something,"felt fine",2,Asleep,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,"",NaN,NaN,NaN,NaN,NaN,NaN,"","",AMV,NaN,NaN,0,NaN,NaN,NaN,NaN,NaN,NaN,NaN
-2114,1,7,02/21/0017 03:37,NaN,3:37 AM,2,2,Something,"no thoughts or impressions",2,Asleep,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,"",NaN,NaN,NaN,NaN,NaN,NaN,"","",AMV,NaN,NaN,0,NaN,NaN,NaN,NaN,NaN,NaN,NaN
-2114,1,8,02/21/0017 04:08,NaN,4:08 AM,2,2,Something,"no details but feeling fine and content",2,Asleep,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,"",NaN,NaN,NaN,NaN,NaN,NaN,"","",AMV,NaN,NaN,0,NaN,NaN,NaN,NaN,NaN,NaN,NaN
-2114,1,9,02/21/0017 04:53,NaN,4:53 AM,2,2,Something,"felt fine",2,Asleep,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,"",NaN,NaN,NaN,NaN,NaN,NaN,"","",AMV,NaN,NaN,0,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+2114,1,1,02/20/0017 23:47,NaN,11:47 PM,2,1,NoReport,"",1,Awake,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,"",NaN,NaN,NaN,NaN,NaN,NaN,"","",AMV,NaN,3.111,1,NaN,1,0,1,0,0,1
+2114,1,2,02/21/0017 00:34,NaN,12:34 PM,2,1,NoReport,"ppt has a headache and was thinking about that; I let her take a single dose of ibuprofen",1,Awake,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,"",NaN,NaN,NaN,NaN,NaN,NaN,"","",AMV,NaN,22.17,1,NaN,2,0,1,0,0,1
+2114,1,3,02/21/0017 02:11,NaN,2:11 AM,2,1,NoReport,"",2,Asleep,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,"",NaN,NaN,NaN,NaN,NaN,NaN,"","",AMV,NaN,32.693,1,NaN,3,0,1,0,0,1
+2114,1,4,02/21/0017 02:29,NaN,2:29 AM,2,2,Something,"felt content",2,Asleep,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,"",NaN,NaN,NaN,NaN,NaN,NaN,"","",AMV,NaN,45.913,1,NaN,4,0,1,0,0,1
+2114,1,5,02/21/0017 03:00,NaN,3:00 AM,2,1,NoReport,"",1,Awake,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,"",NaN,NaN,NaN,NaN,NaN,NaN,"","",AMV,NaN,12.726,1,NaN,5,0,1,0,0,1
+2114,1,6,02/21/0017 03:21,NaN,3:21 AM,2,2,Something,"felt fine",2,Asleep,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,"",NaN,NaN,NaN,NaN,NaN,NaN,"","",AMV,NaN,1.583,1,NaN,6,0,1,0,0,1
+2114,1,7,02/21/0017 03:37,NaN,3:37 AM,2,2,Something,"no thoughts or impressions",2,Asleep,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,"",NaN,NaN,NaN,NaN,NaN,NaN,"","",AMV,NaN,45.76,1,NaN,7,0,1,0,0,1
+2114,1,8,02/21/0017 04:08,NaN,4:08 AM,2,2,Something,"no details but feeling fine and content",2,Asleep,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,"",NaN,NaN,NaN,NaN,NaN,NaN,"","",AMV,NaN,51.023,1,NaN,8,0,1,0,0,1
+2114,1,9,02/21/0017 04:53,NaN,4:53 AM,2,2,Something,"felt fine",2,Asleep,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,"",NaN,NaN,NaN,NaN,NaN,NaN,"","",AMV,NaN,7.813,1,NaN,9,1,1,0,0,1
 2115,1,1,03/02/0017 01:54,NaN,1:54 AM,2,2,Something,"Really happy (she) had fallen asleep! But that was before the dream.",2,Asleep,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,"",NaN,NaN,NaN,NaN,NaN,NaN,"","",AMV,NaN,NaN,0,NaN,NaN,NaN,NaN,NaN,NaN,NaN
 2115,1,2,03/02/0017 02:57,NaN,2:57 AM,2,3,Report,"cooking on a stove",2,Asleep,4,4,3,2,1,3,2,0,0,3,-2,1,"upper body (arms)",1,0,0,0,0,1,"looking forward to dinner (anticipation)","",AMV,NaN,NaN,0,NaN,NaN,NaN,NaN,NaN,NaN,NaN
 2115,1,3,03/02/0017 03:18,NaN,3:18 AM,2,3,Report,"in the kitchen, rolling out dough",2,Asleep,4,4,3,2,2,2,1,0,0,2,-2,1,"upper body",1,0,0,0,0,0,"","",AMV,NaN,NaN,0,NaN,NaN,NaN,NaN,NaN,NaN,NaN
@@ -2601,14 +2601,14 @@ ID,Visit,SA,Date_Time,Date,Time,Stage,Q1ExperienceNum,Q1Experience,Q1Report,Q2Aw
 2115,1,8,03/02/0017 06:00,NaN,6:00 AM,2,2,Something,"felt good/happy",2,Asleep,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,"",NaN,NaN,NaN,NaN,NaN,NaN,"","",AMV,NaN,NaN,0,NaN,NaN,NaN,NaN,NaN,NaN,NaN
 2115,1,9,03/02/0017 06:19,NaN,6:19 AM,2,2,Something,"positive",2,Asleep,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,"",NaN,NaN,NaN,NaN,NaN,NaN,"","",AMV,NaN,NaN,0,NaN,NaN,NaN,NaN,NaN,NaN,NaN
 2115,1,10,03/02/0017 06:40,NaN,6:40 AM,2,2,Something,"",2,Asleep,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,"",NaN,NaN,NaN,NaN,NaN,NaN,"","",AMV,NaN,NaN,0,NaN,NaN,NaN,NaN,NaN,NaN,NaN
-2116,1,1,03/08/0017 00:23,NaN,12:23 PM,2,2,Something,"pretty thing",2,Asleep,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,"",NaN,NaN,NaN,NaN,NaN,NaN,"","",AMV,NaN,NaN,0,NaN,NaN,NaN,NaN,NaN,NaN,NaN
-2116,1,2,03/08/0017 01:11,NaN,1:11 AM,2,1,NoReport,"",2,Asleep,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,"",NaN,NaN,NaN,NaN,NaN,NaN,"","",AMV,NaN,NaN,0,NaN,NaN,NaN,NaN,NaN,NaN,NaN
-2116,1,3,03/08/0017 01:30,NaN,1:30 AM,2,2,Something,"something about problem solving",2,Asleep,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,"",NaN,NaN,NaN,NaN,NaN,NaN,"","",AMV,NaN,NaN,0,NaN,NaN,NaN,NaN,NaN,NaN,NaN
-2116,1,4,03/08/0017 03:04,NaN,3:04 AM,2,2,Something,"",2,Asleep,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,"",NaN,NaN,NaN,NaN,NaN,NaN,"","",AMV,NaN,NaN,0,NaN,NaN,NaN,NaN,NaN,NaN,NaN
-2116,1,5,03/08/0017 04:21,NaN,4:21 AM,NaN,3,Report,"roses (flowers)",2,Asleep,4,1,1,1,4,0,5,0,0,0,1,0,"",3,0,0,0,0,0,"","",AMV,NaN,NaN,0,NaN,NaN,NaN,NaN,NaN,NaN,NaN
-2116,1,6,03/08/0017 04:41,NaN,4:41 AM,2,2,Something,"",2,Asleep,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,"",NaN,NaN,NaN,NaN,NaN,NaN,"","",AMV,NaN,NaN,0,NaN,NaN,NaN,NaN,NaN,NaN,NaN
-2116,1,7,03/08/0017 05:00,NaN,5:00 AM,2,2,Something,"(nothing specific)",2,Asleep,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,"",NaN,NaN,NaN,NaN,NaN,NaN,"","",AMV,NaN,NaN,0,NaN,NaN,NaN,NaN,NaN,NaN,NaN
-2116,1,8,03/08/0017 05:35,NaN,5:35 AM,NaN,2,Something,"",2,Asleep,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,"",NaN,NaN,NaN,NaN,NaN,NaN,"","",AMV,NaN,NaN,0,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+2116,1,1,03/08/0017 00:23,NaN,12:23 PM,2,2,Something,"pretty thing",2,Asleep,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,"",NaN,NaN,NaN,NaN,NaN,NaN,"","",AMV,NaN,37.168,1,NaN,1,0,1,0,0,1
+2116,1,2,03/08/0017 01:11,NaN,1:11 AM,2,1,NoReport,"",2,Asleep,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,"",NaN,NaN,NaN,NaN,NaN,NaN,"","",AMV,NaN,30.484,1,NaN,2,0,1,1,0,1
+2116,1,3,03/08/0017 01:30,NaN,1:30 AM,2,2,Something,"something about problem solving",2,Asleep,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,"",NaN,NaN,NaN,NaN,NaN,NaN,"","",AMV,NaN,25.85,1,NaN,3,0,1,0,0,1
+2116,1,4,03/08/0017 03:04,NaN,3:04 AM,2,2,Something,"",2,Asleep,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,"",NaN,NaN,NaN,NaN,NaN,NaN,"","",AMV,NaN,57.89,1,NaN,4,1,1,0,0,1
+2116,1,5,03/08/0017 04:21,NaN,4:21 AM,NaN,3,Report,"roses (flowers)",2,Asleep,4,1,1,1,4,0,5,0,0,0,1,0,"",3,0,0,0,0,0,"","",AMV,NaN,22.384,1,NaN,5,0,0,0,1,1
+2116,1,6,03/08/0017 04:41,NaN,4:41 AM,2,2,Something,"",2,Asleep,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,"",NaN,NaN,NaN,NaN,NaN,NaN,"","",AMV,NaN,52.166,1,NaN,6,0,1,0,0,1
+2116,1,7,03/08/0017 05:00,NaN,5:00 AM,2,2,Something,"(nothing specific)",2,Asleep,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,"",NaN,NaN,NaN,NaN,NaN,NaN,"","",AMV,NaN,27.551,1,NaN,7,1,1,0,0,1
+2116,1,8,03/08/0017 05:35,NaN,5:35 AM,NaN,2,Something,"",2,Asleep,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,"",NaN,NaN,NaN,NaN,NaN,NaN,"","",AMV,NaN,33.513,1,NaN,8,0,0,0,1,1
 2116,2,1,06/06/0017 00:24,NaN,12:24 AM,2,1,NoReport,"",2,Asleep,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,"",NaN,NaN,NaN,NaN,NaN,NaN,"","",AMV,NaN,NaN,0,NaN,NaN,NaN,NaN,NaN,NaN,NaN
 2116,2,2,06/06/0017 00:54,NaN,12:54 AM,2,2,Something,"felt like he was dreaming but can't remember anything.",2,Asleep,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,"",NaN,NaN,NaN,NaN,NaN,NaN,"","",AMV,NaN,NaN,0,NaN,NaN,NaN,NaN,NaN,NaN,NaN
 2116,2,3,06/06/0017 02:22,NaN,2:22 AM,2,1,NoReport,"",2,Asleep,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,"",NaN,NaN,NaN,NaN,NaN,NaN,"","",AMV,NaN,NaN,0,NaN,NaN,NaN,NaN,NaN,NaN,NaN
@@ -2688,7 +2688,7 @@ ID,Visit,SA,Date_Time,Date,Time,Stage,Q1ExperienceNum,Q1Experience,Q1Report,Q2Aw
 2121,3,10,12/05/0017 05:03,NaN,5:03 AM,NaN,3,Report,"with some friends at a house",2,Asleep,4,4,3,3,3,1,4,0,2,3,0,1,"whole body",1,1,1,0,0,-1,"fear, anxiety","",AMV,NaN,NaN,0,NaN,NaN,NaN,NaN,NaN,NaN,NaN
 2121,3,11,NaT,NaN,no time,NaN,1,NoReport,"",2,Asleep,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,"",NaN,NaN,NaN,NaN,NaN,NaN,"","",AMV,NaN,NaN,0,NaN,NaN,NaN,NaN,NaN,NaN,NaN
 2122,1,1,02/27/0017 23:21,NaN,11:21 PM,2,1,NoReport,"",2,Asleep,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,"",NaN,NaN,NaN,NaN,NaN,NaN,"","",AMV,NaN,NaN,0,NaN,NaN,NaN,NaN,NaN,NaN,NaN
-2122,1,2,02/28/0027 01:17,NaN,1:17 AM,2,2,Something,"",1,Awake,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,"",NaN,NaN,NaN,NaN,NaN,NaN,"","",AMV,NaN,NaN,0,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+2122,1,2,02/28/0017 01:17,NaN,1:17 AM,2,2,Something,"",1,Awake,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,"",NaN,NaN,NaN,NaN,NaN,NaN,"","",AMV,NaN,NaN,0,NaN,NaN,NaN,NaN,NaN,NaN,NaN
 2122,1,3,02/28/0017 03:00,NaN,3:00 AM,2,3,Report,"having a dream about getting ready in the mornign",2,Asleep,4,4,4,4,3,2,1,0,0,0,-2,0,"",1,0,0,0,0,0,"","",AMV,NaN,NaN,0,NaN,NaN,NaN,NaN,NaN,NaN,NaN
 2122,2,1,06/30/0017 23:40,NaN,11:40 PM,2,1,NoReport,"",2,Asleep,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,"",NaN,NaN,NaN,NaN,NaN,NaN,"","",AMV,NaN,NaN,0,NaN,NaN,NaN,NaN,NaN,NaN,NaN
 2122,2,2,07/01/0017 00:36,NaN,12:36 AM,NaN,2,Something,"",2,Asleep,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,"",NaN,NaN,NaN,NaN,NaN,NaN,"","",AMV,NaN,NaN,0,NaN,NaN,NaN,NaN,NaN,NaN,NaN
@@ -2784,25 +2784,25 @@ ID,Visit,SA,Date_Time,Date,Time,Stage,Q1ExperienceNum,Q1Experience,Q1Report,Q2Aw
 2127,1,10,03/07/0017 04:43,NaN,4:43 AM,2,3,Report,"work, scheduling",2,Asleep,4,4,2,2,4,3,0,0,1,1,-2,0,"",1,0,0,0,0,0,"","",AMV,NaN,NaN,0,NaN,NaN,NaN,NaN,NaN,NaN,NaN
 2127,1,11,03/07/0017 05:09,NaN,5:09 AM,2,1,NoReport,"",2,Asleep,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,"",NaN,NaN,NaN,NaN,NaN,NaN,"","",AMV,NaN,NaN,0,NaN,NaN,NaN,NaN,NaN,NaN,NaN
 2127,1,12,03/07/0017 05:30,NaN,5:30 AM,NaN,3,Report,"work related things; dreaming about work-like experience, talking about expanding market, etc.",2,Asleep,4,4,4,4,4,2,4,0,0,2,1,1,"whole body walking",1,1,0,1,1,1,"curiosity","",AMV,NaN,NaN,0,NaN,NaN,NaN,NaN,NaN,NaN,NaN
-2127,2,1,06/12/0017 22:20,NaN,10:20 PM,2,2,Something,"",2,Asleep,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,"",NaN,NaN,NaN,NaN,NaN,NaN,"","",JC,NaN,NaN,0,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+2127,2,1,06/12/0017 22:20,NaN,10:20 PM,2,2,Something,"",2,Asleep,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,"",NaN,NaN,NaN,NaN,NaN,NaN,"","",JC,NaN,27.656,1,NaN,1,0,0,0,0,0
 2127,2,2,06/12/0017 23:05,NaN,11:05 PM,2,2,Something,"",2,Asleep,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,"",NaN,NaN,NaN,NaN,NaN,NaN,"","",JC,NaN,NaN,0,NaN,NaN,NaN,NaN,NaN,NaN,NaN
-2127,2,3,06/12/0017 23:35,NaN,11:35 PM,2,3,Report,"Having a barbaque, being outside on the grill. ",2,Asleep,4,4,3,3,3,2,2,0,0,0,2,0,"",2,0,0,0,0,1,"excitement","",JC,NaN,NaN,0,NaN,NaN,NaN,NaN,NaN,NaN,NaN
-2127,2,4,06/13/0017 01:09,NaN,1:09 AM,2,2,Something,"",2,Asleep,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,"",NaN,NaN,NaN,NaN,NaN,NaN,"","",JC,NaN,NaN,0,NaN,NaN,NaN,NaN,NaN,NaN,NaN
-2127,2,5,06/13/0017 02:37,NaN,2:37 AM,2,2,Something,"",2,Asleep,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,"",NaN,NaN,NaN,NaN,NaN,NaN,"","",JC,NaN,NaN,0,NaN,NaN,NaN,NaN,NaN,NaN,NaN
-2127,2,6,06/13/0017 03:06,NaN,3:06 AM,2,3,Report,"going through my play of my work day today",2,Asleep,4,4,3,3,0,4,0,0,0,1,-2,0,"",3,0,0,0,0,0,"","",JC,NaN,NaN,0,NaN,NaN,NaN,NaN,NaN,NaN,NaN
-2127,2,7,06/13/0017 03:33,NaN,3:33 AM,2,3,Report,"Wondering when my alarm was going to go off.",2,Asleep,3,3,3,2,1,3,1,0,0,1,0,0,"",1,0,0,0,0,0,"","",JC,NaN,NaN,0,NaN,NaN,NaN,NaN,NaN,NaN,NaN
-2127,2,8,06/13/0017 03:55,NaN,3:55 AM,2,1,NoReport,"",2,Asleep,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,"",NaN,NaN,NaN,NaN,NaN,NaN,"","",JC,NaN,NaN,0,NaN,NaN,NaN,NaN,NaN,NaN,NaN
-2127,2,9,06/13/0017 04:22,NaN,4:22 AM,NaN,3,Report,"Talking with coworkers in the caffeteria grabbing some lunch.",2,Asleep,3,3,3,2,3,3,2,0,0,0,-1,0,"",1,1,0,0,0,1,"","",JC,NaN,NaN,0,NaN,NaN,NaN,NaN,NaN,NaN,NaN
-2127,2,10,06/13/0017 04:42,NaN,4:42 AM,NaN,1,NoReport,"",2,Asleep,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,"",NaN,NaN,NaN,NaN,NaN,NaN,"","",JC,NaN,NaN,0,NaN,NaN,NaN,NaN,NaN,NaN,NaN
-2127,2,11,06/13/0017 05:24,NaN,5:24 AM,NaN,3,Report,"Cooking chicken on a grill outside. It was raining out on my patio.",2,Asleep,4,4,4,4,5,4,3,0,2,3,-1,1,"arms, upper body",2,0,0,0,1,1,"","",JC,NaN,NaN,0,NaN,NaN,NaN,NaN,NaN,NaN,NaN
-2127,2,12,06/13/0017 05:47,NaN,5:47 AM,2,1,NoReport,"",2,Asleep,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,"",NaN,NaN,NaN,NaN,NaN,NaN,"","",JC,NaN,NaN,0,NaN,NaN,NaN,NaN,NaN,NaN,NaN
-2128,1,1,02/25/0017 01:29,NaN,1:29 AM,2,1,NoReport,"",1,Awake,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,"",NaN,NaN,NaN,NaN,NaN,NaN,"","",AMV,NaN,28.638,0,NaN,NaN,NaN,NaN,NaN,NaN,NaN
-2128,1,2,02/25/0017 02:43,NaN,2:43 AM,NaN,2,Something,"worry (everything else vague)",2,Asleep,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,"",NaN,NaN,NaN,NaN,NaN,NaN,"","",AMV,NaN,24.212,0,NaN,NaN,NaN,NaN,NaN,NaN,NaN
-2128,1,3,02/25/0017 04:10,NaN,4:10 AM,2,3,Report,"going to the doctor",2,Asleep,4,4,3,3,4,5,3,1,3,2,-2,1,"legs and arms",1,1,1,1,1,-1,"worried","",AMV,NaN,14.512,0,NaN,NaN,NaN,NaN,NaN,NaN,NaN
-2128,1,4,02/25/0017 05:05,NaN,5:05 AM,NaN,3,Report,"going out to eat",2,Asleep,4,3,4,5,4,5,5,1,4,5,-2,1,"arms and legs",1,1,1,1,1,-1,"frustration","",AMV,NaN,49.978,0,NaN,NaN,NaN,NaN,NaN,NaN,NaN
-2128,1,5,02/25/0017 05:54,NaN,5:54 AM,2,3,Report,"research lab",2,Asleep,4,4,4,4,4,4,2,1,3,2,-1,1,"legs",1,0,0,1,1,0,"","",AMV,NaN,12.044,0,NaN,NaN,NaN,NaN,NaN,NaN,NaN
-2128,1,6,02/25/0017 06:22,NaN,6:22 AM,2,1,NoReport,"",2,Asleep,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,"",NaN,NaN,NaN,NaN,NaN,NaN,"","",AMV,NaN,28.594,0,NaN,NaN,NaN,NaN,NaN,NaN,NaN
-2128,1,7,02/25/0017 06:45,NaN,6:45 AM,NaN,1,NoReport,"",1,Awake,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,"",NaN,NaN,NaN,NaN,NaN,NaN,"","",AMV,NaN,10.162,0,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+2127,2,3,06/12/0017 23:35,NaN,11:35 PM,2,3,Report,"Having a barbaque, being outside on the grill. ",2,Asleep,4,4,3,3,3,2,2,0,0,0,2,0,"",2,0,0,0,0,1,"excitement","",JC,NaN,24.854,1,NaN,2,0,0,0,0,0
+2127,2,4,06/13/0017 01:09,NaN,1:09 AM,2,2,Something,"",2,Asleep,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,"",NaN,NaN,NaN,NaN,NaN,NaN,"","",JC,NaN,36.683,1,NaN,3,0,0,0,0,0
+2127,2,5,06/13/0017 02:37,NaN,2:37 AM,2,2,Something,"",2,Asleep,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,"",NaN,NaN,NaN,NaN,NaN,NaN,"","",JC,NaN,10.348,1,NaN,4,0,0,0,0,0
+2127,2,6,06/13/0017 03:06,NaN,3:06 AM,2,3,Report,"going through my play of my work day today",2,Asleep,4,4,3,3,0,4,0,0,0,1,-2,0,"",3,0,0,0,0,0,"","",JC,NaN,0.646,1,NaN,5,0,0,0,0,0
+2127,2,7,06/13/0017 03:33,NaN,3:33 AM,2,3,Report,"Wondering when my alarm was going to go off.",2,Asleep,3,3,3,2,1,3,1,0,0,1,0,0,"",1,0,0,0,0,0,"","",JC,NaN,38.612,1,NaN,6,0,0,0,0,0
+2127,2,8,06/13/0017 03:55,NaN,3:55 AM,2,1,NoReport,"",2,Asleep,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,"",NaN,NaN,NaN,NaN,NaN,NaN,"","",JC,NaN,40.042,1,NaN,7,0,0,0,0,0
+2127,2,9,06/13/0017 04:22,NaN,4:22 AM,NaN,3,Report,"Talking with coworkers in the caffeteria grabbing some lunch.",2,Asleep,3,3,3,2,3,3,2,0,0,0,-1,0,"",1,1,0,0,0,1,"","",JC,NaN,23.638,1,NaN,8,0,0,0,0,0
+2127,2,10,06/13/0017 04:42,NaN,4:42 AM,NaN,1,NoReport,"",2,Asleep,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,"",NaN,NaN,NaN,NaN,NaN,NaN,"","",JC,NaN,7.146,1,NaN,9,0,0,0,0,0
+2127,2,11,06/13/0017 05:24,NaN,5:24 AM,NaN,3,Report,"Cooking chicken on a grill outside. It was raining out on my patio.",2,Asleep,4,4,4,4,5,4,3,0,2,3,-1,1,"arms, upper body",2,0,0,0,1,1,"","",JC,NaN,35.159,1,NaN,10,0,0,0,0,0
+2127,2,12,06/13/0017 05:47,NaN,5:47 AM,2,1,NoReport,"",2,Asleep,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,"",NaN,NaN,NaN,NaN,NaN,NaN,"","",JC,NaN,83.578,1,NaN,11,0,0,0,0,0
+2128,1,1,02/25/0017 01:29,NaN,1:29 AM,2,1,NoReport,"",1,Awake,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,"",NaN,NaN,NaN,NaN,NaN,NaN,"","",AMV,NaN,28.638,1,NaN,1,0,1,0,0,1
+2128,1,2,02/25/0017 02:43,NaN,2:43 AM,NaN,2,Something,"worry (everything else vague)",2,Asleep,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,"",NaN,NaN,NaN,NaN,NaN,NaN,"","",AMV,NaN,24.212,1,NaN,2,0,0,0,1,1
+2128,1,3,02/25/0017 04:10,NaN,4:10 AM,2,3,Report,"going to the doctor",2,Asleep,4,4,3,3,4,5,3,1,3,2,-2,1,"legs and arms",1,1,1,1,1,-1,"worried","",AMV,NaN,14.512,1,NaN,3,0,1,0,0,1
+2128,1,4,02/25/0017 05:05,NaN,5:05 AM,NaN,3,Report,"going out to eat",2,Asleep,4,3,4,5,4,5,5,1,4,5,-2,1,"arms and legs",1,1,1,1,1,-1,"frustration","",AMV,NaN,49.978,1,NaN,4,0,0,0,1,1
+2128,1,5,02/25/0017 05:54,NaN,5:54 AM,2,3,Report,"research lab",2,Asleep,4,4,4,4,4,4,2,1,3,2,-1,1,"legs",1,0,0,1,1,0,"","",AMV,NaN,12.044,1,NaN,5,0,1,0,0,1
+2128,1,6,02/25/0017 06:22,NaN,6:22 AM,2,1,NoReport,"",2,Asleep,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,"",NaN,NaN,NaN,NaN,NaN,NaN,"","",AMV,NaN,28.594,1,NaN,6,1,1,0,0,1
+2128,1,7,02/25/0017 06:45,NaN,6:45 AM,NaN,1,NoReport,"",1,Awake,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,"",NaN,NaN,NaN,NaN,NaN,NaN,"","",AMV,NaN,10.162,1,NaN,7,1,0,0,1,1
 2128,2,1,07/21/0017 23:04,NaN,11:04 PM,2,1,NoReport,"",2,Asleep,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,"",NaN,NaN,NaN,NaN,NaN,NaN,"","",AMV,NaN,NaN,0,NaN,NaN,NaN,NaN,NaN,NaN,NaN
 2128,2,2,07/22/0017 00:00,NaN,12:00 AM,2,3,Report,"hiking through the woods",2,Asleep,4,4,4,4,1,3,2,1,4,4,1,1,"legs",2,1,0,1,1,1,"cannot elaborate","",AMV,NaN,NaN,0,NaN,NaN,NaN,NaN,NaN,NaN,NaN
 2128,2,3,07/22/0017 01:11,NaN,1:11 AM,2,2,Something,"being tired",2,Asleep,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,"",NaN,NaN,NaN,NaN,NaN,NaN,"","",AMV,NaN,NaN,0,NaN,NaN,NaN,NaN,NaN,NaN,NaN
@@ -2879,13 +2879,13 @@ ID,Visit,SA,Date_Time,Date,Time,Stage,Q1ExperienceNum,Q1Experience,Q1Report,Q2Aw
 2130,2,11,06/30/0017 05:32,NaN,5:32 AM,NaN,3,Report,"Imagining reading a letter (as the alarm played, ppt rolled over; did not proceed with the rest of the questions)",1,Awake,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,"",NaN,NaN,NaN,NaN,NaN,NaN,"","",,NaN,NaN,0,NaN,NaN,NaN,NaN,NaN,NaN,NaN
 2130,2,12,06/30/0017 05:54,NaN,5:54 AM,2,3,Report,"dreaming, talking to truck driver about participating in a sleep study",2,Asleep,4,4,4,4,2,3,3,0,3,1,1,1,"hands",3,1,0,1,0,0,"","",,NaN,NaN,0,NaN,NaN,NaN,NaN,NaN,NaN,NaN
 2130,2,13,06/30/0017 06:14,NaN,6:14 AM,2,3,Report,"trying to open a bag of nuts",2,Asleep,4,3,3,3,3,4,1,0,2,3,0,1,"arms mostly, whole body was trying to open bag",1,0,1,0,0,-1,"","",,NaN,NaN,0,NaN,NaN,NaN,NaN,NaN,NaN,NaN
-2131,1,2,03/16/0017 01:20,NaN,1:20 AM,2,2,Something,"",2,Asleep,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,"",NaN,NaN,NaN,NaN,NaN,NaN,"","",AMV,NaN,NaN,0,NaN,NaN,NaN,NaN,NaN,NaN,NaN
-2131,1,3,03/16/0017 01:47,NaN,1:47 AM,2,2,Something,"mix of things, like a puzzle",1,Awake,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,"",NaN,NaN,NaN,NaN,NaN,NaN,"","",AMV,NaN,NaN,0,NaN,NaN,NaN,NaN,NaN,NaN,NaN
-2131,1,4,03/16/0017 02:06,NaN,2:06 AM,2,3,Report,"a video game",2,Asleep,2,1,1,3,2,3,4,1,2,4,1,0,"",1,0,0,0,0,0,"","",AMV,NaN,NaN,0,NaN,NaN,NaN,NaN,NaN,NaN,NaN
-2131,1,5,03/16/0017 02:38,NaN,2:38 AM,2,3,Report,"numbers, 3x3 numbers (like matrices?)",2,Asleep,4,1,4,2,1,2,4,1,2,3,1,0,"",3,0,0,0,0,0,"","",AMV,NaN,NaN,0,NaN,NaN,NaN,NaN,NaN,NaN,NaN
-2131,1,6,03/16/0017 03:06,NaN,3:06 AM,2,2,Something,"",2,Asleep,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,"",NaN,NaN,NaN,NaN,NaN,NaN,"","",AMV,NaN,NaN,0,NaN,NaN,NaN,NaN,NaN,NaN,NaN
-2131,1,7,03/16/0017 04:26,NaN,4:26 AM,2,2,Something,"the feeling of needing to wake someone up",2,Asleep,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,"",NaN,NaN,NaN,NaN,NaN,NaN,"","",AMV,NaN,NaN,0,NaN,NaN,NaN,NaN,NaN,NaN,NaN
-2131,1,8,03/16/0017 04:53,NaN,4:53 AM,NaN,3,Report,"a song, can't remember what it's called",2,Asleep,5,4,2,4,4,3,3,1,2,1,2,0,"",2,0,0,0,0,1,"","",AMV,NaN,NaN,0,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+2131,1,2,03/16/0017 01:20,NaN,1:20 AM,2,2,Something,"",2,Asleep,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,"",NaN,NaN,NaN,NaN,NaN,NaN,"","",AMV,NaN,55.331,1,NaN,1,0,1,0,0,1
+2131,1,3,03/16/0017 01:47,NaN,1:47 AM,2,2,Something,"mix of things, like a puzzle",1,Awake,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,"",NaN,NaN,NaN,NaN,NaN,NaN,"","",AMV,NaN,65.898,1,NaN,2,1,1,0,0,1
+2131,1,4,03/16/0017 02:06,NaN,2:06 AM,2,3,Report,"a video game",2,Asleep,2,1,1,3,2,3,4,1,2,4,1,0,"",1,0,0,0,0,0,"","",AMV,NaN,43.348,1,NaN,3,1,0,0,0,1
+2131,1,5,03/16/0017 02:38,NaN,2:38 AM,2,3,Report,"numbers, 3x3 numbers (like matrices?)",2,Asleep,4,1,4,2,1,2,4,1,2,3,1,0,"",3,0,0,0,0,0,"","",AMV,NaN,38.763,1,NaN,4,1,0,0,0,1
+2131,1,6,03/16/0017 03:06,NaN,3:06 AM,2,2,Something,"",2,Asleep,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,"",NaN,NaN,NaN,NaN,NaN,NaN,"","",AMV,NaN,15.819,1,NaN,5,1,1,0,0,1
+2131,1,7,03/16/0017 04:26,NaN,4:26 AM,2,2,Something,"the feeling of needing to wake someone up",2,Asleep,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,"",NaN,NaN,NaN,NaN,NaN,NaN,"","",AMV,NaN,32.873,1,NaN,6,1,0,0,0,1
+2131,1,8,03/16/0017 04:53,NaN,4:53 AM,NaN,3,Report,"a song, can't remember what it's called",2,Asleep,5,4,2,4,4,3,3,1,2,1,2,0,"",2,0,0,0,0,1,"","",AMV,NaN,33.8,1,NaN,7,0,0,0,1,1
 2133,1,1,03/17/0017 23:32,NaN,11:32 PM,2,3,Report,"",1,Awake,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,"",NaN,NaN,NaN,NaN,NaN,NaN,"","",AMV,NaN,NaN,0,NaN,NaN,NaN,NaN,NaN,NaN,NaN
 2133,1,2,03/17/0017 23:54,NaN,11:54 PM,2,1,NoReport,"",1,Awake,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,"",NaN,NaN,NaN,NaN,NaN,NaN,"","",AMV,NaN,NaN,0,NaN,NaN,NaN,NaN,NaN,NaN,NaN
 2133,1,3,03/18/0017 01:08,NaN,1:08 AM,2,2,Something,"something about being at the sleep lab",1,Awake,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,"",NaN,NaN,NaN,NaN,NaN,NaN,"","",AMV,NaN,NaN,0,NaN,NaN,NaN,NaN,NaN,NaN,NaN
@@ -2928,16 +2928,15 @@ ID,Visit,SA,Date_Time,Date,Time,Stage,Q1ExperienceNum,Q1Experience,Q1Report,Q2Aw
 2134,1,13,03/09/0017 05:55,NaN,5:55 AM,2,2,Something,"",2,Asleep,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,"",NaN,NaN,NaN,NaN,NaN,NaN,"","",AMV,NaN,NaN,0,NaN,NaN,NaN,NaN,NaN,NaN,NaN
 2134,1,14,03/09/0017 06:18,NaN,6:18 AM,NaN,3,Report,"talking with brother and mother",2,Asleep,4,3,1,1,2,2,1,0,NaN,1,1,0,"",1,1,0,1,0,1,"amused","",AMV,NaN,NaN,0,NaN,NaN,NaN,NaN,NaN,NaN,NaN
 2134,1,15,03/09/0017 06:40,NaN,6:40 AM,2,3,Report,"a control panel",2,Asleep,3,2,1,1,2,2,1,0,1,1,1,0,"",1,0,0,0,0,0,"","",AMV,NaN,NaN,0,NaN,NaN,NaN,NaN,NaN,NaN,NaN
-2134,2,1,06/28/0017 23:36,NaN,11:36 PM,2,2,Something,"vaguely recall something with other people",2,Asleep,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,"",NaN,NaN,NaN,NaN,NaN,NaN,"","",AMV,NaN,NaN,0,NaN,NaN,NaN,NaN,NaN,NaN,NaN
-2134,2,2,06/29/0017 00:10,NaN,12:10 AM,2,3,Report,"""I was in a meeting with some people""",2,Asleep,4,3,2,2,3,2,1,0,1,1,2,0,"",3,1,0,1,0,0,"","",AMV,NaN,NaN,0,NaN,NaN,NaN,NaN,NaN,NaN,NaN
-2134,2,3,06/29/0017 00:54,NaN,12:54 AM,2,1,NoReport,"",2,Asleep,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,"",NaN,NaN,NaN,NaN,NaN,NaN,"","",AMV,NaN,NaN,0,NaN,NaN,NaN,NaN,NaN,NaN,NaN
-2134,2,4,06/29/0017 01:37,NaN,1:37 AM,2,2,Something,"eating something",2,Asleep,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,"",NaN,NaN,NaN,NaN,NaN,NaN,"","",AMV,NaN,NaN,0,NaN,NaN,NaN,NaN,NaN,NaN,NaN
-2134,2,5,06/29/0017 02:23,NaN,2:23 AM,2,1,NoReport,"",2,Asleep,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,"",NaN,NaN,NaN,NaN,NaN,NaN,"","",AMV,NaN,NaN,0,NaN,NaN,NaN,NaN,NaN,NaN,NaN
-2134,2,6,NaT,NaN,no time,2,2,Something,"I thought I heard a noise",1,Awake,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,"",NaN,NaN,NaN,NaN,NaN,NaN,"","",AMV,NaN,NaN,0,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+2134,2,1,06/28/0017 23:36,NaN,11:36 PM,2,2,Something,"vaguely recall something with other people",2,Asleep,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,"",NaN,NaN,NaN,NaN,NaN,NaN,"","",AMV,NaN,47.655,1,NaN,1,0,0,0,0,0
+2134,2,2,06/29/0017 00:10,NaN,12:10 AM,2,3,Report,"""I was in a meeting with some people""",2,Asleep,4,3,2,2,3,2,1,0,1,1,2,0,"",3,1,0,1,0,0,"","",AMV,NaN,37.589,1,NaN,2,0,0,0,0,0
+2134,2,3,06/29/0017 00:54,NaN,12:54 AM,2,1,NoReport,"",2,Asleep,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,"",NaN,NaN,NaN,NaN,NaN,NaN,"","",AMV,NaN,31.191,1,NaN,3,0,0,0,0,0
+2134,2,4,06/29/0017 01:37,NaN,1:37 AM,2,2,Something,"eating something",2,Asleep,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,"",NaN,NaN,NaN,NaN,NaN,NaN,"","",AMV,NaN,15.176,1,NaN,4,0,0,0,0,0
+2134,2,5,06/29/0017 02:23,NaN,2:23 AM,2,1,NoReport,"",2,Asleep,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,"",NaN,NaN,NaN,NaN,NaN,NaN,"","",AMV,NaN,70.029,1,NaN,5,0,0,0,0,0
 2134,2,7,06/29/0027 03:26,NaN,3:26 AM,3,1,NoReport,"",2,Asleep,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,"",NaN,NaN,NaN,NaN,NaN,NaN,"","",AMV,NaN,NaN,0,NaN,NaN,NaN,NaN,NaN,NaN,NaN
-2134,2,8,06/29/0017 04:05,NaN,4:05 AM,3,3,Report,"I was observing somebody talking about pollution",2,Asleep,4,3,3,3,5,3,1,0,1,2,2,0,"",3,1,0,1,0,-1,"concerned","",AMV,NaN,NaN,0,NaN,NaN,NaN,NaN,NaN,NaN,NaN
-2134,2,9,06/29/0017 04:43,NaN,4:43 AM,2,3,Report,"putting some weather proofing around the house",2,Asleep,3,3,2,2,4,2,4,0,1,1,2,1,"head",2,1,0,1,1,0,"","",AMV,NaN,NaN,0,NaN,NaN,NaN,NaN,NaN,NaN,NaN
-2134,2,10,06/29/0017 05:20,NaN,5:20 AM,NaN,3,Report,"standing on structure pulling levers",2,Asleep,4,3,3,3,4,3,4,0,2,2,1,1,"arm",2,1,0,1,1,1,"satisfaction, pleased that he could accomplish a task.","",AMV,NaN,NaN,0,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+2134,2,8,06/29/0017 04:05,NaN,4:05 AM,3,3,Report,"I was observing somebody talking about pollution",2,Asleep,4,3,3,3,5,3,1,0,1,2,2,0,"",3,1,0,1,0,-1,"concerned","",AMV,NaN,50.981,1,NaN,6,0,0,0,0,0
+2134,2,9,06/29/0017 04:43,NaN,4:43 AM,2,3,Report,"putting some weather proofing around the house",2,Asleep,3,3,2,2,4,2,4,0,1,1,2,1,"head",2,1,0,1,1,0,"","",AMV,NaN,56.747,1,NaN,7,0,0,0,0,0
+2134,2,10,06/29/0017 05:20,NaN,5:20 AM,NaN,3,Report,"standing on structure pulling levers",2,Asleep,4,3,3,3,4,3,4,0,2,2,1,1,"arm",2,1,0,1,1,1,"satisfaction, pleased that he could accomplish a task.","",AMV,NaN,7.608,1,NaN,8,0,0,0,0,0
 2134,3,1,11/21/0017 23:29,NaN,11:29 PM,2,3,Report,"in a room, a castle tower talking to some people",2,Asleep,4,3,3,2,3,2,2,0,2,2,1,1,"arms mouth",1,1,0,1,0,0,"","",AMV,NaN,NaN,0,NaN,NaN,NaN,NaN,NaN,NaN,NaN
 2134,3,2,11/21/0017 23:56,NaN,11:56 PM,2,3,Report,"talking with someone",2,Asleep,3,3,2,2,2,1,1,0,1,2,0,0,"",1,1,0,1,0,0,"","",AMV,NaN,NaN,0,NaN,NaN,NaN,NaN,NaN,NaN,NaN
 2134,3,3,11/22/0017 00:44,NaN,12:44 AM,2,2,Something,"",2,Asleep,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,"",NaN,NaN,NaN,NaN,NaN,NaN,"","",AMV,NaN,NaN,0,NaN,NaN,NaN,NaN,NaN,NaN,NaN
@@ -2980,18 +2979,18 @@ ID,Visit,SA,Date_Time,Date,Time,Stage,Q1ExperienceNum,Q1Experience,Q1Report,Q2Aw
 2140,3,9,12/09/0017 04:30,NaN,4:30 AM,2,1,NoReport,"",2,Asleep,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,"",NaN,NaN,NaN,NaN,NaN,NaN,"","",AMV,NaN,NaN,0,NaN,NaN,NaN,NaN,NaN,NaN,NaN
 2140,3,10,12/09/0017 05:10,NaN,5:10 AM,2,1,NoReport,"",2,Asleep,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,"",NaN,NaN,NaN,NaN,NaN,NaN,"","",AMV,NaN,NaN,0,NaN,NaN,NaN,NaN,NaN,NaN,NaN
 2140,3,11,12/09/0017 05:38,NaN,5:38 AM,NaN,3,Report,"walking in the street",2,Asleep,1,2,1,1,0,1,0,0,0,1,-1,0,"",2,1,0,0,0,0,"","",AMV,NaN,NaN,0,NaN,NaN,NaN,NaN,NaN,NaN,NaN
-2142,1,1,03/17/0017 00:37,NaN,12:37 AM,2,3,Report,"walking down a road, trying to meet somewhere. It was nice out. ",2,Asleep,3,4,4,4,3,4,0,1,0,1,2,1,"legs",2,0,1,0,1,-1,"anxiety, worry","",AMV,NaN,NaN,0,NaN,NaN,NaN,NaN,NaN,NaN,NaN
-2142,1,2,03/17/0017 01:04,NaN,1:04 AM,2,3,Report,"sitting in a car, going down the road. Felt like he was driving but not for a long time. ",2,Asleep,4,4,4,4,0,0,1,0,2,2,2,1,"hands (steering)",2,0,0,0,1,2,"","",AMV,NaN,NaN,0,NaN,NaN,NaN,NaN,NaN,NaN,NaN
-2142,1,3,03/17/0017 01:51,NaN,1:51 AM,2,3,Report,"same dream aas before about sitting in a car, going down a road",2,Asleep,4,4,4,4,3,3,0,0,0,2,-2,1,"arms",2,0,0,0,1,2,"lonely and concerned","repeated the scale for Q20 but ppt insists on +2",AMV,NaN,NaN,0,NaN,NaN,NaN,NaN,NaN,NaN,NaN
-2142,1,4,03/17/0017 02:27,NaN,2:27 AM,2,3,Report,"dreaming about going to Minnesota",2,Asleep,4,4,4,4,3,3,1,0,1,2,2,1,"hands",2,0,0,0,1,2,"waiting and anticipation","",AMV,NaN,NaN,0,NaN,NaN,NaN,NaN,NaN,NaN,NaN
-2142,1,5,03/17/0017 03:03,NaN,3:03 AM,2,3,Report,"dreaming that he ws dreaming. Felt in bed and sleeping and had to wake up. ",2,Asleep,4,4,4,4,2,3,1,1,0,0,-2,0,"",1,0,0,0,0,0,"","",AMV,NaN,NaN,0,NaN,NaN,NaN,NaN,NaN,NaN,NaN
-2142,1,6,03/17/0017 03:26,NaN,3:26 AM,NaN,3,Report,"a scene from a movie: two missionaries were arguing. It was hot and sweaty. One of them had a full beard.",2,Asleep,4,4,4,5,2,0,2,1,0,0,0,0,"",2,1,0,1,0,1,"","",AMV,NaN,NaN,0,NaN,NaN,NaN,NaN,NaN,NaN,NaN
-2142,1,7,03/17/0017 03:48,NaN,3:48 AM,2,3,Report,"same dream as before with the 2 missionaries talking",2,Asleep,4,4,4,4,4,0,0,1,0,0,1,0,"",1,1,0,1,0,2,"","",AMV,NaN,NaN,0,NaN,NaN,NaN,NaN,NaN,NaN,NaN
-2142,1,8,03/17/0017 04:07,NaN,4:07 AM,2,3,Report,"dreaming about sleeping and waking",2,Asleep,4,4,4,4,3,0,0,1,1,0,2,0,"",1,1,0,1,0,0,"","",AMV,NaN,NaN,0,NaN,NaN,NaN,NaN,NaN,NaN,NaN
-2142,1,9,03/17/0017 04:25,NaN,4:25 AM,2,3,Report,"dreaming of sleeping",2,Asleep,5,4,5,4,2,2,0,1,0,0,-2,0,"",3,0,0,0,0,1,"sleepy, peaceful","",AMV,NaN,NaN,0,NaN,NaN,NaN,NaN,NaN,NaN,NaN
-2142,1,10,03/17/0017 04:47,NaN,4:47 AM,NaN,3,Report,"walking in a new store, looking at mexican food. Walking back and forth. Bought something (chicken/veggie mix) but forgot it at the store and wwent back to get it. ",2,Asleep,4,4,4,5,3,2,0,1,2,0,-2,1,"legs",2,1,0,1,1,1,"happy","",AMV,NaN,NaN,0,NaN,NaN,NaN,NaN,NaN,NaN,NaN
-2142,1,11,03/17/0017 05:04,NaN,5:04 AM,2,3,Report,"",2,Asleep,4,4,4,5,0,3,3,1,1,2,-2,1,"hands",1,0,0,0,0,1,"calm, peaceful","",AMV,NaN,NaN,0,NaN,NaN,NaN,NaN,NaN,NaN,NaN
-2142,1,12,03/17/0017 05:34,NaN,5:34 AM,2,3,Report,"thinking he had to get up if he woke up, dropped a box of push pins",2,Asleep,4,4,4,4,5,1,0,0,1,0,-2,0,"",1,0,0,0,0,1,"calm but in a hurry to do something.","",AMV,NaN,NaN,0,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+2142,1,1,03/17/0017 00:37,NaN,12:37 AM,2,3,Report,"walking down a road, trying to meet somewhere. It was nice out. ",2,Asleep,3,4,4,4,3,4,0,1,0,1,2,1,"legs",2,0,1,0,1,-1,"anxiety, worry","",AMV,NaN,2.791,1,NaN,1,1,1,0,0,1
+2142,1,2,03/17/0017 01:04,NaN,1:04 AM,2,3,Report,"sitting in a car, going down the road. Felt like he was driving but not for a long time. ",2,Asleep,4,4,4,4,0,0,1,0,2,2,2,1,"hands (steering)",2,0,0,0,1,2,"","",AMV,NaN,11.022,1,NaN,2,0,1,0,0,1
+2142,1,3,03/17/0017 01:51,NaN,1:51 AM,2,3,Report,"same dream aas before about sitting in a car, going down a road",2,Asleep,4,4,4,4,3,3,0,0,0,2,-2,1,"arms",2,0,0,0,1,2,"lonely and concerned","repeated the scale for Q20 but ppt insists on +2",AMV,NaN,46.708,1,NaN,3,1,1,0,0,1
+2142,1,4,03/17/0017 02:27,NaN,2:27 AM,2,3,Report,"dreaming about going to Minnesota",2,Asleep,4,4,4,4,3,3,1,0,1,2,2,1,"hands",2,0,0,0,1,2,"waiting and anticipation","",AMV,NaN,52.033,1,NaN,4,1,1,0,0,1
+2142,1,5,03/17/0017 03:03,NaN,3:03 AM,2,3,Report,"dreaming that he ws dreaming. Felt in bed and sleeping and had to wake up. ",2,Asleep,4,4,4,4,2,3,1,1,0,0,-2,0,"",1,0,0,0,0,0,"","",AMV,NaN,47.294,1,NaN,5,1,1,0,0,1
+2142,1,6,03/17/0017 03:26,NaN,3:26 AM,NaN,3,Report,"a scene from a movie: two missionaries were arguing. It was hot and sweaty. One of them had a full beard.",2,Asleep,4,4,4,5,2,0,2,1,0,0,0,0,"",2,1,0,1,0,1,"","",AMV,NaN,11.947,1,NaN,6,0,0,0,1,1
+2142,1,7,03/17/0017 03:48,NaN,3:48 AM,2,3,Report,"same dream as before with the 2 missionaries talking",2,Asleep,4,4,4,4,4,0,0,1,0,0,1,0,"",1,1,0,1,0,2,"","",AMV,NaN,4.005,1,NaN,7,0,1,0,0,1
+2142,1,8,03/17/0017 04:07,NaN,4:07 AM,2,3,Report,"dreaming about sleeping and waking",2,Asleep,4,4,4,4,3,0,0,1,1,0,2,0,"",1,1,0,1,0,0,"","",AMV,NaN,27.866,1,NaN,8,0,1,0,0,1
+2142,1,9,03/17/0017 04:25,NaN,4:25 AM,2,3,Report,"dreaming of sleeping",2,Asleep,5,4,5,4,2,2,0,1,0,0,-2,0,"",3,0,0,0,0,1,"sleepy, peaceful","",AMV,NaN,47.902,1,NaN,9,0,1,0,0,1
+2142,1,10,03/17/0017 04:47,NaN,4:47 AM,NaN,3,Report,"walking in a new store, looking at mexican food. Walking back and forth. Bought something (chicken/veggie mix) but forgot it at the store and wwent back to get it. ",2,Asleep,4,4,4,5,3,2,0,1,2,0,-2,1,"legs",2,1,0,1,1,1,"happy","",AMV,NaN,6.282,1,NaN,10,0,0,0,0,1
+2142,1,11,03/17/0017 05:14,NaN,5:14 AM,2,3,Report,"",2,Asleep,4,4,4,5,0,3,3,1,1,2,-2,1,"hands",1,0,0,0,0,1,"calm, peaceful","",AMV,NaN,4.175,1,NaN,11,1,0,0,0,1
+2142,1,12,03/17/0017 05:34,NaN,5:34 AM,2,3,Report,"thinking he had to get up if he woke up, dropped a box of push pins",2,Asleep,4,4,4,4,5,1,0,0,1,0,-2,0,"",1,0,0,0,0,1,"calm but in a hurry to do something.","",AMV,NaN,15.063,1,NaN,12,0,1,0,0,1
 2142,2,1,NaT,NaN,no time,2,3,Report,"thinking about all the things he had to do",2,Asleep,4,3,3,3,2,1,0,0,1,0,-1,0,"",3,0,0,0,0,1,"Sense of interest, there were a lot of things that needed to be done.","",AMV,NaN,NaN,0,NaN,NaN,NaN,NaN,NaN,NaN,NaN
 2142,2,2,06/09/0017 01:07,NaN,1:07 AM,2,2,Something,"felt positive, nothing specific",2,Asleep,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,"",NaN,NaN,NaN,NaN,NaN,NaN,"","",AMV,NaN,NaN,0,NaN,NaN,NaN,NaN,NaN,NaN,NaN
 2142,2,3,06/09/0017 01:26,NaN,1:26 AM,2,3,Report,"thinking about getting ready for a bike ride",2,Asleep,3,3,3,3,1,3,1,0,1,1,-1,0,"",1,0,0,0,0,1,"excited, happy","",AMV,NaN,NaN,0,NaN,NaN,NaN,NaN,NaN,NaN,NaN
@@ -3012,12 +3011,12 @@ ID,Visit,SA,Date_Time,Date,Time,Stage,Q1ExperienceNum,Q1Experience,Q1Report,Q2Aw
 2142,3,7,11/15/0017 04:14,NaN,4:14 AM,2,2,Something,"",2,Asleep,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,"",NaN,NaN,NaN,NaN,NaN,NaN,"","",AMV,NaN,NaN,0,NaN,NaN,NaN,NaN,NaN,NaN,NaN
 2142,3,8,11/15/0017 04:43,NaN,4:43 AM,NaN,3,Report,"I was thinking about eating some cheeseballs. Outside, people had brought a kind of softened cheese shaped into balls",2,Asleep,4,4,4,4,4,4,0,0,0,2,0,0,"",1,1,0,0,0,0,"","",AMV,NaN,NaN,0,NaN,NaN,NaN,NaN,NaN,NaN,NaN
 2142,3,9,11/15/0017 05:16,NaN,5:16 AM,2,1,NoReport,"",2,Asleep,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,"",NaN,NaN,NaN,NaN,NaN,NaN,"","",AMV,NaN,NaN,0,NaN,NaN,NaN,NaN,NaN,NaN,NaN
-2144,1,1,03/15/0017 01:11,NaN,1:11 AM,2,1,NoReport,"",1,Awake,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,"",NaN,NaN,NaN,NaN,NaN,NaN,"","",AMV,NaN,NaN,0,NaN,NaN,NaN,NaN,NaN,NaN,NaN
-2144,1,2,03/15/0017 01:40,NaN,1:40 AM,2,2,Something,"foggy",2,Asleep,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,"",NaN,NaN,NaN,NaN,NaN,NaN,"","",AMV,NaN,NaN,0,NaN,NaN,NaN,NaN,NaN,NaN,NaN
-2144,1,3,03/15/0017 02:17,NaN,2:17 AM,2,3,Report,"an animal standing on top of a ping-pong paddle",2,Asleep,1,1,1,1,1,3,3,1,0,0,2,0,"",2,0,0,0,0,0,"none","",AMV,NaN,NaN,0,NaN,NaN,NaN,NaN,NaN,NaN,NaN
-2144,1,4,03/15/0017 02:57,NaN,2:57 AM,NaN,3,Report,"Robbery in progress, broken glass",2,Asleep,4,4,4,3,0,5,5,1,3,5,-2,0,"",1,1,1,1,0,-1,"fear of being caught","",AMV,NaN,NaN,0,NaN,NaN,NaN,NaN,NaN,NaN,NaN
-2144,1,5,03/15/0017 04:04,NaN,4:04 AM,2,3,Report,"ppt saw her mother, grandmother, and great grandmother",2,Asleep,1,1,2,1,3,5,5,1,3,3,0,0,"",1,1,0,1,0,1,"joy","",AMV,NaN,NaN,0,NaN,NaN,NaN,NaN,NaN,NaN,NaN
-2144,1,6,03/15/0017 04:44,NaN,4:44 AM,NaN,3,Report,"folding laundry",2,Asleep,2,2,2,2,2,2,2,0,0,2,-2,0,"",3,0,0,0,0,0,"none","",AMV,NaN,NaN,0,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+2144,1,1,03/15/0017 01:11,NaN,1:11 AM,2,1,NoReport,"",1,Awake,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,"",NaN,NaN,NaN,NaN,NaN,NaN,"","",AMV,NaN,45.011,1,NaN,1,0,1,0,0,1
+2144,1,2,03/15/0017 01:40,NaN,1:40 AM,2,2,Something,"foggy",2,Asleep,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,"",NaN,NaN,NaN,NaN,NaN,NaN,"","",AMV,NaN,1.368,1,NaN,2,0,1,0,0,1
+2144,1,3,03/15/0017 02:17,NaN,2:17 AM,2,3,Report,"an animal standing on top of a ping-pong paddle",2,Asleep,1,1,1,1,1,3,3,1,0,0,2,0,"",2,0,0,0,0,0,"none","",AMV,NaN,28.385,1,NaN,3,0,1,1,0,1
+2144,1,4,03/15/0017 02:57,NaN,2:57 AM,NaN,3,Report,"Robbery in progress, broken glass",2,Asleep,4,4,4,3,0,5,5,1,3,5,-2,0,"",1,1,1,1,0,-1,"fear of being caught","",AMV,NaN,27.397,1,NaN,4,0,0,0,0,1
+2144,1,5,03/15/0017 04:04,NaN,4:04 AM,2,3,Report,"ppt saw her mother, grandmother, and great grandmother",2,Asleep,1,1,2,1,3,5,5,1,3,3,0,0,"",1,1,0,1,0,1,"joy","",AMV,NaN,111.526,1,NaN,5,1,1,0,0,1
+2144,1,6,03/15/0017 04:44,NaN,4:44 AM,NaN,3,Report,"folding laundry",2,Asleep,2,2,2,2,2,2,2,0,0,2,-2,0,"",3,0,0,0,0,0,"none","",AMV,NaN,11.679,1,NaN,6,0,0,0,0,1
 2144,2,1,06/02/0017 00:50,NaN,12:50 AM,2,1,NoReport,"",1,Awake,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,"",NaN,NaN,NaN,NaN,NaN,NaN,"","",AMV,NaN,11.882,1,NaN,1,1,1,0,0,0
 2144,2,2,06/02/0017 02:15,NaN,2:15 AM,2,2,Something,"anxious",2,Asleep,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,"",NaN,NaN,NaN,NaN,NaN,NaN,"","",AMV,NaN,14.399,1,NaN,2,1,1,0,0,0
 2144,2,3,06/02/0017 02:52,NaN,2:52 AM,2,3,Report,"being in a study",1,Awake,5,4,2,3,1,4,0,0,5,0,-1,0,"",3,0,1,0,0,0,"just anxious","",AMV,NaN,27.467,1,NaN,3,1,1,0,0,0
