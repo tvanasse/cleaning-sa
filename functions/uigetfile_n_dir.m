@@ -3,10 +3,9 @@ function [pathname] = uigetdir2(start_path, dialog_title)
 
 import javax.swing.JFileChooser;
 
-currentdir = pwd
-
+currentdir = pwd;
 if nargin == 0 % Allow a null argument.
-    start_path = [currentdir '/../../../..'];
+    start_path = [currentdir '/../'];
 end
 
 jchooser = javaObjectEDT('javax.swing.JFileChooser', start_path);

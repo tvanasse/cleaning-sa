@@ -2,6 +2,7 @@
 (1) Do multi-taper time/freq <br />
 
 ## Processing Pipeline <br />
+(1) ~3min/awkening, ~20 minutes/night
 (1) Extract 5 minutes before awakening <br />
 (1) Find that awakening matches to experiment entry <br />
 (1) Convert from 256 to "inside" 185 channels <br />

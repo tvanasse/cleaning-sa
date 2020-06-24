@@ -18,21 +18,7 @@ addpath('functions');
 CHANNEL_LOCATION_FILE = 'channel_location_file/HydroCelGSN256v10.sfp';
 
 %% input filenames from separate batch folders
-more_files = 'Yes';
-first_iter = 0;
-while strcmp(more_files, 'No') ~= 1
-    batch_folder = uigetfile_n_dir();
-    if first_iter == 0;
-        inputlist = uigetfile_n_dir(batch_folder);
-    else
-        inputlist = [inputlist uigetfile_n_dir(batch_folder)];
-    end
-
-    more_files = questdlg('Add more subjects from different batch folder?', ...
-        '??', ...
-        'Yes','No','No');
-    first_iter = first_iter + 1;
-end
+inputlist = uigetfile_n_dir([pwd '/../raw_aligned_data']);
 
 % add table name (so we aren't simultaneously i/o'ing csv file)
 TABLE_name = uigetfile_n_dir(pwd,'Pick Specific DREAM REPORT FILE');
@@ -43,50 +29,13 @@ for mff_input_file = 1:length(inputlist)
     TABLE = readtable(TABLE_name{1},'ReadVariableNames',true); %read experimenter input file
     filename = char(inputlist(mff_input_file)); %mff raw data filename
     
-    k = strfind(filename, 'NCCAM_'); % get start index for filename (from full path)
-    subid = filename(k+6:k+9);
-    session = filename(k+11:k+12);
+    subid = filename(end-9:end-6);
+    session = filename(end-4:end-3);
     
     %% create directory if it does not already exist
     current_dir = pwd;
     subdir = [current_dir '/../sub-' subid];
-    if ~exist(subdir, 'dir')
-       mkdir(subdir);
-       eegdir = [subdir '/eeg'];
-       mkdir(eegdir);
-    else 
-       eegdir = [subdir '/eeg'];
-    end
-
-    
-    if strcmp(session,'T1')
-        sesdir = [eegdir '/ses-1'];
-        timepoint=1;
-        if ~exist(sesdir)
-            mkdir(sesdir);
-        else 
-            f = warndlg('Subject Folder Already Exists','Warning');
-        end
-    elseif strcmp(session,'T2')
-        sesdir = [eegdir '/ses-2'];
-        timepoint=2;
-        if ~exist(sesdir)
-            mkdir(sesdir);
-        else 
-            f = warndlg('Subject Folder Already Exists','Warning');
-        end
-    elseif strcmp(session,'T3')
-        sesdir = [eegdir '/ses-3'];
-        timepoint=3;
-        if ~exist(sesdir)
-            mkdir(sesdir);
-        else 
-            f = warndlg('Subject Folder Already Exists','Warning');
-        end
-    else
-        fprintf('session directory error\n');
-        sesdir = [eegdir '/error'];
-    end 
+    [eegdir, sesdir] = get_dirs(subdir,session);
     
     fprintf('\nExtracting data for subject %s, %s... \n\n', subid, session)
    
@@ -236,6 +185,7 @@ for mff_input_file = 1:length(inputlist)
                 TABLE.DIN_EVENTS_WITHIN_TWO_MINUTES(de_index(din_event_match(k,1))) = 1; 
             end 
         end 
+      
         
         %% save five minutes of data for each awakening
         

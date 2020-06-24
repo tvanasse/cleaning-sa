@@ -13,21 +13,7 @@ eeglab;
 close;
 
 %% input filenames
-more_files = 'Yes';
-first_iter = 0;
-while strcmp(more_files, 'No') ~= 1
-batch_folder = uigetfile_n_dir();
-if first_iter == 0;
-    inputlist = uigetfile_n_dir(batch_folder);
-else
-    inputlist = [inputlist uigetfile_n_dir(batch_folder)];
-end
-
-more_files = questdlg('Add more subjects from different batch folder?', ...
-	'??', ...
-	'Yes','No','No');
-first_iter = first_iter + 1;
-end
+inputlist = get_ses_dirs();
 
 % set local folder to run ica
 local_folder = uigetfile_n_dir('~');
@@ -37,55 +23,11 @@ max_threads = inputdlg('Input Max Threads',...
          'Sample', [1 50]);
 max_threads = str2num(max_threads{1});
 
-
 %% loop through input file list
-
 for mff_input_file = 1:length(inputlist)
     
-    TABLE = readtable('NCCAM3_06_SADreamReports_10-20-18.csv','ReadVariableNames',true); %read experimenter input file
-    filename = char(inputlist(mff_input_file)); %mff raw data filename
-    
-    k = strfind(filename, 'NCCAM_'); % get start index for filename (from full path)
-    subid = filename(k+6:k+9);
-    session = filename(k+11:k+12);
-    
-    %% create directory if it does not already exist
-    current_dir = pwd;
-    subdir = [current_dir '/../sub-' subid];
-    
-    if ~exist(subdir, 'dir')
-       mkdir(subdir);
-       eegdir = [subdir '/eeg'];
-       mkdir(eegdir);
-    else 
-       eegdir = [subdir '/eeg'];
-    end
-
-    
-    if strcmp(session,'T1')
-        sesdir = [eegdir '/ses-1'];
-        timepoint=1;
-        if ~exist(sesdir)
-            mkdir(sesdir);
-        end
-    elseif strcmp(session,'T2')
-        sesdir = [eegdir '/ses-2'];
-        timepoint=2;
-        if ~exist(sesdir)
-            mkdir(sesdir);
-        end
-    elseif strcmp(session,'T3')
-        sesdir = [eegdir '/ses-3'];
-        timepoint=3;
-        if ~exist(sesdir)
-            mkdir(sesdir);
-        end
-    else
-        fprintf('session directory error\n');
-        sesdir = [eegdir '/error'];
-    end 
-    
-    
+    sesdir = char(inputlist(mff_input_file));
+      
     EEG = pop_loadset([sesdir '/nrem_awakening_eeg_hp_trim_merged_nobadch.set']);
 
     AMICA_DIR = [local_folder{1} '/amicaout/'];  % good to have a separate dir for each file
