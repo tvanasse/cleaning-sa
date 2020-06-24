@@ -2,14 +2,18 @@
 (1) Do multi-taper time/freq <br />
 
 ## Data folders to process data (TONONI-NAS) <br />
-data - /Volumes/NCCAM_scratch/NCCAM_scratch/raw_aligned_data <br />
+NCCAM3_scratch - RAID10, 5TB
+raw data - /Volumes/NCCAM_scratch/NCCAM_scratch/raw_aligned_data <br />
 scripts - /Volumes/NCCAM_scratch/NCCAM_scratch/cleaning-sa <br />
+data during processing - /Volumes/NCCAM_scratch/NCCAM_scratch/sub-*/ <br /> 
 
 after processing, transfer data to - CHECK IF FOLDER ALREADY EXISTS: <br />
 /Volumes/NCCAM/NCCAM/NCCAM3/NCCAM3_Dogen_TOM_V/wDreamReport/aligned/extraction_TJV <br />
 
 
 ## Processing Pipeline <br />
+(1) Transfer raw data to raw data folder (~18 GB/night; ~1 hr to transfer) <br />
+(1) Check if all awakenings are found with a_check_awakenings_found.m <br />
 (1) ~3min/awkening, ~20 minutes/night <br />
 (1) Extract 5 minutes before awakening <br />
 (1) Find that awakening matches to experiment entry <br />
@@ -31,7 +35,7 @@ after processing, transfer data to - CHECK IF FOLDER ALREADY EXISTS: <br />
 <br />
 (7) Low-pass filter (50 Hz), then re-split awakenings, and perform qa plots.<br />
 <br />
-(8) Remove raw/intermediate files. 
+(8) Remove raw/intermediate files. After removal, data capacity ~1.5GB/5 NREM Awakenings
 
 ## Intermediary Data Naming <br />
 *_eeg.set - 5 min. raw eeg data before awakening din <br />
