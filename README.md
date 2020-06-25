@@ -8,7 +8,7 @@ scripts - /Volumes/NCCAM_scratch/NCCAM_scratch/cleaning-sa <br />
 data during processing - /Volumes/NCCAM_scratch/NCCAM_scratch/sub-*/ <br /> 
 
 after processing, transfer data to - CHECK IF FOLDER ALREADY EXISTS: <br />
-/Volumes/NCCAM/NCCAM/NCCAM3/NCCAM3_Dogen_TOM_V/wDreamReport/aligned/extraction_TJV <br />
+/Volumes/NCCAM/NCCAM/NCCAM3/NCCAM3_Workspace_Backup/wDreamReport/aligned/extraction_TJV <br />
 
 
 ## Processing Pipeline <br />
