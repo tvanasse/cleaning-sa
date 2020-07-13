@@ -1,8 +1,10 @@
 ## TO-DO <br />
 (1) Do multi-taper time/freq <br />
 
-## Data folders to process data (TONONI-NAS) <br />
-NCCAM3_scratch - RAID10, 5TB
+## Data folders (TONONI-NAS) <br />
+raw data folder to get (/Volumes/NCCAM/NCCAM/NCCAM3/SerialAwakenings/FINALS)
+
+process data folder (NCCAM_scratch, RAID10, 5TB):
 raw data - /Volumes/NCCAM_scratch/NCCAM_scratch/raw_aligned_data <br />
 scripts - /Volumes/NCCAM_scratch/NCCAM_scratch/cleaning-sa <br />
 data during processing - /Volumes/NCCAM_scratch/NCCAM_scratch/sub-*/ <br /> 
@@ -35,7 +37,7 @@ after processing, transfer data to - CHECK IF FOLDER ALREADY EXISTS: <br />
 <br />
 (7) Low-pass filter (50 Hz), then re-split awakenings, and perform qa plots.<br />
 <br />
-(8) Remove raw/intermediate files. After removal, data capacity ~1.5GB/5 NREM Awakenings
+(8) Remove raw/intermediate files. After removal, data capacity ~2GB/5 NREM Awakenings
 
 ## Intermediary Data Naming <br />
 *_eeg.set - 5 min. raw eeg data before awakening din <br />

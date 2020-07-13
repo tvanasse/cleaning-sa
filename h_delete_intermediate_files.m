@@ -12,20 +12,12 @@ eeglab;
 close;
 
 %% input filenames
-inputlist = uigetfile_n_dir([pwd '/../raw_aligned_data']);
+inputlist = get_ses_dirs();
 
 %% loop through input file list
 for mff_input_file = 1:length(inputlist)
     
-    filename = char(inputlist(mff_input_file)); %mff raw data filename
-    
-    subid = filename(end-9:end-6);
-    session = filename(end-4:end-3);
-    
-    %% create directory if it does not already exist
-    current_dir = pwd;
-    subdir = [current_dir '/../sub-' subid];
-    [eegdir, sesdir] = get_dirs(subdir,session);
+    sesdir = char(inputlist(mff_input_file));
     
     %% remove intermediate files
     delete([sesdir '/*_eeg.set']);
@@ -39,6 +31,6 @@ for mff_input_file = 1:length(inputlist)
     delete([sesdir '/nrem_awakening_eeg_hp_trim_merged_nobadch.fdt'])
     
     %% raw data
-    rmdir(filename,'s')
+    % rmdir(filename,'s')
     
 end

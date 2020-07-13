@@ -18,7 +18,7 @@ addpath('functions');
 CHANNEL_LOCATION_FILE = 'channel_location_file/HydroCelGSN256v10.sfp';
 
 %% input filenames from separate batch folders
-inputlist = uigetfile_n_dir([pwd '/../raw_aligned_data']);
+inputlist = uigetfile_n_dir('/Volumes/NCCAM/NCCAM/NCCAM3/SerialAwakenings/FINALS');
 
 % add table name (so we aren't simultaneously i/o'ing csv file)
 TABLE_name = uigetfile_n_dir(pwd,'Pick Specific DREAM REPORT FILE');
@@ -32,10 +32,14 @@ for mff_input_file = 1:length(inputlist)
     subid = filename(end-9:end-6);
     session = filename(end-4:end-3);
     
+    %% hard code for certain folders
+%     subid = '2014'
+%     session = 'T2'
+    
     %% create directory if it does not already exist
     current_dir = pwd;
     subdir = [current_dir '/../sub-' subid];
-    [eegdir, sesdir] = get_dirs(subdir,session);
+    [eegdir, sesdir, timepoint] = get_dirs(subdir,session);
     
     fprintf('\nExtracting data for subject %s, %s... \n\n', subid, session)
    
