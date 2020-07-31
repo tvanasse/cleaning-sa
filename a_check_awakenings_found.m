@@ -32,7 +32,7 @@ for mff_input_file = 1:length(inputlist)
     session = filename(end-4:end-3);
     
     %% hard code subid session
-%     subid = '2014'
+%     subid = '2034'
 %     session = 'T2'
     
     %% create directory if it does not already exist

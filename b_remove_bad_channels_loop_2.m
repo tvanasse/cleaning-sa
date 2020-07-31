@@ -35,7 +35,12 @@ for mff_input_file = 1:length(inputlist)
     if length(EEG.csc_hidden_channels) > 0
         figure; topoplot([],EEG.chanlocs([EEG.badchannels]), 'style', 'blank',  'electrodes', 'labelpoint', 'chaninfo', EEG.chaninfo); % which channels removed
         saveas(gcf, [sesdir '/nrem_badchannels'], 'tif');
-        close all;      
+        close all;    
+        
+    else
+        figure; topoplot([],EEG.chanlocs, 'style', 'blank',  'electrodes', 'labelpoint', 'chaninfo', EEG.chaninfo); % which channels removed 
+        saveas(gcf, [sesdir '/nrem_badchannels'], 'tif');
+        close all;
     end
     
     % remove the bad channels, saving original channel info for later

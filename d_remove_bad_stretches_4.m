@@ -33,7 +33,10 @@ for mff_input_file = 1:length(inputlist)
 
         % get entire five minutes
         start_sample = (awak-1)*(EEG_all.srate*60*5 - EEG_all.srate*2 + 1);
+        fprintf('\n Start Sample (seconds): %d',start_sample/EEG_all.srate);
+        
         end_sample = awak*(EEG_all.srate*60*5 - EEG_all.srate*2 + 1); %each extraction is 4 min. 58seconds
+        fprintf('\n End Sample (seconds): %d',end_sample/EEG_all.srate);
 
         EEG = pop_select(EEG_all, 'point', [start_sample, end_sample]);
         
