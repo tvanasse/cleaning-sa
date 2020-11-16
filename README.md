@@ -39,6 +39,9 @@ after processing, transfer data to - CHECK IF FOLDER ALREADY EXISTS: <br />
 <br />
 (8) Remove raw/intermediate files. After removal, data capacity ~2GB/5 NREM Awakenings
 
+## Minimum NREM data recommended per night for ICA <br />
+22.8 minutes = [20*(185 channels)^2]/(500 samples/second * 60 seconds/min.)<br />
+
 ## Intermediary Data Naming <br />
 *_eeg.set - 5 min. raw eeg data before awakening din <br />
 *_eeg_hp_trim.set - data high-pass filetered and trimmed (1 sec. beginning and end) <br />
