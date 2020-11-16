@@ -14,9 +14,8 @@ after processing, transfer data to - CHECK IF FOLDER ALREADY EXISTS: <br />
 
 
 ## Processing Pipeline <br />
-(1) Transfer raw data to raw data folder (~18 GB/night; ~1 hr to transfer) <br />
 (1) Check if all awakenings are found with a_check_awakenings_found.m <br />
-(1) ~3min/awkening, ~20 minutes/night <br />
+(1) ~3min of processing time/awakening, ~20 minutes/night <br />
 (1) Extract 5 minutes before awakening <br />
 (1) Find that awakening matches to experiment entry <br />
 (1) Convert from 256 to "inside" 185 channels <br />
