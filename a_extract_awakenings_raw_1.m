@@ -330,6 +330,9 @@ for mff_input_file = 1:length(inputlist)
     clear timestamps
     clear din_event_match
     
+    %% save table
+    %writetable(TABLE(de_index,:),[sesdir '/awakening_table.txt'])
+    
 end 
 
 
