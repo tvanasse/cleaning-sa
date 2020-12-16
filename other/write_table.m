@@ -38,7 +38,7 @@ for mff_input_file = 1:length(inputlist)
     
     %% create directory if it does not already exist
     current_dir = pwd;
-    subdir = [current_dir '../../sub-' subid];
+    subdir = [current_dir '/../sub-' subid];
     [eegdir, sesdir, timepoint] = get_dirs(subdir,session);
     
     fprintf('\nExtracting data for subject %s, %s... \n\n', subid, session)
