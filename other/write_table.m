@@ -21,7 +21,7 @@ CHANNEL_LOCATION_FILE = 'channel_location_file/HydroCelGSN256v10.sfp';
 inputlist = uigetfile_n_dir('/Volumes/NCCAM/NCCAM/NCCAM3/SerialAwakenings/FINALS');
 
 % add table name (so we aren't simultaneously i/o'ing csv file)
-TABLE_name = uigetfile_n_dir(pwd,'Pick Specific DREAM REPORT FILE');
+TABLE_name = uigetfile_n_dir([pwd],'Pick Specific DREAM REPORT FILE');
 
 %% loop through input file list
 for mff_input_file = 1:length(inputlist)
