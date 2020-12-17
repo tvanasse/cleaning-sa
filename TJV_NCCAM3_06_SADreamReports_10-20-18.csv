@@ -1,13 +1,13 @@
 ID,Visit,SA,Date_Time,Date,Time,Stage,Q1ExperienceNum,Q1Experience,Q1Report,Q2AwakeNum,Q2Awake,Q3,Q4,Q5,Q6,Q7,Q8,Q9,Q10,Q11,Q12,Q13,Q14,Q14b,Q15,Q16,Q17,Q18,Q19,Q20,Q20b,Notes,Int,FILE_NOT_FOUND,DIFF_FROM_EVENT_SECONDS,DIN_EVENTS_WITHIN_TWO_MINUTES,MFF_FILE_HAS_NO_EVENTS_TO_IMPORT,ENTRY_MATCHED_AWAKENING_NO,N1,N2,N3,REM,WAKE
-2000,1,1,11/19/0014 01:00,NaN,1:00 AM,2,3,Report,"Food or herbal supplements",2,Asleep,1,1,3,1,1,3,0,0,0,1,1,0,"",3,0,0,0,0,1,"Thinking about what I have to do","",RA,NaN,NaN,0,NaN,NaN,NaN,NaN,NaN,NaN,NaN
-2000,1,2,11/19/0014 01:38,NaN,1:38 AM,2,3,Report,"Was trying to recall the previous dream",2,Asleep,1,1,1,1,0,1,1,0,0,0,-2,0,"",2,1,0,0,0,0,"","",RA,NaN,NaN,0,NaN,NaN,NaN,NaN,NaN,NaN,NaN
-2000,1,3,11/19/0014 02:41,NaN,2:41 AM,2,1,NoReport,"",2,Asleep,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,"",NaN,NaN,NaN,NaN,NaN,NaN,"","",RA,NaN,NaN,0,NaN,NaN,NaN,NaN,NaN,NaN,NaN
-2000,1,4,11/19/0014 03:15,NaN,3:15 AM,2,1,NoReport,"",2,Asleep,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,"",NaN,NaN,NaN,NaN,NaN,NaN,"","(question, N3?)",RA,NaN,NaN,0,NaN,NaN,NaN,NaN,NaN,NaN,NaN
-2000,1,5,11/19/0014 03:42,NaN,3:42 AM,2,3,Report,"Heating things for health benefits. Doing different things for health benefits. Taking supplements.",2,Asleep,2,2,3,1,1,3,0,0,0,0,-2,0,"",2,0,0,0,0,0,"responsibility","",RA,NaN,NaN,0,NaN,NaN,NaN,NaN,NaN,NaN,NaN
-2000,1,6,11/19/0014 04:15,NaN,4:15 AM,NaN,3,Report,"washing my face. Explaining to my parents who I was.",2,Asleep,3,3,4,2,2,2,0,0,1,1,0,1,"washing my face",1,0,0,1,1,0,"","",RA,NaN,NaN,0,NaN,NaN,NaN,NaN,NaN,NaN,NaN
-2000,1,7,11/19/0014 05:08,NaN,5:08 AM,2,3,Report,"walking",2,Asleep,4,4,4,4,1,2,0,0,2,1,1,1,"walking and shaking my head",1,1,0,1,1,1,"Self-Consciousness happiness","",RA,NaN,NaN,0,NaN,NaN,NaN,NaN,NaN,NaN,NaN
-2000,1,8,11/19/0014 05:30,NaN,5:30 AM,2,3,Report,"Hotel Washing my face grooming",2,Asleep,4,4,4,4,3,2,1,0,0,1,-1,0,"",1,0,0,1,1,2,"Happiness and Love","",RA,NaN,NaN,0,NaN,NaN,NaN,NaN,NaN,NaN,NaN
-2000,1,9,11/19/0014 06:07,NaN,6:07 AM,NaN,3,Report,"Drive in a car with a friend going to the bank and stuff",2,Asleep,4,4,4,4,2,1,1,0,0,1,-1,1,"my whole body",2,1,0,1,1,-1,"Skepticism and concern","",RA,NaN,NaN,0,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+2000,1,1,11/19/0014 01:00,NaN,1:00 AM,2,3,Report,"Food or herbal supplements",2,Asleep,1,1,3,1,1,3,0,0,0,1,1,0,"",3,0,0,0,0,1,"Thinking about what I have to do","",RA,NaN,224.648,1,NaN,1,0,1,0,0,1
+2000,1,2,11/19/0014 01:38,NaN,1:38 AM,2,3,Report,"Was trying to recall the previous dream",2,Asleep,1,1,1,1,0,1,1,0,0,0,-2,0,"",2,1,0,0,0,0,"","",RA,NaN,66.265,1,NaN,2,0,1,0,0,1
+2000,1,3,11/19/0014 02:41,NaN,2:41 AM,2,1,NoReport,"",2,Asleep,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,"",NaN,NaN,NaN,NaN,NaN,NaN,"","",RA,NaN,40.349,1,NaN,3,0,1,0,0,1
+2000,1,4,11/19/0014 03:15,NaN,3:15 AM,2,1,NoReport,"",2,Asleep,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,"",NaN,NaN,NaN,NaN,NaN,NaN,"","(question, N3?)",RA,NaN,1.118,2,NaN,4,0,0,1,0,1
+2000,1,5,11/19/0014 03:42,NaN,3:42 AM,2,3,Report,"Heating things for health benefits. Doing different things for health benefits. Taking supplements.",2,Asleep,2,2,3,1,1,3,0,0,0,0,-2,0,"",2,0,0,0,0,0,"responsibility","",RA,NaN,75.592,2,NaN,5,0,1,0,0,1
+2000,1,6,11/19/0014 04:15,NaN,4:15 AM,NaN,3,Report,"washing my face. Explaining to my parents who I was.",2,Asleep,3,3,4,2,2,2,0,0,1,1,0,1,"washing my face",1,0,0,1,1,0,"","",RA,NaN,5.738,1,NaN,6,0,0,0,1,1
+2000,1,7,11/19/0014 05:08,NaN,5:08 AM,2,3,Report,"walking",2,Asleep,4,4,4,4,1,2,0,0,2,1,1,1,"walking and shaking my head",1,1,0,1,1,1,"Self-Consciousness happiness","",RA,NaN,38.636,1,NaN,7,0,1,0,0,1
+2000,1,8,11/19/0014 05:30,NaN,5:30 AM,2,3,Report,"Hotel Washing my face grooming",2,Asleep,4,4,4,4,3,2,1,0,0,1,-1,0,"",1,0,0,1,1,2,"Happiness and Love","",RA,NaN,106.842,1,NaN,8,0,1,0,0,1
+2000,1,9,11/19/0014 06:07,NaN,6:07 AM,NaN,3,Report,"Drive in a car with a friend going to the bank and stuff",2,Asleep,4,4,4,4,2,1,1,0,0,1,-1,1,"my whole body",2,1,0,1,1,-1,"Skepticism and concern","",RA,NaN,38.338,1,NaN,9,0,1,0,0,1
 2001,1,1,12/16/0014 01:00,NaN,1:00 AM,2,1,NoReport,"",1,Awake,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,"",NaN,NaN,NaN,NaN,NaN,NaN,"","",RA,NaN,NaN,0,NaN,NaN,NaN,NaN,NaN,NaN,NaN
 2001,1,2,12/16/0014 01:42,NaN,1:42 AM,2,1,NoReport,"",1,Awake,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,"",NaN,NaN,NaN,NaN,NaN,NaN,"","",RA,NaN,NaN,0,NaN,NaN,NaN,NaN,NaN,NaN,NaN
 2001,1,3,12/16/0014 02:05,NaN,2:05 AM,2,1,NoReport,"",1,Awake,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,"",NaN,NaN,NaN,NaN,NaN,NaN,"","",RA,NaN,NaN,0,NaN,NaN,NaN,NaN,NaN,NaN,NaN
@@ -1109,18 +1109,18 @@ ID,Visit,SA,Date_Time,Date,Time,Stage,Q1ExperienceNum,Q1Experience,Q1Report,Q2Aw
 2052,2,11,06/04/0016 04:22,NaN,4:22 AM,2,1,NoReport,"",2,Asleep,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,"",NaN,NaN,NaN,NaN,NaN,NaN,"","",AMV,NaN,NaN,0,NaN,NaN,NaN,NaN,NaN,NaN,NaN
 2052,2,12,06/04/0016 04:47,NaN,4:47 AM,NaN,1,NoReport,"",2,Asleep,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,"",NaN,NaN,NaN,NaN,NaN,NaN,"","",AMV,NaN,NaN,0,NaN,NaN,NaN,NaN,NaN,NaN,NaN
 2052,2,13,06/04/0016 05:10,NaN,5:10 AM,NaN,3,Report,"telling people about sleep clinic",2,Asleep,4,3,3,4,5,4,3,0,0,3,1,1,"legs",3,1,0,1,1,1,"amusement and fun!","",AMV,NaN,NaN,0,NaN,NaN,NaN,NaN,NaN,NaN,NaN
-2052,3,1,12/07/0016 00:03,NaN,12:03 AM,2,2,Something,"something with a lot of people",2,Asleep,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,"",NaN,NaN,NaN,NaN,NaN,NaN,"","",AMV,NaN,58.41,1,NaN,1,0,1,0,0,0
-2052,3,2,12/07/0016 00:21,NaN,12:21 AM,2,2,Something,"around people",2,Asleep,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,"",NaN,NaN,NaN,NaN,NaN,NaN,"","",AMV,NaN,58.762,1,NaN,2,1,1,0,0,1
-2052,3,3,12/07/0016 00:44,NaN,12:44 AM,2,1,NoReport,"",2,Asleep,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,"",NaN,NaN,NaN,NaN,NaN,NaN,"","",AMV,NaN,2.693,1,NaN,3,0,1,0,0,0
-2052,3,4,12/07/0016 01:10,NaN,1:10 AM,2,1,NoReport,"",2,Asleep,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,"",NaN,NaN,NaN,NaN,NaN,NaN,"","",AMV,NaN,38.073,1,NaN,4,0,1,0,0,0
-2052,3,5,12/07/0016 01:33,NaN,1:33 AM,2,1,NoReport,"",2,Asleep,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,"",NaN,NaN,NaN,NaN,NaN,NaN,"","",AMV,NaN,33.958,1,NaN,5,1,1,0,0,0
-2052,3,6,12/07/0016 01:57,NaN,1:57 AM,2,2,Something,"",2,Asleep,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,"",NaN,NaN,NaN,NaN,NaN,NaN,"","",AMV,NaN,17.551,1,NaN,6,0,1,0,0,0
-2052,3,7,12/07/0016 02:32,NaN,2:32 AM,2,3,Report,"traveling on a bus",2,Asleep,2,3,3,2,2,2,1,0,0,1,-2,0,"",2,0,0,1,0,1,"excitement","",AMV,NaN,40.051,1,NaN,7,0,1,0,0,0
-2052,3,8,12/07/0016 03:58,NaN,3:58 AM,2,2,Something,"",2,Asleep,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,"",NaN,NaN,NaN,NaN,NaN,NaN,"","",AMV,NaN,17.458,2,NaN,8,0,1,0,0,0
-2052,3,9,12/07/0016 04:19,NaN,4:19 AM,2,2,Something,"",2,Asleep,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,"",NaN,NaN,NaN,NaN,NaN,NaN,"","",AMV,NaN,46.383,1,NaN,9,0,1,0,0,0
-2052,3,10,12/07/0016 04:47,NaN,4:47 AM,NaN,1,NoReport,"",2,Asleep,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,"",NaN,NaN,NaN,NaN,NaN,NaN,"","",AMV,NaN,3.952,2,NaN,10,0,1,0,0,0
-2052,3,11,12/07/0016 05:09,NaN,5:09 AM,NaN,3,Report,"Talking with relatives about ppt's job",2,Asleep,3,3,3,4,3,4,3,0,0,1,-2,0,"",1,1,0,1,0,-1,"nervous","",AMV,NaN,5.578,2,NaN,11,0,0,0,1,0
-2052,3,12,12/07/0016 05:36,NaN,5:36 AM,2,2,Something,"",2,Asleep,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,"",NaN,NaN,NaN,NaN,NaN,NaN,"","",AMV,NaN,4.258,1,NaN,12,0,1,0,0,0
+2052,3,1,12/07/0016 00:03,NaN,12:03 AM,2,2,Something,"something with a lot of people",2,Asleep,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,"",NaN,NaN,NaN,NaN,NaN,NaN,"","",AMV,NaN,58.41,1,NaN,1,0,1,0,0,1
+2052,3,2,12/07/0016 00:21,NaN,12:21 AM,2,2,Something,"around people",2,Asleep,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,"",NaN,NaN,NaN,NaN,NaN,NaN,"","",AMV,NaN,58.762,1,NaN,2,0,1,0,0,1
+2052,3,3,12/07/0016 00:44,NaN,12:44 AM,2,1,NoReport,"",2,Asleep,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,"",NaN,NaN,NaN,NaN,NaN,NaN,"","",AMV,NaN,2.693,1,NaN,3,0,1,0,0,1
+2052,3,4,12/07/0016 01:10,NaN,1:10 AM,2,1,NoReport,"",2,Asleep,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,"",NaN,NaN,NaN,NaN,NaN,NaN,"","",AMV,NaN,38.073,1,NaN,4,0,1,0,0,1
+2052,3,5,12/07/0016 01:33,NaN,1:33 AM,2,1,NoReport,"",2,Asleep,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,"",NaN,NaN,NaN,NaN,NaN,NaN,"","",AMV,NaN,33.958,1,NaN,5,1,1,0,0,1
+2052,3,6,12/07/0016 01:57,NaN,1:57 AM,2,2,Something,"",2,Asleep,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,"",NaN,NaN,NaN,NaN,NaN,NaN,"","",AMV,NaN,17.551,1,NaN,6,0,1,0,0,1
+2052,3,7,12/07/0016 02:32,NaN,2:32 AM,2,3,Report,"traveling on a bus",2,Asleep,2,3,3,2,2,2,1,0,0,1,-2,0,"",2,0,0,1,0,1,"excitement","",AMV,NaN,40.051,1,NaN,7,0,1,0,0,1
+2052,3,8,12/07/0016 03:58,NaN,3:58 AM,2,2,Something,"",2,Asleep,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,"",NaN,NaN,NaN,NaN,NaN,NaN,"","",AMV,NaN,17.458,2,NaN,8,0,1,0,0,1
+2052,3,9,12/07/0016 04:19,NaN,4:19 AM,2,2,Something,"",2,Asleep,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,"",NaN,NaN,NaN,NaN,NaN,NaN,"","",AMV,NaN,46.383,1,NaN,9,0,1,0,0,1
+2052,3,10,12/07/0016 04:47,NaN,4:47 AM,NaN,1,NoReport,"",2,Asleep,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,"",NaN,NaN,NaN,NaN,NaN,NaN,"","",AMV,NaN,3.952,2,NaN,10,0,1,0,0,1
+2052,3,11,12/07/0016 05:09,NaN,5:09 AM,NaN,3,Report,"Talking with relatives about ppt's job",2,Asleep,3,3,3,4,3,4,3,0,0,1,-2,0,"",1,1,0,1,0,-1,"nervous","",AMV,NaN,5.578,2,NaN,11,0,0,0,1,1
+2052,3,12,12/07/0016 05:36,NaN,5:36 AM,2,2,Something,"",2,Asleep,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,"",NaN,NaN,NaN,NaN,NaN,NaN,"","",AMV,NaN,4.258,1,NaN,12,1,1,0,0,1
 2053,1,1,07/17/0015 01:32,NaN,1:32 AM,2,3,Report,"A wagon. That's it.",1,Awake,1,1,1,1,0,1,NaN,1,0,0,2,0,"",3,0,0,0,0,0,"","",KL,NaN,45.97,1,NaN,1,0,1,0,0,1
 2053,1,2,07/17/0015 03:41,NaN,3:41 AM,2,1,NoReport,"",2,Asleep,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,"",NaN,NaN,NaN,NaN,NaN,NaN,"","",KL,NaN,NaN,0,NaN,NaN,NaN,NaN,NaN,NaN,NaN
 2053,1,3,07/17/0015 04:08,NaN,4:08 AM,2,1,NoReport,"",2,Asleep,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,"",NaN,NaN,NaN,NaN,NaN,NaN,"","",KL,NaN,74.578,1,NaN,2,1,1,0,0,1
