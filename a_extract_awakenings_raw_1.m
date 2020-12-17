@@ -5,6 +5,11 @@
 % of data before awakening. Concatenate those files that were awoke in NREM
 % sleep for ICA cleaning. 
 
+% Script aquires absolute datetime of aligned recording start, then aquires the
+% event onset timestamps from the mff_event file. Sample data (from raw aligned
+% file) and scoring data (from alignedscoring) is aquired by this timestamp
+% difference
+
 % Author: Thomas Vanasse
 % Center for Sleep and Consciousness, University of Wisconsin - Madison
 % ------------------------------------------------------------------------

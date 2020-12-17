@@ -1995,16 +1995,16 @@ ID,Visit,SA,Date_Time,Date,Time,Stage,Q1ExperienceNum,Q1Experience,Q1Report,Q2Aw
 2089,1,9,02/18/0016 05:22,NaN,5:22 AM,2,3,Report,"Daugther needing to write another thank you note to her grandmother for a b-day gifts",2,Asleep,3,3,2,2,4,4,1,0,0,4,0,0,"",1,0,0,0,0,-1,"urgency","",AMV,NaN,NaN,0,NaN,NaN,NaN,NaN,NaN,NaN,NaN
 2089,1,10,02/18/0016 05:30,NaN,5:30 AM,NaN,2,Something,"something I needed to do",2,Asleep,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,"",NaN,NaN,NaN,NaN,NaN,NaN,"","",AMV,NaN,NaN,0,NaN,NaN,NaN,NaN,NaN,NaN,NaN
 2089,1,11,02/18/0016 05:50,NaN,5:50 AM,NaN,3,Report,"in a store going through the checkout line with daughter, incident with keys and a car in the parking lot",2,Asleep,4,4,4,4,4,4,3,0,3,4,0,1,"arms",NaN,1,1,1,1,1,"happy, anxious concerned","",AMV,NaN,NaN,0,NaN,NaN,NaN,NaN,NaN,NaN,NaN
-2091,1,1,02/22/0016 23:51,NaN,11:51 PM,2,1,NoReport,"",2,Asleep,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,"",NaN,NaN,NaN,NaN,NaN,NaN,"","",AMV,NaN,361.592,2,NaN,1,0,1,1,0,0
-2091,1,2,02/23/0016 00:45,NaN,12:45 AM,2,2,Something,"vague, but nothing negative",2,Asleep,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,"",NaN,NaN,NaN,NaN,NaN,NaN,"","",AMV,NaN,129.383,1,NaN,2,0,0,0,1,1
-2091,1,3,02/23/0016 01:42,NaN,1:42 AM,2,2,Something,"",2,Asleep,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,"",NaN,NaN,NaN,NaN,NaN,NaN,"","",AMV,NaN,37.193,1,NaN,3,0,0,0,0,1
+2091,1,1,02/22/0016 23:51,NaN,11:51 PM,2,1,NoReport,"",2,Asleep,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,"",NaN,NaN,NaN,NaN,NaN,NaN,"","",AMV,NaN,361.592,2,NaN,1,0,0,1,0,0
+2091,1,2,02/23/0016 00:45,NaN,12:45 AM,2,2,Something,"vague, but nothing negative",2,Asleep,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,"",NaN,NaN,NaN,NaN,NaN,NaN,"","",AMV,NaN,129.383,1,NaN,2,0,1,0,0,1
+2091,1,3,02/23/0016 01:42,NaN,1:42 AM,2,2,Something,"",2,Asleep,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,"",NaN,NaN,NaN,NaN,NaN,NaN,"","",AMV,NaN,37.193,1,NaN,3,0,1,0,0,0
 2091,1,4,02/23/0016 02:20,NaN,2:20 AM,2,1,NoReport,"",2,Asleep,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,"",NaN,NaN,NaN,NaN,NaN,NaN,"","",AMV,NaN,27.071,1,NaN,4,0,1,0,0,1
-2091,1,5,02/23/0016 02:46,NaN,2:46 AM,NaN,1,NoReport,"",2,Asleep,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,"",NaN,NaN,NaN,NaN,NaN,NaN,"","",AMV,NaN,28.025,1,NaN,5,1,1,0,1,1
-2091,1,6,02/23/0016 04:06,NaN,4:06 AM,2,2,Something,"not stressful",2,Asleep,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,"",NaN,NaN,NaN,NaN,NaN,NaN,"","",AMV,NaN,16.265,1,NaN,6,0,1,0,0,1
-2091,1,7,02/23/0016 04:41,NaN,4:41 AM,2,2,Something,"nothing negs",2,Asleep,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,"",NaN,NaN,NaN,NaN,NaN,NaN,"","",AMV,NaN,63.595,1,NaN,7,1,1,1,0,1
-2091,1,8,02/23/0016 05:12,NaN,5:12 AM,NaN,2,Something,"anxious",2,Asleep,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,"",NaN,NaN,NaN,NaN,NaN,NaN,"","",AMV,NaN,22.168,1,NaN,8,1,0,0,0,1
+2091,1,5,02/23/0016 02:46,NaN,2:46 AM,NaN,1,NoReport,"",2,Asleep,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,"",NaN,NaN,NaN,NaN,NaN,NaN,"","",AMV,NaN,28.025,1,NaN,5,1,1,0,0,1
+2091,1,6,02/23/0016 04:06,NaN,4:06 AM,2,2,Something,"not stressful",2,Asleep,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,"",NaN,NaN,NaN,NaN,NaN,NaN,"","",AMV,NaN,16.265,1,NaN,6,0,1,0,0,0
+2091,1,7,02/23/0016 04:41,NaN,4:41 AM,2,2,Something,"nothing negs",2,Asleep,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,"",NaN,NaN,NaN,NaN,NaN,NaN,"","",AMV,NaN,63.595,1,NaN,7,0,0,0,1,1
+2091,1,8,02/23/0016 05:12,NaN,5:12 AM,NaN,2,Something,"anxious",2,Asleep,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,"",NaN,NaN,NaN,NaN,NaN,NaN,"","",AMV,NaN,22.168,1,NaN,8,0,1,0,0,1
 2091,1,9,02/23/0016 05:41,NaN,5:41 AM,NaN,1,NoReport,"",2,Asleep,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,"",NaN,NaN,NaN,NaN,NaN,NaN,"","",AMV,NaN,65.471,1,NaN,9,0,1,0,0,1
-2091,1,10,02/23/0016 06:10,NaN,6:10 AM,2,1,NoReport,"",2,Asleep,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,"",NaN,NaN,NaN,NaN,NaN,NaN,"","",AMV,NaN,21.206,1,NaN,10,0,1,0,1,0
+2091,1,10,02/23/0016 06:10,NaN,6:10 AM,2,1,NoReport,"",2,Asleep,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,"",NaN,NaN,NaN,NaN,NaN,NaN,"","",AMV,NaN,21.206,1,NaN,10,0,0,0,1,1
 2091,2,1,07/12/0016 00:35,NaN,12:35 AM,2,1,NoReport,"",2,Asleep,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,"",NaN,NaN,NaN,NaN,NaN,NaN,"","",AC,NaN,NaN,0,NaN,NaN,NaN,NaN,NaN,NaN,NaN
 2091,2,2,07/12/0016 01:10,NaN,1:10 AM,2,1,NoReport,"",2,Asleep,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,"",NaN,NaN,NaN,NaN,NaN,NaN,"","",AC,NaN,NaN,0,NaN,NaN,NaN,NaN,NaN,NaN,NaN
 2091,2,3,07/12/0016 01:50,NaN,1:50 AM,2,1,NoReport,"",1,Awake,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,"",NaN,NaN,NaN,NaN,NaN,NaN,"","",AC,NaN,NaN,0,NaN,NaN,NaN,NaN,NaN,NaN,NaN
