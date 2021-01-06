@@ -2382,7 +2382,7 @@ ID,Visit,SA,Date_Time,Date,Time,Stage,Q1ExperienceNum,Q1Experience,Q1Report,Q2Aw
 2105,1,12,03/09/0016 05:20,NaN,5:20 AM,NaN,3,Report,"donuts!",2,Asleep,3,4,4,4,5,4,3,0,0,0,0,1,"walking",3,1,1,0,1,-1,"anxiety ","",AMV,NaN,43.856,2,NaN,12,0,0,0,1,1
 2105,1,13,03/09/0016 05:44,NaN,5:44 AM,NaN,3,Report,"left over money?",2,Asleep,3,4,3,3,4,4,2,0,2,2,-1,1,"legs",1,1,1,1,1,0,"","",AMV,NaN,67.031,3,NaN,13,0,1,0,1,1
 2105,2,1,06/10/0016 22:49,NaN,10:49 PM,2,1,NoReport,"",1,Awake,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,"",NaN,NaN,NaN,NaN,NaN,NaN,"","",AMV,NaN,1.987,3,NaN,1,0,0,0,0,0
-2105,2,2,06/10/0016 23:40,NaN,11:40 PM,2,3,Report,"waiting in line",2,Asleep,1,1,1,1,2,2,1,0,0,0,1,0,"",2,0,0,1,0,-1,"frustration","",AMV,NaN,0.775,2,NaN,2,0,0,0,0,0
+2105,2,2,06/10/0016 23:40,NaN,11:40 PM,2,3,Report,"waiting in line",2,Asleep,1,1,1,1,2,2,1,0,0,0,1,0,"",2,0,0,1,0,-1,"frustration","",AMV,NaN,0.774999999999999,2,NaN,2,0,0,0,0,0
 2105,2,3,06/11/0016 00:08,NaN,12:08 AM,2,2,Something,"""waiting, in general""",2,Asleep,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,"",NaN,NaN,NaN,NaN,NaN,NaN,"","",AMV,NaN,34.757,1,NaN,3,0,0,0,0,0
 2105,2,4,06/11/0016 00:42,NaN,12:42 AM,2,2,Something,"""regrouping?""",2,Asleep,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,"",NaN,NaN,NaN,NaN,NaN,NaN,"","",AMV,NaN,28.272,2,NaN,4,0,0,0,0,0
 2105,2,5,06/11/0016 01:54,NaN,1:54 AM,2,1,NoReport,"",2,Asleep,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,"",NaN,NaN,NaN,NaN,NaN,NaN,"","",AMV,NaN,6.362,1,NaN,5,0,0,0,0,0
