@@ -1,9 +1,5 @@
 % ------------------------------------------------------------------------
-% Find DIN events that match to experimenter reported awakening. If there
-% are multiple DIN events for one awakening, then find the closest DIN
-% event to the reported one. For each awakening found, extract five minutes
-% of data before awakening. Concatenate those files that were awoke in NREM
-% sleep for ICA cleaning. 
+% create dreamreport data txt file in data folder
 
 % Author: Thomas Vanasse
 % Center for Sleep and Consciousness, University of Wisconsin - Madison

@@ -1,9 +1,5 @@
 % ------------------------------------------------------------------------
-% Find DIN events that match to experimenter reported awakening. If there
-% are multiple DIN events for one awakening, then find the closest DIN
-% event to the reported one. For each awakening found, extract five minutes
-% of data before awakening. Concatenate those files that were awoke in NREM
-% sleep for ICA cleaning. 
+% rewrite dreamreport data
 
 % Author: Thomas Vanasse
 % Center for Sleep and Consciousness, University of Wisconsin - Madison
@@ -198,7 +194,7 @@ for mff_input_file = 1:length(inputlist)
         nrem_index = [];
         for i = 1:length(timestamps)
            if ((din_event_match(i,1) > 0) && din_event_match(i,4) > 0) %DIN matches with awakening AND is the shortest time away from recoreded awakening   
-                fprintf("DIN %d \n");
+                fprintf("DIN %d \n", ent_matched_awakening);
                 % mark time away from experimenter marked time (+/- 60 seconds)
                 TABLE.DIFF_FROM_EVENT_SECONDS(de_index(din_event_match(i,1))) = din_event_match(i,2);
                 TABLE.ENTRY_MATCHED_AWAKENING_NO(de_index(din_event_match(i,1))) = ent_matched_awakening;
@@ -275,27 +271,33 @@ for mff_input_file = 1:length(inputlist)
 %                 EEG = pop_select(EEG,'point', [0 + EEG.srate*1, EEG.pnts - EEG.srate*1]); 
 %                 pop_saveset(EEG,sprintf('awakening-%d_eeg_hp_trim',ent_matched_awakening), sesdir);
 %                 
-%                 % assess if awakening occured in N2/N3 (look at 60 seconds
-%                 % before awakening).
-%                 awakening_n2n3_samples = find(scoring(EEG.pnts-60*EEG.srate:EEG.pnts) == -2 | scoring(EEG.pnts-60*EEG.srate:EEG.pnts) == -3);
-%                     
-%                 % cannot contain any REM
-%                 if (~isempty(awakening_n2n3_samples) && ~(any(scoring(:) == 1)))
-%                     nrem_index = [nrem_index ent_matched_awakening];
-%                    
-%                     if n2n3_iter == 0
-%                         MERGEDEEG = EEG;
-%                     else
-%                         MERGEDEEG = pop_mergeset(MERGEDEEG,EEG);
-%                     end
-%                     n2n3_iter = n2n3_iter + 1;                 
-%                 end   
-%                ent_matched_awakening = ent_matched_awakening + 1;                         
-%             else 
-%                 fprintf('No Awakening Match\n');
+                % assess if awakening occured in N2/N3 (look at 60 seconds
+                % before awakening).
+                EEG.pnts = 298*500;
+                EEG.srate = 500;
+                awakening_n2n3_samples = find(scoring(EEG.pnts-60*EEG.srate:EEG.pnts) == -2 | scoring(EEG.pnts-60*EEG.srate:EEG.pnts) == -3);
+                    
+                % cannot contain any REM
+                if (~isempty(awakening_n2n3_samples) && ~(any(scoring(:) == 1)))
+                    nrem_index = [nrem_index ent_matched_awakening];
+                   
+                    if n2n3_iter == 0
+                        MERGEDEEG = EEG;
+                    else
+                        MERGEDEEG = pop_mergeset(MERGEDEEG,EEG);
+                    end
+                    
+                    n2n3_iter = n2n3_iter + 1;
+                end
+                
+                ent_matched_awakening = ent_matched_awakening + 1;
+            
+           else 
+                fprintf('No Awakening Match\n');
             end          
         end
-    
+        
+    writetable(TABLE,TABLE_name{1});
 %     save([sesdir '/nrem_index.mat'],'nrem_index');
 %     pop_saveset(MERGEDEEG,'filename', 'nrem_awakening_eeg_hp_trim_merged','filepath', sesdir); 
 %     
