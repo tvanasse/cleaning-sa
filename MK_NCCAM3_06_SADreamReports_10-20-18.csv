@@ -196,11 +196,11 @@ ID,Visit,SA,Date_Time,Date,Time,Stage,Q1ExperienceNum,Q1Experience,Q1Report,Q2Aw
 2008,3,10,10/02/0015 04:58,NaN,4:58 AM,2,2,Something,"remembered something but then quickly forgot",2,Asleep,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,"",NaN,NaN,NaN,NaN,NaN,NaN,"","",JS,NaN,NaN,0,NaN,NaN,NaN,NaN,NaN,NaN,NaN
 2008,3,11,10/02/0015 05:28,NaN,5:28 AM,NaN,3,Report,"conversation with someone in a dream",2,Asleep,4,3,3,4,5,5,3,NaN,1,1,-1,0,"",1,1,0,1,0,1,"","",JS,NaN,NaN,0,NaN,NaN,NaN,NaN,NaN,NaN,NaN
 2008,3,12,10/02/0015 05:50,NaN,5:50 AM,NaN,3,Report,"in a courtyard space. Recruitment center for college program",2,Asleep,3,4,4,4,5,5,4,NaN,4,2,0,1,"legs and arms",1,1,1,1,1,1,"","",JS,NaN,NaN,0,NaN,NaN,NaN,NaN,NaN,NaN,NaN
-2009,1,1,12/09/0014 01:50,NaN,1:50 AM,2,1,NoReport,"",2,Asleep,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,"",NaN,NaN,NaN,NaN,NaN,NaN,"","",AC,NaN,NaN,0,NaN,NaN,NaN,NaN,NaN,NaN,NaN
-2009,1,2,12/09/0014 03:01,NaN,3:01 AM,2,2,Something,"thinking about position I was sleeping in, haven't been asleep",1,Awake,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,"",NaN,NaN,NaN,NaN,NaN,NaN,"","",AC,NaN,NaN,0,NaN,NaN,NaN,NaN,NaN,NaN,NaN
-2009,1,3,12/09/0014 03:57,NaN,3:57 AM,2,3,Report,"bored at my workstation",2,Asleep,1,1,1,1,4,4,3,0,0,3,-1,0,"",3,0,1,0,0,-1,"","",AC,NaN,NaN,0,NaN,NaN,NaN,NaN,NaN,NaN,NaN
-2009,1,4,12/09/0014 04:30,NaN,4:30 AM,2,3,Report,"I was working, doing some paper work",1,Awake,5,1,1,1,4,4,3,0,2,2,-1,0,"",1,0,0,0,0,0,"","",AC,NaN,NaN,0,NaN,NaN,NaN,NaN,NaN,NaN,NaN
-2009,1,5,12/09/0014 05:36,NaN,5:36 AM,2,2,Something,"can't remember",2,Asleep,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,"",NaN,NaN,NaN,NaN,NaN,NaN,"","",AC,NaN,NaN,0,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+2009,1,1,12/09/0014 01:50,NaN,1:50 AM,2,1,NoReport,"",2,Asleep,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,"",NaN,NaN,NaN,NaN,NaN,NaN,"","",AC,NaN,18.923,3,NaN,1,0,1,1,0,1
+2009,1,2,12/09/0014 03:01,NaN,3:01 AM,2,2,Something,"thinking about position I was sleeping in, haven't been asleep",1,Awake,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,"",NaN,NaN,NaN,NaN,NaN,NaN,"","",AC,NaN,12.548,1,NaN,2,1,1,0,0,1
+2009,1,3,12/09/0014 03:57,NaN,3:57 AM,2,3,Report,"bored at my workstation",2,Asleep,1,1,1,1,4,4,3,0,0,3,-1,0,"",3,0,1,0,0,-1,"","",AC,NaN,10.056,1,NaN,3,0,1,0,0,1
+2009,1,4,12/09/0014 04:30,NaN,4:30 AM,2,3,Report,"I was working, doing some paper work",1,Awake,5,1,1,1,4,4,3,0,2,2,-1,0,"",1,0,0,0,0,0,"","",AC,NaN,19.865,1,NaN,4,0,0,0,0,1
+2009,1,5,12/09/0014 05:36,NaN,5:36 AM,2,2,Something,"can't remember",2,Asleep,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,"",NaN,NaN,NaN,NaN,NaN,NaN,"","",AC,NaN,66.078,1,NaN,5,0,1,0,0,1
 2009,2,1,03/28/0015 01:13,NaN,1:13 AM,2,3,Report,"coworker at job",2,Asleep,1,1,1,1,1,1,0,0,0,0,0,0,"",1,0,0,1,0,1,"","",PG,NaN,24.74,2,NaN,1,0,0,0,0,0
 2009,2,2,03/28/0015 01:50,NaN,1:50 AM,2,1,NoReport,"",2,Asleep,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,"",NaN,NaN,NaN,NaN,NaN,NaN,"","",PG,NaN,62.105,1,NaN,2,0,0,0,0,0
 2009,2,3,03/28/0015 02:23,NaN,2:23 AM,NaN,2,Something,"I can't remember conversation with somebody",2,Asleep,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,"",NaN,NaN,NaN,NaN,NaN,NaN,"","",PG,NaN,60.849,1,NaN,3,0,0,0,0,0

@@ -218,15 +218,15 @@ for mff_input_file = 1:length(inputlist)
                     
                 else 
                     scoring = readalignmentraw(aligned_folder, {'alignedscoring.raw'}, ...
-                        events(din100_idx(i),2)-(srate*60*5) + egi_offset*srate,...
-                        events(din100_idx(i),2) + (srate*60) + egi_offset*srate);
+                        events(din100_idx(i),2)-(srate*60*5),...
+                        events(din100_idx(i),2) + (srate*60));
                     plot(scoring,'LineWidth',5)
                     hold on
                     title(datestr(absolute_datetime + seconds(events(din100_idx(i),2)/500)));
                     xline(size(scoring,2)-(srate*90),'LineWidth', 5); %plot point where sleep soring is being assessed
                     xline(size(scoring,2)-(srate*60),'LineWidth', 5, 'Color','r');
 %                     saveas(gcf, [sesdir '/awakening-' num2str(ent_matched_awakening) '-scoring.png'], 'png');
-%                     close all;
+                    close all;
                     
                     % mark in table if the scoring 5 minutes before, 1
                     % minute after contained score
@@ -269,12 +269,13 @@ for mff_input_file = 1:length(inputlist)
 
     end
     %% plot all awakenings
+    fprintf('TESTING');
     scoring = readalignmentraw(aligned_folder, {'alignedscoring.raw'});
     plot(scoring,'LineWidth',2);
     hold on;
     for i = 1:length(timestamps)
            if ((din_event_match(i,1) > 0) && din_event_match(i,4) > 0) %DIN matches with awakening AND is the shortest time away from recoreded awakening   
-                xline(events(din100_idx(i),2) + egi_offset*srate,'LineWidth',3,'Color','r');
+                xline(events(din100_idx(i),2),'LineWidth',3,'Color','r');
            end
     end
     set(gcf, 'Units', 'Inches', 'Position', [0, 0, 18, 7]);

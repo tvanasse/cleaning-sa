@@ -235,11 +235,11 @@ for mff_input_file = 1:length(inputlist)
 %                 EEG = pop_saveset(EEG,sprintf('awakening-%d_eeg', ...
 %                     ent_matched_awakening), sesdir);                 
                 
-                if ~isfile([aligned_folder '/alignedscoring.raw'])
+                if ~isfile([aligned_folder '/XXXalignedscoring.raw'])
                     TABLE.N1(de_index(din_event_match(i,1))) = 'NO ALIGNED SCORING FILE FOUND';
                     
                 else 
-                    scoring = readalignmentraw(aligned_folder, {'alignedscoring.raw'}, ...
+                    scoring = readalignmentraw(aligned_folder, {'XXXalignedscoring.raw'}, ...
                         events(din100_idx(i),2)-(srate*60*5),...
                         events(din100_idx(i),2) + (srate*60));
                     plot(scoring,'LineWidth',5)
