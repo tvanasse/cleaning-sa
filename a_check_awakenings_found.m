@@ -17,7 +17,7 @@ addpath('functions');
 CHANNEL_LOCATION_FILE = 'channel_location_file/HydroCelGSN256v10.sfp';
 
 %% input filenames
-inputlist = uigetfile_n_dir('/Volumes/NCCAM/NCCAM/NCCAM3/SerialAwakenings/FINALS');
+inputlist = uigetfile_n_dir('/Volumes/NCCAM/NCCAM/NCCAM3/Archive/FINALS/');
 
 % add table name (so we aren't simultaneously i/o'ing csv file)
 TABLE_name = uigetfile_n_dir(pwd,'Pick Specific DREAM REPORT FILE');
