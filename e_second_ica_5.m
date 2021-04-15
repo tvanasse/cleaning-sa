@@ -29,6 +29,8 @@ for mff_input_file = 1:length(inputlist)
     
     sesdir = char(inputlist(mff_input_file));
     
+    addpath(genpath(sesdir));
+    
     AMICA_DIR = [local_folder{1} '/amicaout2/'];  % good to have a separate dir for each file
     if ~exist(AMICA_DIR,'dir')
         mkdir(AMICA_DIR)

@@ -1751,19 +1751,19 @@ ID,Visit,SA,Date_Time,Date,Time,Stage,Q1ExperienceNum,Q1Experience,Q1Report,Q2Aw
 2079,2,12,07/14/0016 04:55,NaN,4:55 AM,2,1,NoReport,"",2,Asleep,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,"",NaN,NaN,NaN,NaN,NaN,NaN,"","",AMV,NaN,NaN,0,NaN,NaN,NaN,NaN,NaN,NaN,NaN
 2079,2,13,07/14/0016 05:16,NaN,5:16 AM,NaN,1,NoReport,"",3,Unsure,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,"",NaN,NaN,NaN,NaN,NaN,NaN,"","",AMV,NaN,NaN,0,NaN,NaN,NaN,NaN,NaN,NaN,NaN
 2079,2,14,07/14/0016 05:38,NaN,5:38 AM,NaN,1,NoReport,"",2,Asleep,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,"",NaN,NaN,NaN,NaN,NaN,NaN,"","",AMV,NaN,NaN,0,NaN,NaN,NaN,NaN,NaN,NaN,NaN
-2079,3,1,11/22/0016 22:47,NaN,10:47 PM,2,1,NoReport,"",3,Unsure,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,"",NaN,NaN,NaN,NaN,NaN,NaN,"","",AMV,NaN,49.881,1,NaN,1,1,1,1,0,1
-2079,3,2,11/22/0016 23:23,NaN,11:23 PM,2,1,NoReport,"",2,Asleep,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,"",NaN,NaN,NaN,NaN,NaN,NaN,"","",AMV,NaN,48.995,1,NaN,2,0,1,0,1,0
-2079,3,3,11/23/0016 00:04,NaN,12:04 AM,2,1,NoReport,"",2,Asleep,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,"",NaN,NaN,NaN,NaN,NaN,NaN,"","",AMV,NaN,1.146,1,NaN,3,1,1,0,0,1
+2079,3,1,11/22/0016 22:47,NaN,10:47 PM,2,1,NoReport,"",3,Unsure,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,"",NaN,NaN,NaN,NaN,NaN,NaN,"","",AMV,NaN,49.881,1,NaN,1,0,1,0,0,1
+2079,3,2,11/22/0016 23:23,NaN,11:23 PM,2,1,NoReport,"",2,Asleep,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,"",NaN,NaN,NaN,NaN,NaN,NaN,"","",AMV,NaN,48.995,1,NaN,2,1,1,0,0,1
+2079,3,3,11/23/0016 00:04,NaN,12:04 AM,2,1,NoReport,"",2,Asleep,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,"",NaN,NaN,NaN,NaN,NaN,NaN,"","",AMV,NaN,1.146,1,NaN,3,0,1,0,0,1
 2079,3,4,11/23/0016 00:33,NaN,12:33 AM,2,1,NoReport,"",2,Asleep,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,"",NaN,NaN,NaN,NaN,NaN,NaN,"","slight apneas with rebound noted ~5 min before awakening",AMV,NaN,3.592,1,NaN,4,1,1,0,0,1
-2079,3,5,11/23/0016 01:06,NaN,1:06 AM,2,1,NoReport,"",2,Asleep,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,"",NaN,NaN,NaN,NaN,NaN,NaN,"","",AMV,NaN,39.561,1,NaN,5,0,1,0,0,0
-2079,3,6,11/23/0016 02:02,NaN,2:02 AM,2,2,Something,"",2,Asleep,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,"",NaN,NaN,NaN,NaN,NaN,NaN,"","",AMV,NaN,47.622,1,NaN,6,1,0,0,0,1
+2079,3,5,11/23/0016 01:06,NaN,1:06 AM,2,1,NoReport,"",2,Asleep,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,"",NaN,NaN,NaN,NaN,NaN,NaN,"","",AMV,NaN,39.561,1,NaN,5,1,1,0,0,1
+2079,3,6,11/23/0016 02:02,NaN,2:02 AM,2,2,Something,"",2,Asleep,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,"",NaN,NaN,NaN,NaN,NaN,NaN,"","",AMV,NaN,47.622,1,NaN,6,1,1,0,0,1
 2079,3,7,11/23/0016 02:39,NaN,2:39 AM,2,1,NoReport,"",2,Asleep,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,"",NaN,NaN,NaN,NaN,NaN,NaN,"","",AMV,NaN,14.996,1,NaN,7,1,1,0,0,1
-2079,3,8,11/23/0016 03:05,NaN,3:05 AM,NaN,1,NoReport,"",2,Asleep,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,"",NaN,NaN,NaN,NaN,NaN,NaN,"","",AMV,NaN,15.748,4,NaN,8,0,1,0,1,1
-2079,3,9,11/23/0016 03:26,NaN,3:26 AM,2,1,NoReport,"",2,Asleep,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,"",NaN,NaN,NaN,NaN,NaN,NaN,"","needed to be prompted multiple times for both questions despite having woken up. ",AMV,NaN,53.46,1,NaN,9,0,1,0,0,0
-2079,3,10,11/23/0016 04:29,NaN,4:29 AM,NaN,1,NoReport,"",2,Asleep,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,"",NaN,NaN,NaN,NaN,NaN,NaN,"","VERY hard to tell what he was saying. Didn't fully vocalize. ",AMV,NaN,4.497,1,NaN,10,1,1,0,1,0
-2079,3,11,11/23/0016 04:59,NaN,4:59 AM,NaN,2,Something,"",2,Asleep,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,"",NaN,NaN,NaN,NaN,NaN,NaN,"","",AMV,NaN,26.669,2,NaN,11,1,1,0,0,1
-2079,3,12,11/23/0016 05:14,NaN,5:14 AM,NaN,1,NoReport,"",2,Asleep,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,"",NaN,NaN,NaN,NaN,NaN,NaN,"","de facto NR because ppt wouldn't answer Q1 at all.",AMV,NaN,29.656,4,NaN,12,0,1,0,0,0
-2079,3,13,11/23/0016 05:33,NaN,5:33 AM,NaN,1,NoReport,"",2,Asleep,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,"",NaN,NaN,NaN,NaN,NaN,NaN,"","",AMV,NaN,18.238,1,NaN,13,0,0,0,1,0
+2079,3,8,11/23/0016 03:05,NaN,3:05 AM,NaN,1,NoReport,"",2,Asleep,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,"",NaN,NaN,NaN,NaN,NaN,NaN,"","",AMV,NaN,15.748,4,NaN,8,1,0,0,1,1
+2079,3,9,11/23/0016 03:26,NaN,3:26 AM,2,1,NoReport,"",2,Asleep,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,"",NaN,NaN,NaN,NaN,NaN,NaN,"","needed to be prompted multiple times for both questions despite having woken up. ",AMV,NaN,53.46,1,NaN,9,0,1,0,0,1
+2079,3,10,11/23/0016 04:29,NaN,4:29 AM,NaN,1,NoReport,"",2,Asleep,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,"",NaN,NaN,NaN,NaN,NaN,NaN,"","VERY hard to tell what he was saying. Didn't fully vocalize. ",AMV,NaN,4.497,1,NaN,10,1,0,0,1,1
+2079,3,11,11/23/0016 04:59,NaN,4:59 AM,NaN,2,Something,"",2,Asleep,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,"",NaN,NaN,NaN,NaN,NaN,NaN,"","",AMV,NaN,26.669,2,NaN,11,0,1,0,1,1
+2079,3,12,11/23/0016 05:14,NaN,5:14 AM,NaN,1,NoReport,"",2,Asleep,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,"",NaN,NaN,NaN,NaN,NaN,NaN,"","de facto NR because ppt wouldn't answer Q1 at all.",AMV,NaN,29.656,4,NaN,12,0,1,0,1,1
+2079,3,13,11/23/0016 05:33,NaN,5:33 AM,NaN,1,NoReport,"",2,Asleep,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,"",NaN,NaN,NaN,NaN,NaN,NaN,"","",AMV,NaN,18.238,1,NaN,13,0,0,0,1,1
 2080,1,1,02/03/0016 23:15,NaN,11:15 PM,2,2,Something,"",2,Asleep,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,"",NaN,NaN,NaN,NaN,NaN,NaN,"","",AMV,NaN,2.207,1,NaN,1,0,1,0,0,1
 2080,1,2,02/04/0016 00:00,NaN,12:00 AM,2,3,Report,"riding on a bicycle in a nature type scene",2,Asleep,3,3,3,3,1,2,1,0,0,2,1,1,"legs",2,0,0,0,0,1,"","",AMV,NaN,335.502,1,NaN,2,1,1,0,0,1
 2080,1,3,02/04/0016 00:37,NaN,12:37 AM,NaN,1,NoReport,"",2,Asleep,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,"",NaN,NaN,NaN,NaN,NaN,NaN,"","",AMV,NaN,58.124,2,NaN,3,0,0,0,1,1
@@ -2228,19 +2228,19 @@ ID,Visit,SA,Date_Time,Date,Time,Stage,Q1ExperienceNum,Q1Experience,Q1Report,Q2Aw
 2100,3,11,12/05/0017 04:24,NaN,4:24 AM,2,3,Report,"bag of cups, somebody was there in the study-but-not. No idea what the cups are for. ",2,Asleep,4,4,4,4,5,3,5,0,0,1,2,0,"",1,1,0,1,0,1,"happiness","ppt needed 2x alarms",AMV,NaN,NaN,0,NaN,NaN,NaN,NaN,NaN,NaN,NaN
 2100,3,12,12/05/0017 05:05,NaN,5:05 AM,NaN,3,Report,"big rainstorm. Carrying giant table with other people. Sharp, ahd to be careful. Were going to eat later. At a pool before the raining. ",2,Asleep,5,4,4,4,5,5,3,0,1,4,2,1,"arms, legs, hands",2,1,1,1,1,2,"fun, enjoying, excitement","",AMV,NaN,NaN,0,NaN,NaN,NaN,NaN,NaN,NaN,NaN
 2100,3,13,12/05/0017 05:28,NaN,5:28 AM,2,3,Report,"cleaning up and putting things away in boxes. Prior to doing the sleep study. Had a pet dog with him.",2,Asleep,4,3,3,3,5,4,1,0,3,3,2,1,"arms, hands, legs",1,1,0,0,1,0,"neutral","",AMV,NaN,NaN,0,NaN,NaN,NaN,NaN,NaN,NaN,NaN
-2101,1,1,03/07/0016 22:53,NaN,10:53 PM,2,2,Something,"",2,Asleep,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,"",NaN,NaN,NaN,NaN,NaN,NaN,"","",AMV,NaN,99.217,1,NaN,1,0,1,0,0,0
-2101,1,2,03/07/0016 23:13,NaN,11:13 PM,2,2,Something,"",2,Asleep,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,"",NaN,NaN,NaN,NaN,NaN,NaN,"","",AMV,NaN,92.655,1,NaN,2,0,1,0,0,0
-2101,1,3,03/07/0016 23:35,NaN,11:35 PM,2,2,Something,"",2,Asleep,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,"",NaN,NaN,NaN,NaN,NaN,NaN,"","",AMV,NaN,62.46,1,NaN,3,0,1,1,0,1
+2101,1,1,03/07/0016 22:53,NaN,10:53 PM,2,2,Something,"",2,Asleep,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,"",NaN,NaN,NaN,NaN,NaN,NaN,"","",AMV,NaN,99.217,1,NaN,1,0,1,0,0,1
+2101,1,2,03/07/0016 23:13,NaN,11:13 PM,2,2,Something,"",2,Asleep,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,"",NaN,NaN,NaN,NaN,NaN,NaN,"","",AMV,NaN,92.655,1,NaN,2,0,1,0,0,1
+2101,1,3,03/07/0016 23:35,NaN,11:35 PM,2,2,Something,"",2,Asleep,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,"",NaN,NaN,NaN,NaN,NaN,NaN,"","",AMV,NaN,62.46,1,NaN,3,0,1,0,0,1
 2101,1,4,03/08/0016 00:20,NaN,12:20 AM,2,2,Something,"",2,Asleep,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,"",NaN,NaN,NaN,NaN,NaN,NaN,"","",AMV,NaN,92.355,1,NaN,4,1,1,0,0,1
-2101,1,5,03/08/0016 00:40,NaN,12:40 AM,2,1,NoReport,"",2,Asleep,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,"",NaN,NaN,NaN,NaN,NaN,NaN,"","",AMV,NaN,27.344,1,NaN,5,0,1,0,0,0
-2101,1,6,03/08/0016 01:33,NaN,1:33 AM,2,2,Something,"",2,Asleep,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,"",NaN,NaN,NaN,NaN,NaN,NaN,"","",AMV,NaN,58.122,1,NaN,6,1,1,0,0,1
-2101,1,7,03/08/0016 02:02,NaN,2:02 AM,2,1,NoReport,"",2,Asleep,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,"",NaN,NaN,NaN,NaN,NaN,NaN,"","",AMV,NaN,79.177,1,NaN,7,1,0,0,0,1
-2101,1,8,03/08/0016 02:25,NaN,2:25 AM,2,1,NoReport,"",2,Asleep,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,"",NaN,NaN,NaN,NaN,NaN,NaN,"","",AMV,NaN,36.313,1,NaN,8,0,1,0,0,0
-2101,1,9,03/08/0016 02:50,NaN,2:50 AM,2,1,NoReport,"",2,Asleep,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,"",NaN,NaN,NaN,NaN,NaN,NaN,"","",AMV,NaN,30.887,1,NaN,9,1,1,0,0,1
+2101,1,5,03/08/0016 00:40,NaN,12:40 AM,2,1,NoReport,"",2,Asleep,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,"",NaN,NaN,NaN,NaN,NaN,NaN,"","",AMV,NaN,27.344,1,NaN,5,0,1,0,0,1
+2101,1,6,03/08/0016 01:33,NaN,1:33 AM,2,2,Something,"",2,Asleep,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,"",NaN,NaN,NaN,NaN,NaN,NaN,"","",AMV,NaN,58.122,1,NaN,6,0,1,0,0,1
+2101,1,7,03/08/0016 02:02,NaN,2:02 AM,2,1,NoReport,"",2,Asleep,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,"",NaN,NaN,NaN,NaN,NaN,NaN,"","",AMV,NaN,79.177,1,NaN,7,0,1,0,0,1
+2101,1,8,03/08/0016 02:25,NaN,2:25 AM,2,1,NoReport,"",2,Asleep,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,"",NaN,NaN,NaN,NaN,NaN,NaN,"","",AMV,NaN,36.313,1,NaN,8,0,1,0,0,1
+2101,1,9,03/08/0016 02:50,NaN,2:50 AM,2,1,NoReport,"",2,Asleep,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,"",NaN,NaN,NaN,NaN,NaN,NaN,"","",AMV,NaN,30.887,1,NaN,9,0,1,0,0,1
 2101,1,10,03/08/0016 03:21,NaN,3:21 AM,2,2,Something,"",2,Asleep,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,"",NaN,NaN,NaN,NaN,NaN,NaN,"","",AMV,NaN,80.737,1,NaN,10,1,1,0,0,1
-2101,1,11,03/08/0016 04:45,NaN,4:45 AM,2,3,Report,"dreaming about sensors being removed from head",2,Asleep,3,3,3,3,5,1,0,0,0,2,-2,1,"legs(walking)",3,1,0,1,1,1,"","",AMV,NaN,74.022,1,NaN,11,0,1,0,0,0
-2101,1,12,03/08/0016 05:13,NaN,5:13 AM,2,2,Something,"generally positive",2,Asleep,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,"",NaN,NaN,NaN,NaN,NaN,NaN,"","",AMV,NaN,82.366,1,NaN,12,1,1,0,1,1
-2101,1,13,03/08/0016 05:30,NaN,5:30 AM,2,2,Something,"",2,Asleep,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,"",NaN,NaN,NaN,NaN,NaN,NaN,"","",AMV,NaN,102.999,1,NaN,13,1,0,0,0,1
+2101,1,11,03/08/0016 04:45,NaN,4:45 AM,2,3,Report,"dreaming about sensors being removed from head",2,Asleep,3,3,3,3,5,1,0,0,0,2,-2,1,"legs(walking)",3,1,0,1,1,1,"","",AMV,NaN,74.022,1,NaN,11,1,1,0,0,1
+2101,1,12,03/08/0016 05:13,NaN,5:13 AM,2,2,Something,"generally positive",2,Asleep,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,"",NaN,NaN,NaN,NaN,NaN,NaN,"","",AMV,NaN,82.366,1,NaN,12,1,1,0,0,1
+2101,1,13,03/08/0016 05:30,NaN,5:30 AM,2,2,Something,"",2,Asleep,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,"",NaN,NaN,NaN,NaN,NaN,NaN,"","",AMV,NaN,102.999,1,NaN,13,0,1,0,0,1
 2101,2,1,06/03/0016 22:59,NaN,10:59 PM,2,1,NoReport,"",2,Asleep,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,"",NaN,NaN,NaN,NaN,NaN,NaN,"","",AMV,NaN,NaN,0,NaN,NaN,NaN,NaN,NaN,NaN,NaN
 2101,2,2,06/03/0016 23:28,NaN,11:28 PM,2,1,NoReport,"",2,Asleep,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,"",NaN,NaN,NaN,NaN,NaN,NaN,"","",AMV,NaN,NaN,0,NaN,NaN,NaN,NaN,NaN,NaN,NaN
 2101,2,3,06/04/0016 00:55,NaN,12:55 AM,2,2,Something,"",2,Asleep,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,"",NaN,NaN,NaN,NaN,NaN,NaN,"","",AMV,NaN,NaN,0,NaN,NaN,NaN,NaN,NaN,NaN,NaN

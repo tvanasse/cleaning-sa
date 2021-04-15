@@ -21,6 +21,8 @@ for mff_input_file = 1:length(inputlist)
     
     sesdir = char(inputlist(mff_input_file));
     
+    addpath(genpath(sesdir));
+    
     EEG = pop_loadset([sesdir '/nrem_merged_ica2.set']);
     
     % average reference for ICLabel
