@@ -1,0 +1,3 @@
+SNPM TOOLBOX readme
+
+graphalgs.mexw64 comes directly from the bioinformatics toolbox.  need this tool box installed directly on a mac
