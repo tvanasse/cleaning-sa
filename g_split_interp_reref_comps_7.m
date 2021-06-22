@@ -19,6 +19,8 @@ for mff_input_file = 1:length(inputlist)
     
     sesdir = char(inputlist(mff_input_file));
     
+    addpath(genpath(sesdir));
+    
     %% plot all awakenings and sleep scoring data
     if isfile([sesdir '/all_awakenings.png'])
         
